@@ -166,6 +166,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  align-self: center;
+  margin-top: 36px;
+  margin-bottom: 16px;
 }
 
 .contacts {
@@ -180,7 +183,8 @@ body {
 }
 
 .copyright {
-  font-size: 1rem;
+  font-size: 12px;
+  color: #90939e;
 }
 
 .fade-in {
@@ -189,4 +193,132 @@ body {
 
 .fade-out {
   opacity: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Ask to Me section */
+
+.titlePage {
+  font-family: 'Swear Display';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.4rem;
+  background-image: linear-gradient(90deg, #000080, #0000FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  line-height: 80px;
+  margin-top: 64px;
+  align-self: center;
+  margin-bottom: 16px;
+}
+
+.chatSpace {
+  flex-grow: 1;
+  align-self: center;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding: 0px 16px;
+  padding-bottom: 16px;
+}
+
+.myMessageChat {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: fit-content;
+}
+
+.profilePicChat {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.bubbleChat {
+  background-color: #E9EBF2;
+  border-radius: 0px 8px 8px 8px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  text-wrap: wrap;
+  max-width: max(65%, 200px);
+  width: fit-content;
+}
+
+.bubbleChat span {
+  background-image: linear-gradient(90deg, #000080, #0000FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.messageSide {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: fit-content;
+}
+
+.messageSide .nameSender {
+  font-weight: 500;
+  width: fit-content;
+}
+
+.userMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+  margin-left: auto;
+  text-align: right;
+}
+
+.userMessage .title {
+  font-weight: 500;
+}
+
+.userMessage .questions {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.userMessage .questions .question {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: 1px solid #0000FF;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  width: fit-content;
+}
+
+.userMessage .questions .question:hover {
+  color: white;
+  background-color: #0000FF;
+}
+
+.conversation .userMessage {
+  gap: 0px;
+}
+
+.bubbleUser {
+  background-color: #0101ED;
+  color: white;
+  border-radius: 8px 0px 8px 8px;
+  padding: 8px 8px;
+  font-size: 1rem;
+  text-wrap: wrap;
+  width: fit-content;
 }

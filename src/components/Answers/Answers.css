@@ -1,0 +1,132 @@
+.bubbleCustom {
+    background-color: #E9EBF2;
+    border-radius: 0px 8px 8px 8px;
+    padding: 4px 8px;
+    font-size: 1rem;
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 90%;
+}
+
+.bubbleCustom .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bubbleCustom .content .master {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bubbleCustom .content .master .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url('../../assets/img/MasterGraduation.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .franceFlag {
+    position: absolute;
+    height: 50%;
+    background-color: #ffffff20;
+    width: 100%;
+    top: 50%;
+    z-index: 1;
+    left: 0px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .franceFlag::before {
+    content: ' ';
+    position: absolute;
+    background-color: #0055A420;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    border-bottom-left-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .franceFlag::after {
+    content: ' ';
+    position: absolute;
+    background-color: #EF413520;
+    width: 37%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    border-bottom-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .spainFlag {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    margin: auto;
+    display: block;
+    left: 0px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .spainFlag .stripe {
+    display: block;
+    width: 100%;
+}
+
+.bubbleCustom .content .master .details .spainFlag .top {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .spainFlag .red {
+    background-color: #AA151B20 !important;
+    height: 25% !important;
+}
+
+.bubbleCustom .content .master .details .spainFlag .yellow {
+    background-color: #f1c10020 !important;
+    height: 50% !important;
+}
+
+
+
+.bubbleCustom .content .master .details .title {
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.bubbleCustom .content .master .details .group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+}
+
+.bubbleCustom .content .master .details .group .title {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+.bubbleCustom .content .master .details .group .text {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
