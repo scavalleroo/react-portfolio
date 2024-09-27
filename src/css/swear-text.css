@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Swear-Text-Light';
+  src: url('../fonts/Swear-Text-Light.otf') format('otf');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swear-Text-Thin';
+  src: url('../fonts/Swear-Text-Thin.otf') format('otf');
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Swear-Text';
+  src: url('../fonts/Swear-Text.otf') format('otf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swear-Text-Medium';
+  src: url('../fonts/Swear-Text-Medium.otf') format('otf');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Swear-Text-Black';
+  src: url('../fonts/Swear-Text-Black.otf') format('otf');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
