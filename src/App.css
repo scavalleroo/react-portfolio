@@ -1,38 +1,192 @@
+@import url('css/general-sans.css');
+@import url('css/swear-display.css');
+@import url('css/swear-text.css');
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'General Sans', sans-serif;
+  font-size: 12px;
+  background-color: #F8F9FA;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
+}
+
 .App {
-  text-align: center;
+  background-color: #F8F9FA;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.disclamer {
+  display: flex;
+  gap: 4px;
+  font-family: 'Swear Display';
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-image: linear-gradient(90deg, #000080, #0000FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  height: min-content;
+  width: 100%;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  margin-top: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.textColorChange:hover {
+  background-image: linear-gradient(90deg, #08B17B, #33904B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  cursor: default;
+}
+
+.myName {
+  display: flex;
+  font-size: 4.4rem;
+  font-weight: 400;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  line-height: 60px;
+}
+
+.bigMe {
+  font-size: 4.8rem;
+}
+
+.blue {
+  background-image: linear-gradient(90deg, #000080, #0000FF);
+  transition: opacity 0.5s ease-in-out;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.funny {
+  font-family: 'Swear Display';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 4.4rem;
+  background-image: linear-gradient(90deg, #F76162, #E67203);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  width: fit-content;
+  line-height: 80px;
+}
+
+.msc {
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 48px;
+  font-style: italic;
+}
+
+.callToActions {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 0px;
+}
+
+.buttonAction {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.buttonAction .button {
+  border-radius: 16px;
+  padding: 4px 24px;
+  font-size: 1.2rem;
+  background: linear-gradient(#F8F9FA, #F8F9FA) padding-box, linear-gradient(90deg, #F76162, #E67203) border-box;
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.buttonAction .button:hover {
+  color: #FFF;
+  background-color: linear-gradient(90deg, #F76162, #E67203);
+  background: linear-gradient(90deg, #F76162, #E67203) border-box;
+}
+
+.buttonAction .button:hover+.myMessage {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.myMessage {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  /* Ensure the layout is respected */
+  transform: translateY(10px);
+  /* Optional: slightly move the element down initially */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.smallProfile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.bubble {
+  background-color: #E9EBF2;
+  border-radius: 0px 8px 8px 8px;
+  padding: 4px 8px;
+  max-width: 80px;
+  font-size: 0.8rem;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contacts .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
 }
