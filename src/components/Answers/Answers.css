@@ -130,3 +130,78 @@
     color: white;
     font-weight: 400;
 }
+
+.bubbleCustom .content .master .projects {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.bubbleCustom .content .master .projects>div {
+    padding: 4px 16px 8px 16px;
+    border-radius: 16px 0px 16px 0px;
+    flex-grow: 1;
+}
+
+.bubbleCustom .content .master .projects>div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.bubbleCustom .content .master .projects .ups {
+    background-color: #64003D;
+}
+
+.bubbleCustom .content .master .projects .upm {
+    background-color: #0860A8;
+}
+
+.bubbleCustom .content .master .projects .ups>img {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: 32px;
+}
+
+.bubbleCustom .content .master .projects .upm>img {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: 48px;
+}
+
+.bubbleCustom .content .master .projects .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.bubbleCustom .content .master .projects .description .title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bubbleCustom .content .master .projects .description .text {
+    font-size: 12px;
+}
+
+.bubbleCustom .content .master .projects .button {
+    font-weight: 600;
+    font-size: 14px;
+    background-color: white;
+    padding: 4px 16px;
+    width: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bubbleCustom .content .master .projects .ups .button {
+    color: #64003D;
+}
+
+.bubbleCustom .content .master .projects .upm .button {
+    color: #0860A8;
+}

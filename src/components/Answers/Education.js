@@ -1,3 +1,5 @@
+import saclay from '../../assets/icons/saclay.png';
+import upm from '../../assets/icons/upm.png'
 import React from 'react';
 import './Answers.css';
 
@@ -42,10 +44,20 @@ const Education = () => {
                     </div>
                     <div className='projects'>
                         <div className='ups'>
-
+                            <img src={saclay} />
+                            <div className='description'>
+                                <div className='title'>Tune Crafter</div>
+                                <div className='text'>Make music with hands gestures</div>
+                            </div>
+                            <div className='button'>PLAY</div>
                         </div>
                         <div className='upm'>
-
+                            <img src={upm} />
+                            <div className='description'>
+                                <div className='title'>Digital Nomads App</div>
+                                <div className='text'>Meeting app for Digital Nomads</div>
+                            </div>
+                            <div className='button'>PLAY</div>
                         </div>
                     </div>
                 </div>

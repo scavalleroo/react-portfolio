@@ -169,6 +169,7 @@ body {
   align-self: center;
   margin-top: 36px;
   margin-bottom: 16px;
+  max-height: 80px;
 }
 
 .contacts {
@@ -202,6 +203,28 @@ a {
 
 /* Ask to Me section */
 
+.AskToMe {
+  background-color: #F8F9FA;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+  flex: 1;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.leftPanel {
+  padding: 16px;
+}
+
 .titlePage {
   font-family: 'Swear Display';
   font-weight: bold;
@@ -213,22 +236,20 @@ a {
   -webkit-text-fill-color: transparent;
   cursor: default;
   line-height: 80px;
-  margin-top: 64px;
   align-self: center;
-  margin-bottom: 16px;
 }
 
 .chatSpace {
-  flex-grow: 1;
   align-self: center;
   max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 24px;
+  flex: 1;
   overflow-y: auto;
-  padding: 0px 16px;
-  padding-bottom: 16px;
+  height: 90%;
 }
 
 .myMessageChat {
