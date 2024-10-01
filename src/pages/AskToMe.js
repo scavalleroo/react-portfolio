@@ -5,10 +5,14 @@ import '../App.css';
 import Footer from '../components/Footer/Footer';
 import { useState } from 'react';
 import Education from '../components/Answers/Education';
+import WorkExperience from '../components/Answers/WorkExperience';
+import SelectedWork from '../components/Answers/SelectedWork';
+import React, { useRef, useEffect } from 'react';
 
 function AskToMe() {
-
+    const divRefs = useRef([]);  // This stores refs for each message div
     const [messages, setMessages] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const questions = [
         "What is your Work Experience?",
         "What is your Education?",
@@ -29,20 +33,33 @@ function AskToMe() {
         let response;
         switch (question) {
             case questions[0]:
-                response = "1";
+                response = "WorkExperience";
                 break;
             case questions[1]:
-                response = "2";
+                response = "Education";
                 break;
             case questions[2]:
-                response = "3";
+                response = "SelectedWork";
                 break;
             case questions[3]:
-                response = "4";
+                response = "Contacts";
                 break;
         }
         addMessage('Alessandro', response);
     };
+
+    useEffect(() => {
+        if (!isLoading) {
+            if (divRefs.current && divRefs.current[divRefs.current.length - 1]) {
+                divRefs.current[divRefs.current.length - 1].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        // setIsLoading(true);
+        // const timer = setTimeout(() => {
+        //     setIsLoading(false)
+        // }, 600)
+        // return () => clearTimeout(timer)
+    }, [messages]);
 
     return (
         <div className="AskToMe">
@@ -61,29 +78,38 @@ function AskToMe() {
                         <img src={profilePic} className='profilePicChat' />
                         <div className='messageSide'>
                             <div className='nameSender'>Alessandro</div>
-                            {/* <div className='bubbleChat'>
-                            Ciao 👋, I’m Alessandro. I’ve recently <span>graduated in HCID</span> and I’m aspiring to be <span>UX Designer</span> in a leading innovative company. My mission is to design and <span>enhance User Experience and adoption</span> of digital tools.
-                        </div> */}
-                            <Education />
+                            <div className='bubbleChat'>
+                                Ciao 👋, I’m Alessandro. I’ve recently <span>graduated in HCID</span> and I’m aspiring to be <span>UX Designer</span> in a leading innovative company. My mission is to design and <span>enhance User Experience and adoption</span> of digital tools.
+                            </div>
                         </div>
                     </div>
 
                     <div className='conversation'>
-                        {messages.map(message => (
+                        {messages.map((message, index) => (
                             <div>
                                 {message.sender === 'User' ? (
-                                    <div className='userMessage'>
+                                    <div className='userMessage' ref={el => divRefs.current[index] = el} key={index}>
                                         <div className='title'>You</div>
                                         <div className='bubbleUser'>{message.text}</div>
                                     </div>
                                 ) : (
-                                    <div className='myMessageChat'>
-                                        <img src={profilePic} className='profilePicChat' />
-                                        <div className='messageSide'>
-                                            <div className='nameSender'>Alessandro</div>
-                                            <Education />
+                                    !(isLoading && index === messages.length - 1) ? (
+                                        <div className='myMessageChat' key={index}>
+                                            <img src={profilePic} className='profilePicChat' />
+                                            <div className='messageSide'>
+                                                <div className='nameSender'>Alessandro</div>
+                                                {message.text === 'WorkExperience' ? <WorkExperience /> :
+                                                    message.text === 'Education' ? <Education /> :
+                                                        message.text === 'SelectedWork' ? <SelectedWork />
+                                                            : ''}
+                                            </div>
                                         </div>
-                                    </div>
+                                    ) : (
+                                        <div className="shimmer">
+                                            <div className='longLine'></div>
+                                            <div className='shortLine'></div>
+                                        </div>
+                                    )
                                 )}
                             </div>
                         ))}

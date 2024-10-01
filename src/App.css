@@ -209,20 +209,22 @@ a {
   height: 100vh;
   flex-direction: column;
   justify-content: space-around;
+  padding: 0px 0px 0px 8vw;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   align-self: center;
-  justify-content: space-around;
+  gap: 16px;
   flex: 1;
   overflow: hidden;
   height: fit-content;
+  width: 100%;
 }
 
 .leftPanel {
-  padding: 16px;
+  padding: 16px 0px;
 }
 
 .titlePage {
@@ -241,7 +243,6 @@ a {
 
 .chatSpace {
   align-self: center;
-  max-width: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -271,7 +272,7 @@ a {
   padding: 4px 8px;
   font-size: 1rem;
   text-wrap: wrap;
-  max-width: max(65%, 200px);
+  max-width: 90%;
   width: fit-content;
 }
 
@@ -342,4 +343,59 @@ a {
   font-size: 1rem;
   text-wrap: wrap;
   width: fit-content;
+}
+
+
+.shimmer>div {
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+  background-size: 1200px 100%;
+  border-radius: 20px;
+  height: 40px;
+}
+
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.shimmer {
+  width: 64%;
+  height: 50px;
+  border-radius: 0px 16px 16px 16px;
+  position: relative;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #e9ebf2;
+}
+
+.shimmer .longLine {
+  width: 100%;
+}
+
+.shimmer .shortLine {
+  width: 40%;
 }

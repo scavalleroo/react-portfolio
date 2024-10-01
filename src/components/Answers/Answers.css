@@ -1,13 +1,58 @@
 .bubbleCustom {
     background-color: #E9EBF2;
     border-radius: 0px 8px 8px 8px;
-    padding: 4px 8px;
+    padding: 8px;
     font-size: 1rem;
     text-wrap: wrap;
     display: flex;
     flex-direction: row;
     gap: 4px;
     width: 90%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bubbleCustom.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.line {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    width: 48px;
+    color: #A7A7A7;
+    padding: 0px 8px;
+}
+
+.line .verticalLine {
+    width: 2px;
+    height: 88%;
+    background-color: #A7A7A7;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line .verticalLine::before {
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background-color: #A7A7A7;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .bubbleCustom .content {
@@ -15,6 +60,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.spacer {
+    height: 24px;
 }
 
 .bubbleCustom .content .master {
@@ -27,20 +76,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-image: url('../../assets/img/MasterGraduation.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     gap: 24px;
     padding: 24px 16px;
     border-radius: 16px;
 }
 
+.bubbleCustom .content .master .eit {
+    background-image: url('../../assets/img/MasterGraduation.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bubbleCustom .content .master .non-eit {
+    background-image: url('../../assets/img/BachelorGraduation.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 .bubbleCustom .content .master .details .franceFlag {
     position: absolute;
     height: 50%;
-    background-color: #ffffff20;
+    background-color: #ffffff64;
     width: 100%;
     top: 50%;
     z-index: 1;
@@ -52,7 +113,7 @@
 .bubbleCustom .content .master .details .franceFlag::before {
     content: ' ';
     position: absolute;
-    background-color: #0055A420;
+    background-color: #00265420;
     width: 30%;
     height: 100%;
     z-index: 1;
@@ -62,13 +123,71 @@
 .bubbleCustom .content .master .details .franceFlag::after {
     content: ' ';
     position: absolute;
-    background-color: #EF413520;
+    background-color: #EF413564;
     width: 37%;
     height: 100%;
     right: 0;
     z-index: 1;
     border-bottom-right-radius: 16px;
 }
+
+.bubbleCustom .content .master .details .italyFlag {
+    position: absolute;
+    height: 50%;
+    background-color: #F1F2F164;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    left: 0px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .italyFlag::before {
+    content: ' ';
+    position: absolute;
+    background-color: #00924664;
+    width: 33.33%;
+    height: 100%;
+    z-index: 1;
+    border-top-left-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .italyFlag::after {
+    content: ' ';
+    position: absolute;
+    background-color: #CE2B3764;
+    width: 33.33%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    border-top-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .polandFlag {
+    position: absolute;
+    top: 50%;
+    background-color: #F1F2F164;
+    width: 100%;
+    height: 50%;
+    left: 0px;
+    z-index: 1;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .polandFlag:after {
+    content: ' ';
+    position: absolute;
+    background-color: #CE2B3764;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 1;
+}
+
 
 .bubbleCustom .content .master .details .spainFlag {
     position: absolute;
@@ -120,7 +239,7 @@
 }
 
 .bubbleCustom .content .master .details .group .title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     color: white;
 }
@@ -128,7 +247,7 @@
 .bubbleCustom .content .master .details .group .text {
     font-size: 14px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .bubbleCustom .content .master .projects {
@@ -139,7 +258,7 @@
 
 .bubbleCustom .content .master .projects>div {
     padding: 4px 16px 8px 16px;
-    border-radius: 16px 0px 16px 0px;
+    border-radius: 16px 4px 16px 4px;
     flex-grow: 1;
 }
 
@@ -159,6 +278,10 @@
     background-color: #0860A8;
 }
 
+.bubbleCustom .content .master .projects .wut {
+    background-color: #6AB597;
+}
+
 .bubbleCustom .content .master .projects .ups>img {
     position: absolute;
     right: 4px;
@@ -167,6 +290,13 @@
 }
 
 .bubbleCustom .content .master .projects .upm>img {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: 48px;
+}
+
+.bubbleCustom .content .master .projects .wut>img {
     position: absolute;
     right: 4px;
     top: 4px;
@@ -196,6 +326,21 @@
     width: fit-content;
     border-radius: 8px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+.bubbleCustom .content .master .projects .button .arrow {
+    margin-left: 4px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-10px);
+}
+
+.bubbleCustom .content .master .projects .button:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .bubbleCustom .content .master .projects .ups .button {
@@ -204,4 +349,173 @@
 
 .bubbleCustom .content .master .projects .upm .button {
     color: #0860A8;
+}
+
+.bubbleCustom .content .master .projects .wut .button {
+    color: #2D3843;
+}
+
+.callToAction {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: center;
+    margin-bottom: 32px;
+}
+
+.callToAction .title {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.callToAction .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.callToAction .buttons .leftButton {
+    background-color: #0000FF;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.callToAction .buttons .rightButton {
+    background-color: white;
+    color: #0000FF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* Work Experience */
+
+/* Air Liquide */
+.bubbleCustom .content .master .air-liquide {
+    background-image: url('../../assets/img/AirLiquideBg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bubbleCustom .content .master .air-liquide .blueFilter {
+    width: 100%;
+    height: 100%;
+    background-color: #00349B80;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 16px;
+}
+
+.bubbleCustom .content .master .air-liquide-box {
+    background-color: white;
+    gap: 4px !important;
+}
+
+.bubbleCustom .content .master .air-liquide-box .title {
+    color: #DD1B2D;
+    font-weight: 600;
+}
+
+.bubbleCustom .content .master .air-liquide-box .text {
+    color: #355C96;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bubbleCustom .content .master .air-liquide-box .text span {
+    font-weight: 500;
+}
+
+.gap-8 {
+    gap: 8px !important;
+}
+
+
+/* Niipy */
+.bubbleCustom .content .master .niipy {
+    background-image: url('../../assets/img/Niipy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bubbleCustom .content .master .niipy .blueFilter {
+    width: 100%;
+    height: 100%;
+    background-color: #3B797D80;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 16px;
+}
+
+.bubbleCustom .content .master .niipy-box {
+    background-image: linear-gradient(90deg, #08B17B, #33904B);
+    gap: 4px !important;
+}
+
+.bubbleCustom .content .master .niipy-box .title {
+    color: white;
+    font-weight: 600;
+}
+
+.bubbleCustom .content .master .niipy-box .text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bubbleCustom .content .master .niipy-box .text span {
+    font-weight: 500;
+}
+
+/* Rosterbook */
+.bubbleCustom .content .master .rosterbook {
+    background-image: url('../../assets/img/Rosterbook.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bubbleCustom .content .master .rosterbook .blueFilter {
+    width: 100%;
+    height: 100%;
+    background-color: #6A717090;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 16px;
+}
+
+.bubbleCustom .content .master .rosterbook-box {
+    background-image: linear-gradient(90deg, #F76162, #E67203);
+    gap: 4px !important;
+}
+
+.bubbleCustom .content .master .rosterbook-box .title {
+    color: white;
+    font-weight: 600;
+}
+
+.bubbleCustom .content .master .rosterbook-box .text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bubbleCustom .content .master .rosterbook-box .text span {
+    font-weight: 500;
 }
