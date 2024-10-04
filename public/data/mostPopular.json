@@ -1,0 +1,106 @@
+[
+    {
+        "image": "assets/img/700x1000/TuneCrafter.webp",
+        "title": {
+            "name": "Tune Crafter",
+            "href": "https://scavalleroo.github.io/Tune-Crafter/"
+        },
+        "location": "Université Paris-Saclay, Paris",
+        "timeframe": "September 2023 - October 2023",
+        "designConcept": "Tune Crafter is an innovative application that allows DJs, Producers, Artists and the Curious people to create new beats and sounds using hand gestures, without having to know how to use professional and complicated tools.",
+        "tags": "#GestureRecognition #SpeechRecognition #Music #ReactJS #Mediapipe #Webkit #Design #Analytics",
+        "coverImage": "assets/img/covers/1920x800/TuneCrafter.webp",
+        "titleDetails": "Create music with innovative interactions",
+        "centralVideo": "assets/img/covers/TuneCrafterDemo.mp4",
+        "centralImage": "",
+        "centralYoutube": "",
+        "leftBubbleDescriptions": [
+            {
+                "title": "Tech stack",
+                "description": "We used Vite.js and React.js with Typescript and Node.js. Gesture recognition used the Mediapipe library and speech recognition used the Webkit library."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Performace Tracking",
+                "description": "Google Analytics is integrated into the website to evaluate performance and analyse user behaviour and demographic information, enabling informed decisions to be made to improve the user experience."
+            },
+            {
+                "title": "Share",
+                "description": "Tune Crafter caught the attention of a lot of people on social media and I was invited to talk about it on the music podcast of <a target='_blank' href='https://www.instagram.com/good_soup.media/'>@good_soup.media</a> EP. 9 on the 02/12/23."
+            }
+        ]
+    },
+    {
+        "image": "assets/img/700x1000/DigitalNomads.webp",
+        "title": {
+            "name": "Digital Nomads App",
+            "href": "https://drive.google.com/file/d/14_3_hvNoJlfGaYkFP5xTt4yyiSEgtxzy/view?usp=sharing"
+        },
+        "location": "Universidad Politecnica de Madrid",
+        "timeframe": "March 2023 - June 2023",
+        "designConcept": "Digital Nomads is a platform that connects users with like-minded professionals and helps them find ideal workspaces. The platform encourages collaboration, enabling individuals to build relationships and work together towards common goals.",
+        "tags": "#Interviews #LowFiPrototypes #Android #UsabilityTesting #Evaluation #Design",
+        "coverImage": "assets/img/covers/1920x800/DigitalNomads.webp",
+        "titleDetails": "Rely on user feedback to improve",
+        "centralVideo": "assets/img/covers/DigitalNomadsProtoVideo.mp4",
+        "centralImage": "",
+        "centralYoutube": "<iframe width=\"100%\" height=\"400\" src=\"https://www.youtube.com/embed/Y4xxw8Yd-bE?si=rD-rSZrHrYTyM1Ar\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+        "leftBubbleDescriptions": [
+            {
+                "title": "Users Interviews",
+                "description": "Our initial task was to conduct 15 users interviews and observations in work cafes around Madrid to better comprehend the behaviors and needs of our users."
+            },
+            {
+                "title": "User Profiles: Student, Coorporate worker and Freelancer",
+                "description": "Our research showed that the primary focus for freelancers and corporate workers is to interact or collaborate with others on specific projects related to their field of work. Meanwhile, for students, the primary focus is obtaining information on where others work or study and having the ability to organize study groups."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Usability Testing",
+                "description": "Two different low-fidelity prototypes were developed to identify the most efficient design. We tested the usability of both low-fidelity prototypes with 15 participants and created two tasks for them to complete without guidance, encouraging them to find their own solutions."
+            },
+            {
+                "title": "HiFi Evaluation",
+                "description": "We created an HiFi version for Android of the best performing prototype and tested it with 16 participants and collected data on their effectiveness and efficiency."
+            },
+            {
+                "title": "Results",
+                "description": "The project concluded with a presentation of our work and potential design improvements for the future."
+            }
+        ]
+    },
+    {
+        "image": "assets/img/700x1000/Rosterbook.webp",
+        "title": {
+            "name": "Rosterbook",
+            "href": "https://www.instagram.com/rosterlook.it/"
+        },
+        "location": "Carpi, Italy",
+        "timeframe": "March 2020 - September 2020",
+        "designConcept": "Rosterbook is the first app that connects FIP and CSI registered players with sports managers for sports negotiations and player career history.",
+        "tags": "#Flutter #Dart #Firebase #Design #Business #Marketing #Startup #SocialMedia #GoogleAnalytics",
+        "coverImage": "assets/img/covers/1920x800/Rosterbook.webp",
+        "titleDetails": "Startup Experience",
+        "centralVideo": "assets/img/covers/RosterbookVideo.mp4",
+        "centralImage": "",
+        "centralYoutube": "",
+        "leftBubbleDescriptions": [
+            {
+                "title": "Big Data Collection",
+                "description": "I spent 3 months gathering information, designing, learning and coding the frontend and backend of the application all by myself. My brother helped me with the data collection and we managed to have the most complete data set of all the minor basketball teams in Italy."
+            },
+            {
+                "title": "Connecting Players and Managers",
+                "description": "The app allows players to create a CV of their sporting career. The profiles are then indexed and displayed through filtered searches, making it easier for sports managers and coaches to find and contact players."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Launch to the market",
+                "description": "The app had 5,000 downloads from basketball players in 2 months with more than 3,000 registered profiles. The requests were increasing and I could not do all the work myself and we did not have enough resources to keep the project going. It was a great learning experience, both technically and business wise. The application is no longer available, but who knows if it will come back in the future 😃"
+            }
+        ]
+    }
+]

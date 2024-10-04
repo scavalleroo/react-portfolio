@@ -1,0 +1,106 @@
+[
+    {
+        "image": "assets/img/700x1000/RunIt.webp",
+        "title": {
+            "name": "Run It",
+            "href": ""
+        },
+        "location": "Université Paris-Saclay, Paris",
+        "timeframe": "November 2023 - Dicember 2023",
+        "designConcept": "Run-it is a voice-activated wearable projector for runners, offering path selection and personalization with landmarks and points of interest, real-time running data, route issue reporting, map sharing, and access to favorite routes and run statistics.",
+        "tags": "#design #humancomputerinteraction #prototype #interviews #userprofile",
+        "coverImage": "assets/img/covers/1920x800/RunIt.webp",
+        "titleDetails": "Design a new navigation system for runners",
+        "centralVideo": "assets/img/covers/RunItVideo.mp4",
+        "centralImage": "",
+        "centralYoutube": "",
+        "leftBubbleDescriptions": [
+            {
+                "title": "User Interviews",
+                "description": "To gather information about navigation, we interviewed 10 runners in Paris and asked them to describe their navigation experiences and the problems they encountered."
+            },
+            {
+                "title": "Current and Future Scenarios",
+                "description": "We created a current scenario based on the interviews and a future scenario based on the current scenario and the latest technology available in December 2023."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Storyboard",
+                "description": "Given the future scenario, we created a storyboard to show how the product would be used in the future. The storyboard included 8 breakpoints and 3 personas that needed to interact with each other."
+            },
+            {
+                "title": "Prototyping and Filming",
+                "description": "We iterated 3 times on our first prototype, which was made with transparent paper and markers. We made a video based on our future scenario and had our video reviewed by other groups who helped us improve our design."
+            }
+        ]
+    },
+    {
+        "image": "assets/img/700x1000/TuneCrafterAR.webp",
+        "title": {
+            "name": "Tune Crafter AR",
+            "href": ""
+        },
+        "location": "Université Paris-Saclay, Paris",
+        "timeframe": "November 2023 - Dicember 2023",
+        "designConcept": "From the original Tune Crafter project, we decided to create an AR version of the application to allow users to play music with tangibles and AR.",
+        "tags": "#augmented #reality #music #tangibles #design #interaction #Unity #Vuforia #AR",
+        "coverImage": "assets/img/covers/1920x800/TuneCrafterAR.webp",
+        "titleDetails": "Playing music with tangibles and AR",
+        "centralVideo": "assets/img/covers/TuneCrafterAR.mp4",
+        "centralImage": "",
+        "centralYoutube": "",
+        "leftBubbleDescriptions": [
+            {
+                "title": "Unity and Vuforia",
+                "description": "The application was built using Unity and Vuforia. We used the Vuforia library to recognize the objects and the Unity library to create the interactions."
+            },
+            {
+                "title": "Tangibles",
+                "description": "To create the design of the tablet, we observed how DJs actually play the console and tried to make it easier for them to play with our tangibles."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Further Development",
+                "description": "The result of the project was the creation of an Android application that allows the user to view and interact with physical objects through the camera. Further development could include bringing this application to AR glasses and headsets to improve the user experience."
+            }
+        ]
+    },
+    {
+        "image": "assets/img/700x1000/I_love_music.png",
+        "title": {
+            "name": "I Love Music",
+            "href": "https://alessandro-cavallotti.gitbook.io/digital-fabrication/week-1"
+        },
+        "location": "Université Paris-Saclay, Paris",
+        "timeframe": "January 2024 - March 2024",
+        "designConcept": "I Love Music is a composition of simple notes in the shape of a heart, representing my love for music in all it's forms. Everything including the design iterations, drawing, printing and assembling was done by me.",
+        "tags": "#3dprinting #prusa #digialfabrication #fablab #music #love #autocad #fusion360 #flatsurface #modular #parametric #pressfit #foldable",
+        "coverImage": "assets/img/covers/1920x800/ILoveMusic.png",
+        "titleDetails": "Iterative design (3D printing)",
+        "centralVideo": "assets/img/covers/ILoveMusic.mp4",
+        "centralImage": "",
+        "centralYoutube": "",
+        "leftBubbleDescriptions": [
+            {
+                "title": "Drawing and Printing",
+                "description": "Autocad Fusion 360 was used to design the 3D shapes. Printing was done on Prusa 3D printers using PHA filaments, which are produced and consumed by bacteria and are therefore more sustainable than PLA."
+            },
+            {
+                "title": "Prototyping and Testing",
+                "description": "The difficulty of the project lay in the constraints of the project. 6 iterations of design and testing were required to improve the final product."
+            }
+        ],
+        "rightBubbleDescriptions": [
+            {
+                "title": "Mass production",
+                "description": "Once the design had been finalized, a total of 50 pieces were printed using optimization methods to maximize efficiency and minimize production time."
+            },
+            {
+                "title": "Final product",
+                "description": "Each piece could be connected to the others in seven ways. The final project was 50 pieces connected together to form a hearth shape, representing my love for music."
+            }
+        ]
+    }
+]

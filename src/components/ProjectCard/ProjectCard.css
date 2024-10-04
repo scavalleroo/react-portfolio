@@ -1,0 +1,240 @@
+.project-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    /* Align content in the center */
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card .title {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #f5f6fa;
+    padding: 8px 16px;
+    position: relative;
+    width: 100%;
+    margin: 2rem 1rem 1rem 1rem;
+    border-radius: 24px;
+    overflow: auto;
+}
+
+.modal-close {
+    cursor: pointer;
+    height: 36px;
+    border-radius: 25px;
+    user-select: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 24px;
+    background-color: #18181880;
+    color: white;
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    line-height: 0;
+    width: 36px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.projTitle {
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+}
+
+.blueFilter {
+    width: 100%;
+    height: 100%;
+    background-color: #18181898;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 16px;
+}
+
+.header .group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+}
+
+.header .group .title {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    z-index: 2;
+}
+
+.header .group .text {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    max-width: 500px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+}
+
+.center .details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.center .details>div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    padding: 4px 16px 8px 16px;
+    border-radius: 16px 0px 16px 16px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    line-break: anywhere;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.center .details .title {
+    background-image: linear-gradient(90deg, #000080, #0000FF);
+    font-weight: 600;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1rem;
+    line-break: strict !important;
+}
+
+.center .details .text {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.center .centralVideo,
+.center .centralImage {
+    width: 468px;
+    height: 585px;
+    border-radius: 16px;
+    align-self: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.center .titleDetails {
+    font-family: 'Swear Display';
+    font-weight: bold;
+    font-size: 2.4rem;
+    background-image: linear-gradient(90deg, #000080, #0000FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    height: min-content;
+    width: 100%;
+    line-break: normal !important;
+}
+
+.center .callToAction {
+    padding: 24px;
+    background-color: #e0e5ef;
+    width: 100%;
+}
+
+.playButton {
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: white;
+    padding: 8px 16px;
+    width: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    right: 24px;
+    bottom: 16px;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.playButton img {
+    height: 16px;
+    width: 16px;
+}

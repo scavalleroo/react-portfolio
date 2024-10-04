@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Education from '../components/Answers/Education';
 import WorkExperience from '../components/Answers/WorkExperience';
 import SelectedWork from '../components/Answers/SelectedWork';
+import Contacts from '../components/Answers/Contacts';
 import React, { useRef, useEffect } from 'react';
 
 function AskToMe() {
@@ -66,7 +67,7 @@ function AskToMe() {
             <div className='content'>
                 <div className='leftPanel'>
                     <div className='disclamer'>
-                        Not Another <Link to="/"><div className='textColorChange'>Portfolio</div></Link>
+                        Not Another <Link to="/"><div className='textColorChange underline'>Portfolio</div></Link>
                     </div>
                     <div className='titlePage'>
                         Ask to Me
@@ -101,7 +102,7 @@ function AskToMe() {
                                                 {message.text === 'WorkExperience' ? <WorkExperience /> :
                                                     message.text === 'Education' ? <Education /> :
                                                         message.text === 'SelectedWork' ? <SelectedWork />
-                                                            : ''}
+                                                            : <Contacts />}
                                             </div>
                                         </div>
                                     ) : (

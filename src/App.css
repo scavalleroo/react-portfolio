@@ -176,6 +176,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  flex-flow: row wrap;
+  text-wrap: wrap;
+  line-break: anywhere;
 }
 
 .contacts .icon {
@@ -221,10 +224,12 @@ a {
   overflow: hidden;
   height: fit-content;
   width: 100%;
+  text-wrap: wrap;
 }
 
 .leftPanel {
   padding: 16px 0px;
+  text-wrap: nowrap;
 }
 
 .titlePage {
@@ -257,7 +262,7 @@ a {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  width: fit-content;
+  width: 100%;
 }
 
 .profilePicChat {
@@ -288,7 +293,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  width: fit-content;
+  width: 100%;
 }
 
 .messageSide .nameSender {
@@ -398,4 +403,19 @@ a {
 
 .shimmer .shortLine {
   width: 40%;
+}
+
+/* Selected Work */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 projects per row */
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.underline {
+  text-decoration: underline !important;
 }

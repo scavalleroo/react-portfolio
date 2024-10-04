@@ -3,12 +3,13 @@
     border-radius: 0px 8px 8px 8px;
     padding: 8px;
     font-size: 1rem;
-    text-wrap: wrap;
     display: flex;
     flex-direction: row;
     gap: 4px;
-    width: 90%;
     opacity: 0;
+    text-wrap: wrap;
+    max-width: 90%;
+    width: fit-content;
     visibility: hidden;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -260,9 +261,6 @@
     padding: 4px 16px 8px 16px;
     border-radius: 16px 4px 16px 4px;
     flex-grow: 1;
-}
-
-.bubbleCustom .content .master .projects>div {
     color: white;
     display: flex;
     flex-direction: column;
@@ -518,4 +516,70 @@
 
 .bubbleCustom .content .master .rosterbook-box .text span {
     font-weight: 500;
+}
+
+/* Selected Work */
+.gap-0 {
+    gap: 0px !important;
+}
+
+.content .title-gallery {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 0px 0px 24px;
+}
+
+/* Contacts */
+.contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 8px 48px;
+}
+
+.contacts>div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contacts>div .title {
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    padding: 4px 16px;
+    width: fit-content;
+}
+
+.contacts .work .title {
+    background-image: linear-gradient(90deg, #000080, #0000FF);
+}
+
+.contacts .other .title {
+    background-image: linear-gradient(90deg, #F76162, #E67203);
+}
+
+.contacts>div .groupContact .icon img {
+    width: 36px;
+    height: 36px;
+}
+
+.contacts>div .groupContact .data {
+    font-size: 14px;
+}
+
+.contacts>div .groupContact .data .description {
+    font-weight: 500;
+}
+
+.contacts>div .groupContact {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.contacts>div .groupContact .data .link {
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -1,49 +1,42 @@
-import ups from '../../assets/icons/saclay.png';
-import upm from '../../assets/icons/upm.png';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import React, { useEffect, useState } from 'react';
 import './Answers.css';
 
 const SelectedWork = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [popularProjects, setPopularProjects] = useState([]);
+    const [recentProjects, setRecentProjects] = useState([]);
 
+    // Fetch the JSON data when the component mounts
     useEffect(() => {
+        fetch('data/mostPopular.json')
+            .then((response) => response.json())
+            .then((data) => setPopularProjects(data))
+            .catch((error) => console.error('Error fetching data:', error));
+
+
+        fetch('data/mostRecent.json')
+            .then((response) => response.json())
+            .then((data) => setRecentProjects(data))
+            .catch((error) => console.error('Error fetching data:', error));
+
         setTimeout(setIsVisible(true), 1400);
     }, []);
 
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
-            <div className='line'>
-                <div className='popular'>
-                    Most Popular
-                    <div className='verticalLine'></div>
+            <div className='content gap-0'>
+                <div className='title-gallery'>Most popular projects</div>
+                <div className='gallery'>
+                    {popularProjects.map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
                 </div>
-                <div className='popular'>
-                    Most Recent
-                    <div className='verticalLine'></div>
-                </div>
-            </div>
-            <div className='content'>
-                <div className='projectGallery'>
-                    <div className='projectWhite proj-rosterbook'>
-                        <div className='projectStory'>Project story →</div>
-                    </div>
-                    <div className='projectWhite proj-tune-crafter'>
-                        <div className='projectStory'>Project story →</div>
-                        <div className='madeIn'>
-                            <div className='title'>Made in</div>
-                            <img src={ups} className='ups' />
-                        </div>
-                    </div>
-                    <div className='projectBlack proj-nomads'>
-                        <div className='projectStory'>Project story →</div>
-                        <div className='madeIn'>
-                            <div className='title'>Made in</div>
-                            <img src={upm} className='upm' />
-                        </div>
-                    </div>
-                </div>
-                <div className='projectGallery'>
-
+                <div className='title-gallery'>Most recent projects</div>
+                <div className='gallery'>
+                    {recentProjects.map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
                 </div>
                 <div className='callToAction'>
                     <div className='title'>

@@ -30,7 +30,7 @@ function Home() {
     return (
         <div className="App">
             <div className='disclamer'>
-                Not Another <Link to="/"><div className='textColorChange'>Portfolio</div></Link>
+                Not Another <Link to="/"><div className='textColorChange underline'>Portfolio</div></Link>
             </div>
             <div className='header'>
                 <div className='myName'>
