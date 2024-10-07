@@ -44,13 +44,13 @@ const ProjectModal = ({ show, onClose, project }) => {
                         <div className='details'>
                             <div className='titleDetails'>{project.titleDetails}</div>
                             {project.leftBubbleDescriptions.map((data) => (
-                                <div className='project-box'>
+                                <div className='project-box' key={data.title}>
                                     <div className='title'>{data.title}</div>
                                     <div className='text'>{data.description}</div>
                                 </div>
                             ))}
                             {project.rightBubbleDescriptions.map((data) => (
-                                <div className='project-box'>
+                                <div className='project-box' key={data.title}>
                                     <div className="title">{data.title}</div>
                                     <div className="text">{data.description}</div>
                                 </div>
@@ -58,7 +58,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                         </div>
                         {(
                             project.centralVideo && project.centralVideo !== "" ?
-                                <video id="centralVideo" src={require(`../../${project.centralVideo}`)} alt="" className="centralVideo" controls autoplay muted></video>
+                                <video id="centralVideo" src={require(`../../${project.centralVideo}`)} alt="" className="centralVideo" controls autoPlay muted></video>
                                 : project.centralImage && project.centralImage !== "" ?
                                     <img id="centralImage" src={require(`../../${project.centralImage}`)} alt="" className="centralImage" /> : ""
                         )}

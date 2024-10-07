@@ -1,6 +1,7 @@
 import saclay from '../../assets/icons/saclay.png';
 import upm from '../../assets/icons/upm.png'
 import wut from '../../assets/icons/WUT.jpg'
+import { saveAs } from 'file-saver';
 import React, { useEffect, useState } from 'react';
 import './Answers.css';
 
@@ -11,6 +12,7 @@ const Education = () => {
         const timer = setTimeout(() => setIsVisible(true), 400);
         return () => clearTimeout(timer);
     }, []);
+
 
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>

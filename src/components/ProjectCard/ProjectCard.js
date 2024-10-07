@@ -27,7 +27,7 @@ const ProjectCard = ({ project }) => {
                     <div className='text'>{project.location}</div>
                 </div>
             </div>
-            <ProjectModal project={project} show={showModal} onClose={handleCloseModal} />
+            <ProjectModal project={project} show={showModal} onClose={handleCloseModal} key={project.image} />
         </div>
     );
 };
