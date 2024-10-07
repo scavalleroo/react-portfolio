@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8e47cf79.css",
-    "main.js": "/static/js/main.6fb3d64c.js",
+    "main.js": "/static/js/main.00a03971.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
@@ -11,10 +11,13 @@
     "static/media/TuneCrafterDemo.mp4": "/static/media/TuneCrafterDemo.f5e58bc1f63d9e66c8b3.mp4",
     "static/media/DigitalNomadsProtoVideo.mp4": "/static/media/DigitalNomadsProtoVideo.64a7aabb7138aa041281.mp4",
     "static/media/BachelorGraduation.png": "/static/media/BachelorGraduation.eea417b9d020cac4dde6.png",
+    "static/media/ILoveMusic.png": "/static/media/ILoveMusic.eaf996726798246752f3.png",
     "static/media/Rosterbook.png": "/static/media/Rosterbook.0e363a8db71c225cef94.png",
+    "static/media/TuneCrafterAR.png": "/static/media/TuneCrafterAR.bcf282f505a8b3953cd1.png",
     "static/media/MasterGraduation.png": "/static/media/MasterGraduation.289740e7c995655a02d3.png",
-    "static/media/ILoveMusic.png": "/static/media/ILoveMusic.333f3d7aba1daacf3ba0.png",
     "static/media/Professional.png": "/static/media/Professional.82c8185e6b8d5555b97d.png",
+    "static/media/TuneCrafter.png": "/static/media/TuneCrafter.947d090a32edc8924435.png",
+    "static/media/RunIt.png": "/static/media/RunIt.656d5b164a0edfef13f5.png",
     "static/media/Niipy.jpg": "/static/media/Niipy.72e508281f80cdd4c90f.jpg",
     "static/media/Personal.webp": "/static/media/Personal.b6ef82b305b22aefbbc0.webp",
     "static/media/Face.png": "/static/media/Face.8b1b432a9d3e87a6ce18.png",
@@ -105,15 +108,14 @@
     "static/media/github.png": "/static/media/github.f91439ead6566b3f97ec.png",
     "static/media/instagram.png": "/static/media/instagram.ba61479053b2692bdafe.png",
     "static/media/index.cjs": "/static/media/index.1282334337c6cac7deca.cjs",
-    "static/media/favicon.ico": "/static/media/favicon.02d2148fd78ceeb09ebf.ico",
     "static/media/linkedin.png": "/static/media/linkedin.d9c5f047e277b6997e74.png",
     "index.html": "/index.html",
     "main.8e47cf79.css.map": "/static/css/main.8e47cf79.css.map",
-    "main.6fb3d64c.js.map": "/static/js/main.6fb3d64c.js.map",
+    "main.00a03971.js.map": "/static/js/main.00a03971.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e47cf79.css",
-    "static/js/main.6fb3d64c.js"
+    "static/js/main.00a03971.js"
   ]
 }
