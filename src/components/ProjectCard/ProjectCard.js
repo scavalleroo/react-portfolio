@@ -19,11 +19,7 @@ const ProjectCard = ({ project }) => {
                 <img src={require(`../../${project.image}`)} alt={project.title.name} className="project-image" />
                 <div className='blueFilter'></div>
                 <div className='group'>
-                    <div className='title'>Title</div>
-                    <div className='text'>{project.title.name}</div>
-                </div>
-                <div className='group'>
-                    <div className='title'>Location</div>
+                    <div className='title'>{project.title.name}</div>
                     <div className='text'>{project.location}</div>
                 </div>
             </div>

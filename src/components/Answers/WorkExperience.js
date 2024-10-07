@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import AppFunctions from '../../utils/AppFunctions';
 import './Answers.css';
 
 const WorkExperience = () => {
@@ -8,8 +9,19 @@ const WorkExperience = () => {
         setTimeout(setIsVisible(true), 1400);
     }, []);
 
+    const appFunctionsRef = useRef(null);
+
+    const handleDownloadCV = () => {
+        appFunctionsRef.current.downloadCV();
+    };
+
+    const handleEmailClick = () => {
+        appFunctionsRef.current.handleEmailClick();
+    };
+
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+            <AppFunctions ref={appFunctionsRef} />
             <div className='line'>
                 Most Recent
                 <div className='verticalLine'></div>
@@ -144,10 +156,10 @@ const WorkExperience = () => {
                         Do you want to know more about my working experience?
                     </div>
                     <div className='buttons'>
-                        <div className='leftButton'>
+                        <div className='leftButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
-                        <div className='rightButton'>
+                        <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
                         </div>
                     </div>

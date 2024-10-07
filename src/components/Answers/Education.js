@@ -1,8 +1,8 @@
 import saclay from '../../assets/icons/saclay.png';
 import upm from '../../assets/icons/upm.png'
 import wut from '../../assets/icons/WUT.jpg'
-import { saveAs } from 'file-saver';
-import React, { useEffect, useState } from 'react';
+import AppFunctions from '../../utils/AppFunctions';
+import React, { useEffect, useState, useRef } from 'react';
 import './Answers.css';
 
 const Education = () => {
@@ -13,9 +13,21 @@ const Education = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    const appFunctionsRef = useRef(null);
+
+    const handleDownloadCV = () => {
+        appFunctionsRef.current.downloadCV();
+    };
+
+    const handleEmailClick = () => {
+        appFunctionsRef.current.handleEmailClick();
+    };
+
+
 
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+            <AppFunctions ref={appFunctionsRef} />
             <div className='line'>
                 Most Recent
                 <div className='verticalLine'></div>
@@ -61,7 +73,7 @@ const Education = () => {
                                 <div className='title'>Tune Crafter</div>
                                 <div className='text'>Make music with hands gestures</div>
                             </div>
-                            <div className='button'>PLAY <span className="arrow">→</span></div>
+                            <div className='button' onClick={() => window.open('https://scavalleroo.github.io/Tune-Crafter/', '_blank')} >PLAY <span className="arrow">→</span></div>
                         </div>
                         <div className='upm'>
                             <img src={upm} />
@@ -69,7 +81,7 @@ const Education = () => {
                                 <div className='title'>Digital Nomads App</div>
                                 <div className='text'>Meeting app for Digital Nomads</div>
                             </div>
-                            <div className='button'>PLAY <span className="arrow">→</span></div>
+                            <div className='button' onClick={() => window.open('https://drive.google.com/file/d/14_3_hvNoJlfGaYkFP5xTt4yyiSEgtxzy/view?usp=sharing', '_blank')}>READ REPORT <span className="arrow">→</span></div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +123,7 @@ const Education = () => {
                                 <div className='title'>ECLAT</div>
                                 <div className='text'>ML Algorithm</div>
                             </div>
-                            <div className='button'>GITHUB PROJECT <span className="arrow">→</span></div>
+                            <div className='button' onClick={() => window.open('https://github.com/scavalleroo/eclat', '_blank')}>GITHUB PROJECT <span className="arrow">→</span></div>
                         </div>
                         <div className='wut'>
                             <img src={wut} />
@@ -119,7 +131,7 @@ const Education = () => {
                                 <div className='title'>Direct DFA to RegEx</div>
                                 <div className='text'>DFA to RegEx algorithm</div>
                             </div>
-                            <div className='button'>GITHUB PROJEC <span className="arrow">→</span></div>
+                            <div className='button' onClick={() => window.open('https://github.com/scavalleroo/direct-dfa', '_blank')}>GITHUB PROJECT <span className="arrow">→</span></div>
                         </div>
                     </div>
                 </div>
@@ -128,10 +140,10 @@ const Education = () => {
                         Do you want to know more about my education?
                     </div>
                     <div className='buttons'>
-                        <div className='leftButton'>
+                        <div className='leftButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
-                        <div className='rightButton'>
+                        <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
                         </div>
                     </div>

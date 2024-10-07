@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
+import AppFunctions from '../../utils/AppFunctions';
 import externalLink from '../../assets/icons/external-link.png';
 import './ProjectCard.css';
 
 const ProjectModal = ({ show, onClose, project }) => {
+    const appFunctionsRef = useRef(null);
+
     if (!show) {
         return null;
     }
@@ -14,8 +17,13 @@ const ProjectModal = ({ show, onClose, project }) => {
         backgroundImage: `url(${backgroundImage})`,
     };
 
+    const handleEmailClick = () => {
+        appFunctionsRef.current.handleEmailClick();
+    };
+
     return ReactDOM.createPortal(
         <div className="modal-overlay">
+            <AppFunctions ref={appFunctionsRef} />
             <div className="modal-content">
                 <span className="modal-close" onClick={onClose}>&times;</span>
                 <div className='center'>
@@ -38,7 +46,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                             <div className='title'>Tags</div>
                             <div className='text'>{project.tags}</div>
                         </div>
-                        {project.title.href ? (<div className='playButton'>{project.title.name} <img src={externalLink} /></div>) : ''}
+                        {project.title.href ? (<div className='playButton' onClick={() => window.open(project.title.href, '_blank')}>{project.title.name} <img src={externalLink} /></div>) : ''}
                     </div>
                     <div className='information'>
                         <div className='details'>
@@ -68,7 +76,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                             Do you want to know more about {project.title.name}?
                         </div>
                         <div className='buttons'>
-                            <div className='leftButton'>
+                            <div className='leftButton' onClick={handleEmailClick}>
                                 Contact Me
                             </div>
                         </div>

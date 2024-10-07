@@ -584,6 +584,36 @@
     cursor: pointer;
 }
 
+/* Add styles for the notification */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    /* Green color for success */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    /* Ensures it stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeOut 3s forwards;
+    /* Adds fade-out effect */
+}
+
+/* Optional: fade-out animation */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .bubbleCustom .content .master .projects {

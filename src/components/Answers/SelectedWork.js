@@ -1,11 +1,19 @@
 import ProjectCard from '../ProjectCard/ProjectCard';
-import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+import AppFunctions from '../../utils/AppFunctions';
 import './Answers.css';
 
 const SelectedWork = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [popularProjects, setPopularProjects] = useState([]);
     const [recentProjects, setRecentProjects] = useState([]);
+
+    const appFunctionsRef = useRef(null);
+
+    const handleEmailClick = () => {
+        appFunctionsRef.current.handleEmailClick();
+    };
 
     // Fetch the JSON data when the component mounts
     useEffect(() => {
@@ -25,6 +33,7 @@ const SelectedWork = () => {
 
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+            <AppFunctions ref={appFunctionsRef} />
             <div className='content gap-0'>
                 <div className='title-gallery'>Most popular projects</div>
                 <div className='gallery'>
@@ -43,10 +52,10 @@ const SelectedWork = () => {
                         Do you want to know more about my work?
                     </div>
                     <div className='buttons'>
-                        <div className='leftButton'>
+                        <Link to="/selectedwork" className='leftButton'>
                             See all the projects
-                        </div>
-                        <div className='rightButton'>
+                        </Link>
+                        <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
                         </div>
                     </div>
