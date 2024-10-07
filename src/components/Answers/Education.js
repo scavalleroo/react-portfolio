@@ -21,6 +21,7 @@ const Education = () => {
             <div className='content'>
                 <div className='master'>
                     <div className='details eit'>
+                        <div className='blueFilter'></div>
                         <div className='spainFlag'>
                             <span className="red stripe top"></span>
                             <span className="yellow stripe"></span>
@@ -73,6 +74,7 @@ const Education = () => {
                 <div className='spacer'></div>
                 <div className='master'>
                     <div className='details non-eit'>
+                        <div className='blueFilter'></div>
                         <div className='italyFlag'>
                         </div>
                         <div className='polandFlag'></div>

@@ -124,7 +124,7 @@
 .bubbleCustom .content .master .details .franceFlag::after {
     content: ' ';
     position: absolute;
-    background-color: #EF413564;
+    background-color: #AA151B20;
     width: 37%;
     height: 100%;
     right: 0;
@@ -582,4 +582,23 @@
 .contacts>div .groupContact .data .link {
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .bubbleCustom .content .master .projects {
+        flex-direction: column !important;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .contacts {
+        padding: 8px;
+    }
+
+    .contacts>div {
+        gap: 16px;
+    }
 }

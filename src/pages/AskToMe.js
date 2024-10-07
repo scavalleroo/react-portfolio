@@ -64,16 +64,8 @@ function AskToMe() {
 
     return (
         <div className="AskToMe">
-            <div className='content'>
-                <div className='leftPanel'>
-                    <div className='disclamer'>
-                        Not Another <Link to="/"><div className='textColorChange underline'>Portfolio</div></Link>
-                    </div>
-                    <div className='titlePage'>
-                        Ask to Me
-                    </div>
-                    <Menu />
-                </div>
+            <div className='content displayMobile'>
+                <Menu title="Ask to Me" />
                 <div className='chatSpace'>
                     <div className='myMessageChat'>
                         <img src={profilePic} className='profilePicChat' />

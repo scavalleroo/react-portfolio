@@ -22,7 +22,7 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .disclamer {
@@ -41,7 +41,8 @@ body {
   justify-content: start;
   flex-wrap: wrap;
   margin-bottom: 48px;
-  margin-top: 16px;
+  margin-top: 36px;
+  flex-direction: column;
 }
 
 .textColorChange:hover {
@@ -52,7 +53,27 @@ body {
 }
 
 .header {
-  cursor: default;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
+  padding: 24px 0px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.headerHome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 24px 0px;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .myName {
@@ -89,6 +110,7 @@ body {
   cursor: default;
   width: fit-content;
   line-height: 80px;
+  letter-spacing: 3px;
 }
 
 .msc {
@@ -99,7 +121,8 @@ body {
 }
 
 .callToActions {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   width: 100%;
   justify-content: start;
   gap: 16px;
@@ -225,11 +248,6 @@ a {
   height: fit-content;
   width: 100%;
   text-wrap: wrap;
-}
-
-.leftPanel {
-  padding: 16px 0px;
-  text-wrap: nowrap;
 }
 
 .titlePage {
@@ -419,3 +437,184 @@ a {
 .underline {
   text-decoration: underline !important;
 }
+
+/* Contacts */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 48px;
+  overflow-y: auto;
+}
+
+.rightPanel .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.rightPanel .contacts {
+  background-image: url('/src/assets/img/office.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 24px;
+  padding: 24px 16px;
+  border-radius: 16px;
+  height: fit-content;
+}
+
+.rightPanel .contacts .group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+  width: fit-content;
+  z-index: 3;
+  color: white;
+}
+
+.rightPanel .contacts .group .title {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0px !important;
+}
+
+.rightPanel .contacts .group .link {
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.rightPanel .contacts .callToAction {
+  width: fit-content !important;
+  margin-top: 24px;
+  margin-bottom: 0px !important;
+  z-index: 3;
+}
+
+.rightPanel .contacts .callToAction .title {
+  font-weight: 400 !important;
+}
+
+.rightPanel .contacts .callToAction {
+  gap: 8px !important;
+}
+
+.rightPanel .text {
+  color: #797988;
+  font-size: 14px;
+  text-align: center;
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+.blueFilter {
+  width: 100%;
+  height: 100%;
+  background-color: #18181898;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-radius: 16px;
+}
+
+.contentContacts {
+  padding: 0px 16px;
+}
+
+/* Reponsive */
+@media screen and (max-width: 768px) {
+  .bigMe {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .disclamer {
+    margin-bottom: 0px !important;
+    margin-top: 8px !important;
+  }
+
+  .myName {
+    gap: 8px;
+  }
+
+  .myName,
+  .funny,
+  .msc {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .funny {
+    letter-spacing: 0.8px;
+  }
+
+  .App,
+  .AskToMe {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .header {
+    padding: 8px 8px 80px 8px !important;
+    gap: 8px !important;
+  }
+
+  .headerHome {
+    gap: 8px !important;
+  }
+
+  .callToActions {
+    gap: 4px;
+    padding: 8px 0px;
+  }
+
+  .buttonAction .button {
+    font-size: 18px;
+    padding: 4px 16px;
+  }
+
+  .displayMobile {
+    flex-direction: column !important;
+  }
+
+  .profilePicChat {
+    height: 24px;
+    width: 24px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  .callToAction {
+    margin-top: 24px;
+  }
+
+  .callToAction .title {
+    font-size: 16px !important;
+  }
+}
+
+/* Styles for screens that are at least 1024px wide (desktops and larger) */
+/* @media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    background-color: #e0e0e0;
+  }
+} */
+
+/* Styles for screens smaller than 480px wide (mobile phones) */
+/* @media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    background-color: #ffffff;
+  }
+} */

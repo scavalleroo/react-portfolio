@@ -19,16 +19,8 @@ function SelectedWork() {
 
     return (
         <div className="AskToMe">
-            <div className='content'>
-                <div className='leftPanel'>
-                    <div className='disclamer'>
-                        Not Another <Link to="/"><div className='textColorChange underline'>Portfolio</div></Link>
-                    </div>
-                    <div className='titlePage'>
-                        Selected Work
-                    </div>
-                    <Menu />
-                </div>
+            <div className='content displayMobile'>
+                <Menu title="Selected Work" />
                 <div className='gallery'>
                     {projects.map((project, index) => (
                         <ProjectCard key={index} project={project} />

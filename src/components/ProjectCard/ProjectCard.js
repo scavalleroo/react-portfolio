@@ -17,8 +17,15 @@ const ProjectCard = ({ project }) => {
         <div>
             <div className="project-card" onClick={handleOpenModal}>
                 <img src={require(`../../${project.image}`)} alt={project.title.name} className="project-image" />
-                <div className='title'>{project.title.name}</div>
-                <p>{project.location}</p>
+                <div className='blueFilter'></div>
+                <div className='group'>
+                    <div className='title'>Title</div>
+                    <div className='text'>{project.title.name}</div>
+                </div>
+                <div className='group'>
+                    <div className='title'>Location</div>
+                    <div className='text'>{project.location}</div>
+                </div>
             </div>
             <ProjectModal project={project} show={showModal} onClose={handleCloseModal} />
         </div>

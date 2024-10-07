@@ -30,9 +30,9 @@ function Home() {
     return (
         <div className="App">
             <div className='disclamer'>
-                Not Another <Link to="/"><div className='textColorChange underline'>Portfolio</div></Link>
+                <Link to="/">Not Another <div className='textColorChange underline'>Portfolio</div></Link>
             </div>
-            <div className='header'>
+            <div className='headerHome'>
                 <div className='myName'>
                     <div className='bigMe'>Hi, </div>I'm <div className={`blue ${fadeClass}`}>{myName}</div>
                 </div>
@@ -53,7 +53,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='buttonAction'>
-                    <div className='button'>Selected Work</div>
+                    <Link to="/selectedwork" className='button'>Selected Work</Link>
                     <div className='myMessage'>
                         <img src={profilePic} className='smallProfile' />
                         <div className='bubble'>
@@ -62,7 +62,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='buttonAction'>
-                    <div className='button'>Contact Me</div>
+                    <Link to="/contactme" className='button'>Contact Me</Link>
                     <div className='myMessage'>
                         <img src={profilePic} className='smallProfile' />
                         <div className='bubble'>

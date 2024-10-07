@@ -1,12 +1,18 @@
 .project-card {
     background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-align: center;
     /* Align content in the center */
     cursor: pointer;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    justify-content: end;
 }
 
 .project-card:hover {
@@ -15,20 +21,35 @@
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: absolute;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 16px;
+    top: 0px;
+    left: 0px;
 }
 
-.project-card .title {
+.project-card .group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+    text-align: left;
+}
+
+.project-card .group .title {
     font-weight: 600;
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+    z-index: 2;
 }
 
-p {
+.project-card .group .text {
     font-size: 14px;
-    color: #777;
+    color: white;
+    font-weight: 500;
+    max-width: 500px;
+    position: relative;
 }
 
 /* Modal styles */
@@ -93,17 +114,7 @@ p {
 }
 
 .header {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
-    gap: 24px;
     padding: 24px 16px;
-    border-radius: 16px;
 }
 
 .blueFilter {
@@ -135,6 +146,7 @@ p {
     color: white;
     font-weight: 500;
     max-width: 500px;
+    position: relative;
 }
 
 .information {
@@ -181,6 +193,7 @@ p {
     color: black;
     font-size: 14px;
     font-weight: 400;
+    position: relative;
 }
 
 .center .centralVideo,
@@ -237,4 +250,16 @@ p {
 .playButton img {
     height: 16px;
     width: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .information {
+        flex-direction: column !important;
+    }
+
+    .centralImage,
+    .centralVideo {
+        width: auto !important;
+    }
 }
