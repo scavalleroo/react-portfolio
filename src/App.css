@@ -354,6 +354,12 @@ a {
   background-color: #0000FF;
 }
 
+.conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .conversation .userMessage {
   gap: 0px;
 }
