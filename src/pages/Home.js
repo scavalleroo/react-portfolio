@@ -32,41 +32,43 @@ function Home() {
             <div className='disclamer'>
                 <Link to="/">Not Another <div className='textColorChange underline'>Portfolio</div></Link>
             </div>
-            <div className='headerHome'>
-                <div className='myName'>
-                    <div className='bigMe'>Hi, </div>I'm <div className={`blue ${fadeClass}`}>{myName}</div>
+            <div className='centerHome'>
+                <div className='headerHome'>
+                    <div className='myName'>
+                        <div className='bigMe'>Hi, </div>I'm <div className={`blue ${fadeClass}`}>{myName}</div>
+                    </div>
+                    <div className='funny textColorChange'>UX/UI Designer</div>
+                    <div className='msc'>
+                        MSc in Human Computer Interaction,
+                    </div>
+                    <div className='funny textColorChange'>Driven by Innovation</div>
                 </div>
-                <div className='funny textColorChange'>UX/UI Designer</div>
-                <div className='msc'>
-                    MSc in Human Computer Interaction,
-                </div>
-                <div className='funny textColorChange'>Driven by Innovation</div>
-            </div>
-            <div className='callToActions'>
-                <div className='buttonAction'>
-                    <Link to="/asktome" className='button'>Ask To Me</Link>
-                    <div className='myMessage'>
-                        <img src={profilePic} className='smallProfile' />
-                        <div className='bubble'>
-                            Learn more about me
+                <div className='callToActions'>
+                    <div className='buttonAction'>
+                        <Link to="/asktome" className='button'>Ask To Me</Link>
+                        <div className='myMessage'>
+                            <img src={profilePic} className='smallProfile' />
+                            <div className='bubble'>
+                                Learn more about me
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='buttonAction'>
-                    <Link to="/selectedwork" className='button'>Selected Work</Link>
-                    <div className='myMessage'>
-                        <img src={profilePic} className='smallProfile' />
-                        <div className='bubble'>
-                            Discover the methodology
+                    <div className='buttonAction'>
+                        <Link to="/selectedwork" className='button'>Selected Work</Link>
+                        <div className='myMessage'>
+                            <img src={profilePic} className='smallProfile' />
+                            <div className='bubble'>
+                                Discover the methodology
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='buttonAction'>
-                    <Link to="/contactme" className='button'>Contact Me</Link>
-                    <div className='myMessage'>
-                        <img src={profilePic} className='smallProfile' />
-                        <div className='bubble'>
-                            Drop me a message!
+                    <div className='buttonAction'>
+                        <Link to="/contactme" className='button'>Contact Me</Link>
+                        <div className='myMessage'>
+                            <img src={profilePic} className='smallProfile' />
+                            <div className='bubble'>
+                                Drop me a message!
+                            </div>
                         </div>
                     </div>
                 </div>

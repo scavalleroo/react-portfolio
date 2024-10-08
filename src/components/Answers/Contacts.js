@@ -22,25 +22,26 @@ const Education = () => {
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
             <AppFunctions ref={appFunctionsRef} />
-            <div className='content'>
+            <div className='content contentContact'>
+                <div className='filterContacts'></div>
                 <div className='contacts'>
                     <div className='work'>
                         <div className='title'>
                             Work Contacts
                         </div>
                         <div className='groupContact'>
-                            <div className='icon'>
+                            {/* <div className='icon'>
                                 <img src={email} />
-                            </div>
+                            </div> */}
                             <div className='data'>
                                 <div className='description'>Send me an email at:</div>
                                 <div className='link' onClick={handleEmailClick}>cavallotti.alessandro00@gmail.com</div>
                             </div>
                         </div>
                         <div className='groupContact'>
-                            <div className='icon'>
+                            {/* <div className='icon'>
                                 <img src={linkedin} />
-                            </div>
+                            </div> */}
                             <div className='data'>
                                 <div className='description'>Connect on Linkedin</div>
                                 <div className='link' onClick={() => window.open('https://www.linkedin.com/in/alecava/', '_blank')}>https://www.linkedin.com/in/alecava/</div>
@@ -52,18 +53,18 @@ const Education = () => {
                             Other Contacts
                         </div>
                         <div className='groupContact'>
-                            <div className='icon'>
+                            {/* <div className='icon'>
                                 <img src={instagram} />
-                            </div>
+                            </div> */}
                             <div className='data'>
                                 <div className='description'>Follow me on Instagram</div>
                                 <div className='link' onClick={() => window.open('https://www.instagram.com/scavalleroo/', '_blank')}>https://www.instagram.com/scavalleroo/</div>
                             </div>
                         </div>
                         <div className='groupContact'>
-                            <div className='icon'>
+                            {/* <div className='icon'>
                                 <img src={github} />
-                            </div>
+                            </div> */}
                             <div className='data'>
                                 <div className='description'>Check out my Github</div>
                                 <div className='link' onClick={() => window.open('https://github.com/scavalleroo', '_blank')}>https://github.com/scavalleroo</div>
@@ -72,11 +73,11 @@ const Education = () => {
                     </div>
                 </div>
                 <div className='callToAction'>
-                    <div className='title'>
+                    <div className='title white'>
                         Don't hesitate to drop me a message and share my profile
                     </div>
                     <div className='buttons'>
-                        <div className='leftButton' onClick={handleEmailClick}>
+                        <div className='rightButton' onClick={handleEmailClick}>
                             Send a message
                         </div>
                     </div>

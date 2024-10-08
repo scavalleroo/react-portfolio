@@ -76,7 +76,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                             Do you want to know more about {project.title.name}?
                         </div>
                         <div className='buttons'>
-                            <div className='leftButton' onClick={handleEmailClick}>
+                            <div className='rightButton' onClick={handleEmailClick}>
                                 Contact Me
                             </div>
                         </div>

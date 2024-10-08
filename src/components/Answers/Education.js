@@ -140,7 +140,7 @@ const Education = () => {
                         Do you want to know more about my education?
                     </div>
                     <div className='buttons'>
-                        <div className='leftButton' onClick={handleDownloadCV}>
+                        <div className='rightButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
                         <div className='rightButton' onClick={handleEmailClick}>

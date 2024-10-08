@@ -359,11 +359,13 @@
     gap: 16px;
     align-self: center;
     margin-bottom: 32px;
+    position: relative;
 }
 
 .callToAction .title {
     font-size: 1.4rem;
     text-align: center;
+    position: relative;
 }
 
 .callToAction .buttons {
@@ -381,6 +383,12 @@
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.callToAction .buttons .leftButton:hover {
+    background-color: white;
+    color: #0000FF;
 }
 
 .callToAction .buttons .rightButton {
@@ -391,6 +399,12 @@
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.callToAction .buttons .rightButton:hover {
+    background-color: #0000FF;
+    color: white;
 }
 
 
@@ -549,6 +563,7 @@
     color: white;
     padding: 4px 16px;
     width: fit-content;
+    position: relative;
 }
 
 .contacts .work .title {
@@ -562,14 +577,18 @@
 .contacts>div .groupContact .icon img {
     width: 36px;
     height: 36px;
+    position: relative;
+    z-index: 4;
 }
 
 .contacts>div .groupContact .data {
     font-size: 14px;
+    position: relative;
 }
 
 .contacts>div .groupContact .data .description {
     font-weight: 500;
+    color: white;
 }
 
 .contacts>div .groupContact {
@@ -580,38 +599,47 @@
 }
 
 .contacts>div .groupContact .data .link {
-    text-decoration: underline;
+    font-size: 14px;
     cursor: pointer;
-}
-
-/* Add styles for the notification */
-.notification {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #4caf50;
-    /* Green color for success */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
     color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    z-index: 1000;
-    /* Ensures it stays on top */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeOut 3s forwards;
-    /* Adds fade-out effect */
+    background-color: rgba(255, 255, 255, 0.199);
+    font-weight: 500;
 }
 
-/* Optional: fade-out animation */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
+.contacts>div .groupContact .data .link:hover {
+    color: white;
+    background-color: #0000FF;
+}
 
-    100% {
-        opacity: 0;
-    }
+.filterContacts {
+    width: 100%;
+    height: 100%;
+    background-color: #18181898;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 16px;
+}
+
+.white {
+    color: white !important;
+}
+
+.contentContact {
+    background-image: url('/src/assets/img/office.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    height: fit-content;
 }
 
 /* Responsive */

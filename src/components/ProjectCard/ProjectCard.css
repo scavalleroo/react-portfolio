@@ -154,6 +154,7 @@
     flex-direction: row;
     gap: 16px;
     justify-content: center;
+    width: 100%;
 }
 
 .center .details {
@@ -256,10 +257,12 @@
 @media screen and (max-width: 768px) {
     .information {
         flex-direction: column !important;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
     .centralImage,
     .centralVideo {
-        width: auto !important;
+        width: 100% !important;
     }
 }
