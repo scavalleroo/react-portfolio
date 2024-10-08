@@ -8,7 +8,7 @@ import '../../App.css';
 const Footer = () => {
     return (
         <div className='footer'>
-            <div className='copyright'>Designed in Paris, France © 2024 Alessandro Cavallotti</div>
+            <div className='copyright'>Designed in Paris with Love © 2024 Alessandro Cavallotti</div>
             {/* <div className='contacts'>
                 <img src={email} className='icon' />
                 <img src={linkedin} className='icon' />

@@ -1,5 +1,4 @@
-import profilePic from '../assets/img/Face.png';
-import { Link } from 'react-router-dom';
+import profilePic from '../assets/img/Face2.png';
 import Menu from '../components/Menu/Menu';
 import '../App.css';
 import Footer from '../components/Footer/Footer';
