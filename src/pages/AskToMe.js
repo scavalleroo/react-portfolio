@@ -64,7 +64,7 @@ function AskToMe() {
     return (
         <div className="AskToMe">
             <div className='content displayMobile'>
-                <Menu title="Ask to Me" />
+                <Menu title="Ask Me" />
                 <div className='chatSpace'>
                     <div className='myMessageChat'>
                         <img src={profilePic} className='profilePicChat' />

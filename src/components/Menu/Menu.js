@@ -12,7 +12,7 @@ const Menu = ({ title }) => {
         {title}
       </div>
       <div className='menu'>
-        <NavLink to="/asktome"> Ask to Me </NavLink>
+        <NavLink to="/asktome"> Ask Me </NavLink>
         <NavLink to="/selectedwork"> Selected Work </NavLink>
         <NavLink to="/contactme"> Contact Me </NavLink>
       </div>

@@ -175,7 +175,7 @@
     flex-direction: column;
     gap: 4px;
     position: relative;
-    line-break: anywhere;
+    line-break: auto;
     max-width: 400px;
     overflow: hidden;
 }

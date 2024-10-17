@@ -7,7 +7,7 @@
         },
         "location": "Université Paris-Saclay, Paris",
         "timeframe": "September 2023 - October 2023",
-        "designConcept": "Tune Crafter is an innovative application that allows DJs, Producers, Artists and the Curious people to create new beats and sounds using hand gestures, without having to know how to use professional and complicated tools.",
+        "designConcept": "Tune Crafter is an innovative application that allows DJs, Producers, Artists and Curious people to create new beats and sounds using hand gestures, without having to know how to use professional and complicated tools.",
         "tags": "#GestureRecognition #SpeechRecognition #Music #ReactJS #Mediapipe #Webkit #Design #Analytics",
         "coverImage": "assets/img/covers/1920x800/TuneCrafter.png",
         "titleDetails": "Create music with innovative interactions",
@@ -24,10 +24,6 @@
             {
                 "title": "Performace Tracking",
                 "description": "Google Analytics is integrated into the website to evaluate performance and analyse user behaviour and demographic information, enabling informed decisions to be made to improve the user experience."
-            },
-            {
-                "title": "Share",
-                "description": "Tune Crafter caught the attention of a lot of people on social media and I was invited to talk about it on the music podcast of <a target='_blank' href='https://www.instagram.com/good_soup.media/'>@good_soup.media</a> EP. 9 on the 02/12/23."
             }
         ]
     },

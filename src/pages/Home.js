@@ -45,7 +45,7 @@ function Home() {
                 </div>
                 <div className='callToActions'>
                     <div className='buttonAction'>
-                        <Link to="/asktome" className='button'>Ask To Me</Link>
+                        <Link to="/asktome" className='button'>Ask Me</Link>
                         <div className='myMessage'>
                             <img src={profilePic} className='smallProfile' />
                             <div className='bubble'>
