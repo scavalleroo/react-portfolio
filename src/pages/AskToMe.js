@@ -27,6 +27,8 @@ function AskToMe() {
     const askMeRef = useRef(null);
     const bubbleChatRef = useRef(null);
     const answersRef = useRef([]);
+    const nameSenderRef = useRef(null);
+    const nameSendersRef = useRef([]);
 
     const addMessage = (sender, newMessage) => {
         setMessages(prevMessages => [
@@ -45,6 +47,8 @@ function AskToMe() {
         const askMe = askMeRef.current;
         const bubbleChat = bubbleChatRef.current;
         const answers = answersRef.current;
+        const nameSender = nameSenderRef.current;
+        const nameSenders = nameSendersRef.current;
 
         let mouseX = 0;
         let mouseY = 0;
@@ -105,6 +109,7 @@ function AskToMe() {
             let messageFound = null;
             let helloMessageFound = [];
             let answerFound = null;
+            let indexAnswerFound = null;
 
             if (helloMessages.length > 0) {
                 helloMessages.forEach((message, index) => {
@@ -135,9 +140,11 @@ function AskToMe() {
                         ballRect.bottom > answerRect.top
                     ) {
                         answerFound = answer;
+                        indexAnswerFound = index;
                     } else {
                         answer.style.background = '#E9EBF2';
                         answer.style.color = '#000000';
+                        nameSenders[index].style.color = '#000000';
                     }
                 });
 
@@ -146,12 +153,16 @@ function AskToMe() {
                     ball.style.height = '180px';
                     ball.style.background = '#000000';
                     askMe.style.background = '#000000';
-                    bubbleChat.style.background = '#000000';
+                    nameSender.style.color = '#EAEAEA';
+                    bubbleChat.style.background = '#1E1E1E';
                     bubbleChat.style.color = '#91939e';
                     bubbleChat.style.fontSize = '24px';
                     answers.forEach((answer) => {
-                        answer.style.background = '#000000';
+                        answer.style.background = '#1E1E1E';
                         answer.style.color = '#EAEAEA';
+                    });
+                    nameSenders.forEach((nameSender) => {
+                        nameSender.style.color = '#EAEAEA';
                     });
                     helloMessageFound.forEach((message) => {
                         message.classList.add('white-text');
@@ -171,6 +182,7 @@ function AskToMe() {
                         ball.style.border = 'none';
                         ball.style.background = '#91939e12';
                         if (!answerFound) {
+                            nameSender.style.color = '#000000';
                             askMe.style.background = '#F8F9FA';
                             bubbleChat.style.background = '#E9EBF2';
                             bubbleChat.style.color = '#000000';
@@ -182,10 +194,11 @@ function AskToMe() {
 
             if (answerFound !== null) {
                 askMe.style.background = '#000000';
-                answerFound.style.background = '#000000';
+                answerFound.style.background = '#1E1E1E';
                 answerFound.style.color = '#EAEAEA';
-                bubbleChat.style.background = '#000000';
+                bubbleChat.style.background = '#1E1E1E';
                 bubbleChat.style.color = '#91939e';
+                nameSenders[indexAnswerFound].style.color = '#EAEAEA';
             } else {
                 if (helloMessageFound.length === 0) {
                     askMe.style.background = '#F8F9FA';
@@ -339,7 +352,7 @@ function AskToMe() {
                     <div className='myMessageChat'>
                         <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[0] = el} />
                         <div className='messageSide'>
-                            <div className='nameSender'>Alessandro</div>
+                            <div className='nameSender' ref={nameSenderRef}>Alessandro</div>
                             <div className='bubbleChat' ref={bubbleChatRef}>
                                 <span ref={el => helloMessageRef.current[0] = el}>Ciao 👋, </span>
                                 <span ref={el => helloMessageRef.current[1] = el}>I’m Alessandro. </span>
@@ -369,7 +382,7 @@ function AskToMe() {
                                         <div className='myMessageChat' key={index}>
                                             <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[index] = el} />
                                             <div className='messageSide'>
-                                                <div className='nameSender'>Alessandro</div>
+                                                <div className='nameSender' ref={el => nameSendersRef.current[index] = el}>Alessandro</div>
                                                 {message.text === 'WorkExperience' ? <WorkExperience refObj={el => answersRef.current[index] = el} /> :
                                                     message.text === 'Education' ? <Education refObj={el => answersRef.current[index] = el} /> :
                                                         message.text === 'SelectedWork' ? <SelectedWork refObj={el => answersRef.current[index] = el} />
