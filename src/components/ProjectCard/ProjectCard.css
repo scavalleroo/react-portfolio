@@ -5,7 +5,7 @@
     text-align: center;
     /* Align content in the center */
     cursor: pointer;
-    height: 300px;
+    height: 344px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -39,13 +39,13 @@
 
 .project-card .group .title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 24px;
     color: white;
     z-index: 2;
 }
 
 .project-card .group .text {
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     font-weight: 500;
     max-width: 500px;
@@ -65,6 +65,14 @@
     align-items: baseline;
     z-index: 1000;
     overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal-content {
@@ -107,7 +115,7 @@
 
 .projTitle {
     z-index: 2;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 600;
     color: white;
     position: relative;
@@ -136,13 +144,13 @@
 
 .header .group .title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     z-index: 2;
 }
 
 .header .group .text {
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     font-weight: 500;
     max-width: 500px;
@@ -176,24 +184,23 @@
     gap: 4px;
     position: relative;
     line-break: auto;
-    max-width: 400px;
+    max-width: 640px;
     overflow: hidden;
 }
 
 .center .details .title {
-    background-image: linear-gradient(90deg, #000080, #0000FF);
+    background-image: linear-gradient(90deg, #F76162, #E67203);
     font-weight: 600;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-break: strict !important;
 }
 
 .center .details .text {
-    color: black;
-    font-size: 14px;
-    font-weight: 400;
+    color: #90939e;
+    font-size: 18px;
     position: relative;
 }
 
@@ -207,10 +214,9 @@
 }
 
 .center .titleDetails {
-    font-family: 'Swear Display';
     font-weight: bold;
-    font-size: 2.4rem;
-    background-image: linear-gradient(90deg, #000080, #0000FF);
+    font-size: 3.4rem;
+    background-image: linear-gradient(90deg, #F76162, #E67203);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -228,7 +234,7 @@
 
 .playButton {
     position: absolute;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 16px;
     background-color: white;
     padding: 8px 16px;

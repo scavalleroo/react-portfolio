@@ -1,3 +1,4 @@
+@import url('css/avant-garde.css');
 @import url('css/general-sans.css');
 @import url('css/swear-display.css');
 @import url('css/swear-text.css');
@@ -8,7 +9,8 @@ html {
 }
 
 body {
-  font-family: 'General Sans', sans-serif;
+  /* font-family: 'General Sans', sans-serif; */
+  font-family: 'Avant Garde', sans-serif;
   font-size: 12px;
   background-color: #F8F9FA;
   /* max-height: 100vh; */
@@ -23,26 +25,37 @@ body {
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+  transition: background-color 0.5s ease-in-out;
 }
 
-.disclamer {
-  display: flex;
-  gap: 4px;
-  font-family: 'Swear Display';
-  font-weight: bold;
-  font-size: 1.4rem;
-  background-image: linear-gradient(90deg, #000080, #0000FF);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.ball {
+  background: #91939e12;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.topBar {
   cursor: default;
-  height: min-content;
-  width: 100%;
-  justify-content: start;
-  flex-wrap: wrap;
   margin-bottom: 48px;
   margin-top: 36px;
-  flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.lizard {
+  padding: 8px;
+  border-radius: 100%;
+  background-image: linear-gradient(90deg, #F76162, #E67203);
+  transition: transform 0.2s ease-in-out;
 }
 
 .textColorChange:hover {
@@ -89,19 +102,45 @@ body {
   align-items: baseline;
   gap: 16px;
   flex-wrap: wrap;
-  line-height: 60px;
 }
 
 .bigMe {
-  font-size: 4.8rem;
+  font-size: 4.4rem;
+  letter-spacing: -0.2rem;
+  font-weight: 700;
+  color: #91939e;
+  transition: color 0.5s ease-in-out;
+}
+
+.grey-text {
+  color: #91939e !important;
+  transition: color 0.5s ease-in-out;
+}
+
+.white-text {
+  color: #EAEAEA !important;
+  transition: color 0.5s ease-in-out;
+}
+
+.black-text {
+  color: #000000 !important;
+  transition: color 0.5s ease-in-out;
 }
 
 .blue {
-  background-image: linear-gradient(90deg, #000080, #0000FF);
+  background-image: linear-gradient(90deg, #000080, #0000FF) !important;
+  transition: opacity 0.5s ease-in-out !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.orange {
+  background-image: linear-gradient(90deg, #F76162, #E67203) !important;
   transition: opacity 0.5s ease-in-out;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .funny {
@@ -127,13 +166,9 @@ body {
 }
 
 .callToActions {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  width: 100%;
-  justify-content: start;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .buttonAction {
@@ -143,19 +178,20 @@ body {
 }
 
 .buttonAction .button {
-  border-radius: 16px;
-  padding: 4px 24px;
+  border-radius: 8px;
+  padding: 4px 0px;
   font-size: 1.2rem;
-  background: linear-gradient(#F8F9FA, #F8F9FA) padding-box, linear-gradient(90deg, #F76162, #E67203) border-box;
-  border: 1px solid transparent;
   cursor: pointer;
   width: fit-content;
+  color: #91939e;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .buttonAction .button:hover {
-  color: #FFF;
-  background-color: linear-gradient(90deg, #F76162, #E67203);
-  background: linear-gradient(90deg, #F76162, #E67203) border-box;
+  color: black;
+  transform: scale(1.05);
 }
 
 .buttonAction .button:hover+.myMessage {
@@ -180,6 +216,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
 }
 
 .bubble {
@@ -242,10 +279,12 @@ a {
   flex-direction: column;
   justify-content: space-around;
   padding: 0px 0px 0px 8vw;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .content {
   display: flex;
+  padding: 0px 8px;
   flex-direction: row;
   align-self: center;
   gap: 16px;
@@ -293,24 +332,24 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
 }
 
 .bubbleChat {
   background-color: #E9EBF2;
   border-radius: 0px 8px 8px 8px;
   padding: 4px 8px;
-  font-size: 1rem;
+  font-size: 16px;
   text-wrap: wrap;
   max-width: 90%;
   width: fit-content;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
 }
 
 .bubbleChat span {
-  background-image: linear-gradient(90deg, #000080, #0000FF);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 500;
+  z-index: 10;
+  position: relative;
 }
 
 .messageSide {
@@ -321,8 +360,9 @@ a {
 }
 
 .messageSide .nameSender {
-  font-weight: 500;
+  font-weight: bold;
   width: fit-content;
+  margin-bottom: 4px;
 }
 
 .userMessage {
@@ -332,10 +372,13 @@ a {
   width: fit-content;
   margin-left: auto;
   text-align: right;
+  position: relative;
+  font-weight: bold;
 }
 
 .userMessage .title {
-  font-weight: 500;
+  font-weight: bold;
+  color: #90939e;
 }
 
 .userMessage .questions {
@@ -353,6 +396,8 @@ a {
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease;
   width: fit-content;
+  font-weight: bold;
+  color: #90939e;
 }
 
 .userMessage .questions .question:hover {
@@ -363,7 +408,7 @@ a {
 .conversation {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 48px;
 }
 
 .conversation .userMessage {
@@ -378,6 +423,7 @@ a {
   font-size: 1rem;
   text-wrap: wrap;
   width: fit-content;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 
@@ -555,7 +601,7 @@ a {
     line-height: 44px;
   }
 
-  .disclamer {
+  .topBar {
     margin-bottom: 0px !important;
     margin-top: 8px !important;
   }
@@ -583,7 +629,7 @@ a {
 
   .header {
     padding: 8px 8px 80px 8px !important;
-    gap: 8px !important;
+    gap: 24px !important;
   }
 
   .headerHome {
@@ -621,7 +667,7 @@ a {
   }
 
   .callToAction .title {
-    font-size: 16px !important;
+    font-size: 1.4rem !important;
   }
 }
 

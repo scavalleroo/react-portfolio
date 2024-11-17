@@ -4,14 +4,14 @@ import React, { useEffect, useState, useRef } from 'react';
 import AppFunctions from '../../utils/AppFunctions';
 import './Answers.css';
 
-const SelectedWork = () => {
+const SelectedWork = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [popularProjects, setPopularProjects] = useState([]);
     const [recentProjects, setRecentProjects] = useState([]);
 
     const appFunctionsRef = useRef(null);
 
-    const handleEmailClick = () => {
+    const handleEmailClick = (ref) => {
         appFunctionsRef.current.handleEmailClick();
     };
 
@@ -32,7 +32,7 @@ const SelectedWork = () => {
     }, []);
 
     return (
-        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`} ref={refObj}>
             <AppFunctions ref={appFunctionsRef} />
             <div className='content gap-0'>
                 <div className='title-gallery'>Most popular projects</div>
@@ -52,12 +52,12 @@ const SelectedWork = () => {
                         Do you want to know more about my work?
                     </div>
                     <div className='buttons'>
-                        <Link to="/selectedwork" className='leftButton'>
+                        <Link to="/selectedwork" className='rightButton'>
                             See all the projects
                         </Link>
-                        <div className='rightButton' onClick={handleEmailClick}>
+                        {/* <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

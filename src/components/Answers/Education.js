@@ -5,7 +5,7 @@ import AppFunctions from '../../utils/AppFunctions';
 import React, { useEffect, useState, useRef } from 'react';
 import './Answers.css';
 
-const Education = () => {
+const Education = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -23,10 +23,8 @@ const Education = () => {
         appFunctionsRef.current.handleEmailClick();
     };
 
-
-
     return (
-        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`} ref={refObj}>
             <AppFunctions ref={appFunctionsRef} />
             <div className='line'>
                 Most Recent
@@ -43,7 +41,7 @@ const Education = () => {
                         </div>
                         <div className='franceFlag'></div>
                         <div className='title'>
-                            EIT Digital Master Double Degree in Human Computer Interaction and Design
+                            EIT Digital Master in Human Computer Interaction and Design
                         </div>
                         <div className='group'>
                             <div className='title'>Year</div>
@@ -61,10 +59,10 @@ const Education = () => {
                             <div className='title'>Exit University</div>
                             <div className='text'>Université Paris-Saclay, France</div>
                         </div>
-                        <div className='group'>
+                        {/* <div className='group'>
                             <div className='title'>Best Memory</div>
                             <div className='text'>Rappresenting the Padreada football club</div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='projects'>
                         <div className='ups'>
@@ -111,10 +109,10 @@ const Education = () => {
                             <div className='title'>1 Year Erasmsus University</div>
                             <div className='text'>Warsaw University of Technology</div>
                         </div>
-                        <div className='group'>
+                        {/* <div className='group'>
                             <div className='title'>Best Memory</div>
                             <div className='text'>Meeting and sharing experiences with people from all over the world</div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='projects'>
                         <div className='wut'>
@@ -143,9 +141,9 @@ const Education = () => {
                         <div className='rightButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
-                        <div className='rightButton' onClick={handleEmailClick}>
+                        {/* <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

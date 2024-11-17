@@ -73,10 +73,14 @@
     transform: scaleX(1) !important;
 }
 
-
-.leftPanel {
-    padding: 0px;
-    text-wrap: nowrap;
+.leftBar {
+    cursor: default;
+    margin-bottom: 48px;
+    margin-top: 36px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Responsive */
@@ -92,8 +96,16 @@
         align-self: center;
     }
 
-    .leftPanel {
+    .leftBar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        margin-top: 8px;
+        margin-bottom: 0px !important;
+        align-items: center;
+    }
+
+    .callToActions {
+        display: flex;
+        flex-direction: row;
     }
 }

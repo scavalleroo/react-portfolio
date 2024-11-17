@@ -7,10 +7,6 @@ import './ProjectCard.css';
 const ProjectModal = ({ show, onClose, project }) => {
     const appFunctionsRef = useRef(null);
 
-    if (!show) {
-        return null;
-    }
-
     const backgroundImage = require(`../../${project.coverImage}`);
 
     const divStyle = {
@@ -22,7 +18,7 @@ const ProjectModal = ({ show, onClose, project }) => {
     };
 
     return ReactDOM.createPortal(
-        <div className="modal-overlay">
+        <div className={`modal-overlay ${show ? 'show' : ''}`}>
             <AppFunctions ref={appFunctionsRef} />
             <div className="modal-content">
                 <span className="modal-close" onClick={onClose}>&times;</span>

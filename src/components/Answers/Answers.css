@@ -2,7 +2,8 @@
     background-color: #E9EBF2;
     border-radius: 0px 8px 8px 8px;
     padding: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -19,6 +20,7 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -30,7 +32,7 @@
     align-items: center;
     text-align: center;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: bold;
     width: 48px;
     color: #A7A7A7;
     padding: 0px 8px;
@@ -147,7 +149,7 @@
 .bubbleCustom .content .master .details .italyFlag::before {
     content: ' ';
     position: absolute;
-    background-color: #00924664;
+    background-color: #02793b64;
     width: 33.33%;
     height: 100%;
     z-index: 1;
@@ -157,7 +159,7 @@
 .bubbleCustom .content .master .details .italyFlag::after {
     content: ' ';
     position: absolute;
-    background-color: #CE2B3764;
+    background-color: #AA151B20;
     width: 33.33%;
     height: 100%;
     right: 0;
@@ -180,7 +182,7 @@
 .bubbleCustom .content .master .details .polandFlag:after {
     content: ' ';
     position: absolute;
-    background-color: #CE2B3764;
+    background-color: #AA151B20;
     height: 50%;
     width: 100%;
     bottom: 0px;
@@ -227,7 +229,7 @@
 
 .bubbleCustom .content .master .details .title {
     z-index: 2;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 600;
     color: white;
 }
@@ -241,12 +243,12 @@
 
 .bubbleCustom .content .master .details .group .title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
 }
 
 .bubbleCustom .content .master .details .group .text {
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     font-weight: 500;
 }
@@ -308,17 +310,20 @@
 }
 
 .bubbleCustom .content .master .projects .description .title {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 
 .bubbleCustom .content .master .projects .description .text {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
 .bubbleCustom .content .master .projects .button {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     background-color: white;
     padding: 4px 16px;
     width: fit-content;
@@ -394,7 +399,7 @@
 .callToAction .buttons .rightButton {
     background-color: white;
     color: #0000FF;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 8px;
@@ -442,7 +447,7 @@
 .bubbleCustom .content .master .air-liquide-box .text {
     color: #355C96;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .bubbleCustom .content .master .air-liquide-box .text span {
@@ -486,7 +491,7 @@
 .bubbleCustom .content .master .niipy-box .text {
     color: white;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .bubbleCustom .content .master .niipy-box .text span {
@@ -525,7 +530,7 @@
 .bubbleCustom .content .master .rosterbook-box .text {
     color: white;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .bubbleCustom .content .master .rosterbook-box .text span {
@@ -587,8 +592,10 @@
 }
 
 .contacts>div .groupContact .data .description {
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: white;
+    margin-bottom: 4px;
 }
 
 .contacts>div .groupContact {
@@ -599,7 +606,7 @@
 }
 
 .contacts>div .groupContact .data .link {
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 4px 8px;

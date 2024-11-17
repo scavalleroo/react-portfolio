@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import AppFunctions from '../../utils/AppFunctions';
 import './Answers.css';
 
-const WorkExperience = () => {
+const WorkExperience = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const WorkExperience = () => {
     };
 
     return (
-        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`}>
+        <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`} ref={refObj}>
             <AppFunctions ref={appFunctionsRef} />
             <div className='line'>
                 Most Recent
@@ -159,9 +159,9 @@ const WorkExperience = () => {
                         <div className='rightButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
-                        <div className='rightButton' onClick={handleEmailClick}>
+                        {/* <div className='rightButton' onClick={handleEmailClick}>
                             Contact me
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

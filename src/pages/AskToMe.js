@@ -19,6 +19,14 @@ function AskToMe() {
         "Can you show me some of your work?",
         "How can I contact you?"
     ]
+    const lizardRef = useRef(null);
+    const menuRef = useRef(null);
+    const ballRef = useRef(null);
+    const imagesRefs = useRef([]);
+    const helloMessageRef = useRef([]);
+    const askMeRef = useRef(null);
+    const bubbleChatRef = useRef(null);
+    const answersRef = useRef([]);
 
     const addMessage = (sender, newMessage) => {
         setMessages(prevMessages => [
@@ -26,6 +34,267 @@ function AskToMe() {
             { id: prevMessages.length + 1, sender: sender, text: newMessage }
         ]);
     };
+
+    useEffect(() => {
+        const ball = ballRef.current;
+        const images = imagesRefs.current;
+        const userMessages = divRefs.current;
+        const lizard = lizardRef.current;
+        const menu = menuRef.current;
+        const helloMessages = helloMessageRef.current;
+        const askMe = askMeRef.current;
+        const bubbleChat = bubbleChatRef.current;
+        const answers = answersRef.current;
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let ballX = 0;
+        let ballY = 0;
+
+        let speed = 0.1;
+
+        // Update ball position
+        function animate() {
+            // Determine distance between ball and mouse
+            let distX = mouseX - ballX;
+            let distY = mouseY - ballY;
+
+            // Find position of ball and some distance * speed
+            ballX = ballX + (distX * speed);
+            ballY = ballY + (distY * speed);
+
+            ball.style.left = ballX + "px";
+            ball.style.top = ballY + "px";
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Move ball with cursor
+        document.addEventListener("mousemove", function (event) {
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        function checkOverlap() {
+            const ballRect = ball.getBoundingClientRect();
+            if (!lizard || !menu) return;
+            const lizardRect = lizard.getBoundingClientRect();
+            const menuRect = menu.getBoundingClientRect();
+
+            images.forEach((image, index) => {
+                if (!image) return;
+                const imageRect = image.getBoundingClientRect();
+                // Check overlap with lizard and move it
+                if (
+                    ballRect.left < imageRect.right &&
+                    ballRect.right > imageRect.left &&
+                    ballRect.top < imageRect.bottom &&
+                    ballRect.bottom > imageRect.top
+                ) {
+                    const moveX = ballRect.left < imageRect.left ? 5 : -5;
+                    const moveY = ballRect.top < imageRect.top ? 5 : -5;
+                    image.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                } else {
+                    image.style.transform = 'translate(0, 0)';
+                }
+            });
+
+            let messageFound = null;
+            let helloMessageFound = [];
+            let answerFound = null;
+
+            if (helloMessages.length > 0) {
+                helloMessages.forEach((message, index) => {
+                    if (!message) return;
+                    const messageRect = message.getBoundingClientRect();
+                    // Check overlap with lizard and move it
+                    if (
+                        ballRect.left < messageRect.right &&
+                        ballRect.right > messageRect.left &&
+                        ballRect.top < messageRect.bottom &&
+                        ballRect.bottom > messageRect.top
+                    ) {
+                        helloMessageFound.push(message);
+                    } else {
+                        helloMessageFound.slice(helloMessageFound.indexOf(message));
+                        message.classList.remove('white-text');
+                    }
+                });
+
+                answers.forEach((answer, index) => {
+                    if (!answer) return;
+                    const answerRect = answer.getBoundingClientRect();
+                    // Check overlap with lizard and move it
+                    if (
+                        ballRect.left < answerRect.right &&
+                        ballRect.right > answerRect.left &&
+                        ballRect.top < answerRect.bottom &&
+                        ballRect.bottom > answerRect.top
+                    ) {
+                        answerFound = answer;
+                    } else {
+                        answer.style.background = '#E9EBF2';
+                        answer.style.color = '#000000';
+                    }
+                });
+
+                if (helloMessageFound.length > 0) {
+                    ball.style.width = '180px';
+                    ball.style.height = '180px';
+                    ball.style.background = '#000000';
+                    askMe.style.background = '#000000';
+                    bubbleChat.style.background = '#000000';
+                    bubbleChat.style.color = '#91939e';
+                    bubbleChat.style.fontSize = '24px';
+                    answers.forEach((answer) => {
+                        answer.style.background = '#000000';
+                        answer.style.color = '#EAEAEA';
+                    });
+                    helloMessageFound.forEach((message) => {
+                        message.classList.add('white-text');
+                    });
+                } else {
+                    if (
+                        mouseX < menuRect.right &&
+                        mouseX > menuRect.left &&
+                        mouseY < menuRect.bottom &&
+                        mouseY > menuRect.top
+                    ) {
+                        ball.style.width = '0px';
+                        ball.style.height = '0px';
+                    } else {
+                        ball.style.width = '64px';
+                        ball.style.height = '64px';
+                        ball.style.border = 'none';
+                        ball.style.background = '#91939e12';
+                        if (!answerFound) {
+                            askMe.style.background = '#F8F9FA';
+                            bubbleChat.style.background = '#E9EBF2';
+                            bubbleChat.style.color = '#000000';
+                        }
+                        bubbleChat.style.fontSize = '16px';
+                    }
+                }
+            }
+
+            if (answerFound !== null) {
+                askMe.style.background = '#000000';
+                answerFound.style.background = '#000000';
+                answerFound.style.color = '#EAEAEA';
+                bubbleChat.style.background = '#000000';
+                bubbleChat.style.color = '#91939e';
+            } else {
+                if (helloMessageFound.length === 0) {
+                    askMe.style.background = '#F8F9FA';
+                    bubbleChat.style.background = '#E9EBF2';
+                    bubbleChat.style.color = '#000000';
+                }
+            }
+
+            if (userMessages.length === 0) {
+                if (
+                    mouseX < menuRect.right &&
+                    mouseX > menuRect.left &&
+                    mouseY < menuRect.bottom &&
+                    mouseY > menuRect.top
+                ) {
+                    ball.style.width = '0px';
+                    ball.style.height = '0px';
+                } else {
+                    if (helloMessageFound.length === 0) {
+                        ball.style.width = '64px';
+                        ball.style.height = '64px';
+                        ball.style.border = 'none';
+                        ball.style.background = '#91939e12';
+                        if (!answerFound) {
+                            askMe.style.background = '#F8F9FA';
+                            bubbleChat.style.background = '#E9EBF2';
+                            bubbleChat.style.color = '#000000';
+                        }
+                        bubbleChat.style.fontSize = '16px';
+                    }
+                }
+            } else {
+                userMessages.forEach((message, index) => {
+                    if (!message) return;
+                    const messageRect = message.getBoundingClientRect();
+                    // Check overlap with lizard and move it
+                    if (
+                        ballRect.left < messageRect.right &&
+                        ballRect.right > messageRect.left &&
+                        ballRect.top < messageRect.bottom &&
+                        ballRect.bottom > messageRect.top
+                    ) {
+                        messageFound = message;
+                    } else {
+                        message.children[1].style.background = '#0101ED';
+                        message.children[1].classList.remove('blue');
+                    }
+                });
+
+                if (messageFound) {
+                    ball.style.width = '80px';
+                    ball.style.height = '80px';
+                    ball.style.background = '#F8F9FA';
+                    ball.style.border = '2px solid #0101ED';
+                    messageFound.children[1].style.background = 'transparent';
+                    messageFound.children[1].classList.add('blue');
+                } else {
+                    if (
+                        mouseX < menuRect.right &&
+                        mouseX > menuRect.left &&
+                        mouseY < menuRect.bottom &&
+                        mouseY > menuRect.top
+                    ) {
+                        ball.style.width = '0px';
+                        ball.style.height = '0px';
+                    } else {
+                        if (helloMessageFound.length === 0) {
+                            ball.style.width = '64px';
+                            ball.style.height = '64px';
+                            ball.style.border = 'none';
+                            ball.style.background = '#91939e12';
+                            if (!answerFound) {
+                                askMe.style.background = '#F8F9FA';
+                                bubbleChat.style.background = '#E9EBF2';
+                                bubbleChat.style.color = '#000000';
+                            }
+                            bubbleChat.style.fontSize = '16px';
+                        }
+                    }
+                }
+            }
+
+            // Check overlap with lizard and move it
+            if (
+                ballRect.left < lizardRect.right &&
+                ballRect.right > lizardRect.left &&
+                ballRect.top < lizardRect.bottom &&
+                ballRect.bottom > lizardRect.top
+            ) {
+                const moveX = ballRect.left < lizardRect.left ? 5 : -5;
+                const moveY = ballRect.top < lizardRect.top ? 5 : -5;
+                lizard.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            } else {
+                lizard.style.transform = 'translate(0, 0)';
+            }
+
+            requestAnimationFrame(checkOverlap);
+        }
+
+        checkOverlap();
+
+        // Clean up event listener on component unmount
+        return () => {
+            document.removeEventListener("mousemove", function (event) {
+                mouseX = event.pageX;
+                mouseY = event.pageY;
+            });
+        };
+    }, []);
 
     // Handle question click
     const handleQuestionClick = (question) => {
@@ -54,24 +323,35 @@ function AskToMe() {
                 divRefs.current[divRefs.current.length - 1].scrollIntoView({ behavior: 'smooth' });
             }
         }
-        // setIsLoading(true);
-        // const timer = setTimeout(() => {
-        //     setIsLoading(false)
-        // }, 600)
-        // return () => clearTimeout(timer)
+        setIsLoading(true);
+        const timer = setTimeout(() => {
+            setIsLoading(false)
+        }, 600)
+        return () => clearTimeout(timer)
     }, [messages]);
 
     return (
-        <div className="AskToMe">
+        <div className="AskToMe" ref={askMeRef}>
+            <div className="ball" ref={ballRef}></div>
             <div className='content displayMobile'>
-                <Menu title="Ask Me" />
+                <Menu title="Ask Me" menuRef={menuRef} lizardRef={lizardRef} />
                 <div className='chatSpace'>
                     <div className='myMessageChat'>
-                        <img src={profilePic} className='profilePicChat' />
+                        <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[0] = el} />
                         <div className='messageSide'>
                             <div className='nameSender'>Alessandro</div>
-                            <div className='bubbleChat'>
-                                Ciao 👋, I’m Alessandro. I’ve recently <span>graduated in HCID</span> and I’m aspiring to be <span>UX Designer</span> in a leading innovative company. My mission is to design and <span>enhance User Experience and adoption</span> of digital tools.
+                            <div className='bubbleChat' ref={bubbleChatRef}>
+                                <span ref={el => helloMessageRef.current[0] = el}>Ciao 👋, </span>
+                                <span ref={el => helloMessageRef.current[1] = el}>I’m Alessandro. </span>
+                                <span ref={el => helloMessageRef.current[2] = el}>I’m an </span>
+                                <span ref={el => helloMessageRef.current[3] = el}>early stage </span>
+                                <span className='orange'>UX Designer </span>
+                                <span ref={el => helloMessageRef.current[4] = el}>looking </span>
+                                <span className='orange'>for new challenges </span>
+                                <br />
+                                <span ref={el => helloMessageRef.current[5] = el}>What would </span>
+                                <span ref={el => helloMessageRef.current[6] = el}>you like to </span>
+                                <span ref={el => helloMessageRef.current[7] = el}>know about me? </span>
                             </div>
                         </div>
                     </div>
@@ -87,13 +367,13 @@ function AskToMe() {
                                 ) : (
                                     !(isLoading && index === messages.length - 1) ? (
                                         <div className='myMessageChat' key={index}>
-                                            <img src={profilePic} className='profilePicChat' />
+                                            <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[index] = el} />
                                             <div className='messageSide'>
                                                 <div className='nameSender'>Alessandro</div>
-                                                {message.text === 'WorkExperience' ? <WorkExperience /> :
-                                                    message.text === 'Education' ? <Education /> :
-                                                        message.text === 'SelectedWork' ? <SelectedWork />
-                                                            : <Contacts />}
+                                                {message.text === 'WorkExperience' ? <WorkExperience refObj={el => answersRef.current[index] = el} /> :
+                                                    message.text === 'Education' ? <Education refObj={el => answersRef.current[index] = el} /> :
+                                                        message.text === 'SelectedWork' ? <SelectedWork refObj={el => answersRef.current[index] = el} />
+                                                            : <Contacts refObj={el => answersRef.current[index] = el} />}
                                             </div>
                                         </div>
                                     ) : (
