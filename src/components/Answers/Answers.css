@@ -36,6 +36,12 @@
     width: 48px;
     color: #A7A7A7;
     padding: 0px 8px;
+    cursor: default;
+    transition: all 0.4s ease-in-out;
+}
+
+.line:hover {
+    color: white;
 }
 
 .line .verticalLine {
@@ -44,6 +50,17 @@
     background-color: #A7A7A7;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+.line .verticalLine:hover {
+    background-color: #F76162;
+    width: 5px;
+}
+
+.line .verticalLine:hover::before {
+    background-color: #F76162;
+    left: -5px;
 }
 
 .line .verticalLine::before {
@@ -56,6 +73,7 @@
     left: -7px;
     top: -7px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
 }
 
 .bubbleCustom .content {
@@ -612,13 +630,17 @@
     align-items: center;
 }
 
-.playButton {
+.playContact {
     position: relative !important;
-    color: black !important;
-    background-color: white !important;
     margin-top: 8px !important;
     bottom: 0px !important;
     right: 0px !important;
+    background-color: rgba(255, 255, 255, 0.700) !important;
+    color: #000000 !important;
+}
+
+.playContact:hover {
+    background-color: white !important;
 }
 
 .filterContacts {

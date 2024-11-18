@@ -196,6 +196,7 @@ function AskToMe() {
                 askMe.style.background = '#000000';
                 answerFound.style.background = '#1E1E1E';
                 answerFound.style.color = '#EAEAEA';
+                nameSender.style.color = '#EAEAEA';
                 bubbleChat.style.background = '#1E1E1E';
                 bubbleChat.style.color = '#91939e';
                 nameSenders[indexAnswerFound].style.color = '#EAEAEA';
