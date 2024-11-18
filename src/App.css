@@ -110,6 +110,7 @@ body {
   font-weight: 700;
   color: #91939e;
   transition: color 0.5s ease-in-out;
+  cursor: default;
 }
 
 .grey-text {
@@ -485,13 +486,25 @@ a {
 
 /* Selected Work */
 
+.galleryTitle {
+  padding: 20px 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* 3 projects per row */
   gap: 20px;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .underline {
@@ -501,10 +514,11 @@ a {
 /* Contacts */
 .rightPanel {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  gap: 24px;
-  margin-top: 48px;
   overflow-y: auto;
+  position: relative;
+  width: 100%;
 }
 
 .rightPanel .title {
@@ -513,7 +527,7 @@ a {
   font-weight: 600;
 }
 
-.rightPanel .contacts {
+/* .rightPanel .contacts {
   background-image: url('/src/assets/img/office.jpg');
   background-size: cover;
   background-position: center;
@@ -525,7 +539,7 @@ a {
   padding: 24px 16px;
   border-radius: 16px;
   height: fit-content;
-}
+} */
 
 .rightPanel .contacts .group {
   display: flex;
@@ -594,6 +608,10 @@ a {
 
 .contentContacts {
   padding: 0px 16px;
+}
+
+.mh-16 {
+  margin: 20px 16px 0px 16px;
 }
 
 /* Reponsive */

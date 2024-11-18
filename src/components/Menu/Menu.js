@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import lizard from '../../assets/icons/chameleon_white.svg';
 import { Link } from 'react-router-dom';
 import './Menu.css';
