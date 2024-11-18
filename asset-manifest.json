@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb421f2e.css",
-    "main.js": "/static/js/main.b4d7ff0c.js",
+    "main.css": "/static/css/main.101549d4.css",
+    "main.js": "/static/js/main.0136d57a.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
@@ -76,8 +76,11 @@
     "static/media/EnviroShareApp.webp": "/static/media/EnviroShareApp.6e66b2e5801edce98a09.webp",
     "static/media/AirLiquideLogo.png": "/static/media/AirLiquideLogo.7c7a00124a5726b6dd73.png",
     "static/media/GeneralSans-VariableItalic.woff2": "/static/media/GeneralSans-VariableItalic.8d45d5d416206c70daeb.woff2",
+    "static/media/AVGARDN.TTF": "/static/media/AVGARDN.d62809b5761e75ba84c0.TTF",
     "static/media/GeneralSans-Variable.woff2": "/static/media/GeneralSans-Variable.65a7e76e15a342e2ed8f.woff2",
+    "static/media/AVGARDDO.TTF": "/static/media/AVGARDDO.96e9234e77446229947b.TTF",
     "static/media/saclay.png": "/static/media/saclay.10bf5193bf97c9c2b7cd.png",
+    "static/media/AVGARDD.TTF": "/static/media/AVGARDD.86c587470edf8c9b81b5.TTF",
     "static/media/GeneralSans-VariableItalic.woff": "/static/media/GeneralSans-VariableItalic.e4ae865b18351f51feb9.woff",
     "static/media/GeneralSans-Variable.woff": "/static/media/GeneralSans-Variable.bc2b124702cdb8b3b38b.woff",
     "static/media/GeneralSans-SemiboldItalic.woff": "/static/media/GeneralSans-SemiboldItalic.36eb24d73e66df8e25a4.woff",
@@ -111,12 +114,15 @@
     "static/media/index.cjs": "/static/media/index.1282334337c6cac7deca.cjs",
     "static/media/linkedin.png": "/static/media/linkedin.d9c5f047e277b6997e74.png",
     "index.html": "/index.html",
-    "main.fb421f2e.css.map": "/static/css/main.fb421f2e.css.map",
-    "main.b4d7ff0c.js.map": "/static/js/main.b4d7ff0c.js.map",
+    "static/media/chameleon_grey.svg": "/static/media/chameleon_grey.aea51125630f70e4f5be.svg",
+    "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
+    "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
+    "main.101549d4.css.map": "/static/css/main.101549d4.css.map",
+    "main.0136d57a.js.map": "/static/js/main.0136d57a.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb421f2e.css",
-    "static/js/main.b4d7ff0c.js"
+    "static/css/main.101549d4.css",
+    "static/js/main.0136d57a.js"
   ]
 }
