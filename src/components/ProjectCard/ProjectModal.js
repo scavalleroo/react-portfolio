@@ -38,10 +38,10 @@ const ProjectModal = ({ show, onClose, project }) => {
                             <div className='title'>Design Concept</div>
                             <div className='text'>{project.designConcept}</div>
                         </div>
-                        <div className='group'>
+                        {/* <div className='group'>
                             <div className='title'>Tags</div>
                             <div className='text'>{project.tags}</div>
-                        </div>
+                        </div> */}
                         {project.title.href ? (<div className='playButton' onClick={() => window.open(project.title.href, '_blank')}>{project.title.name} <img src={externalLink} /></div>) : ''}
                     </div>
                     <div className='information'>

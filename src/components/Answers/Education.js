@@ -64,13 +64,11 @@ const Education = ({ refObj }) => {
                             <div className='text'>Rappresenting the Padreada football club</div>
                         </div> */}
                     </div>
+                    {/* <h2 className='orange m-0'>Projects</h2>
                     <div className='projects'>
-                        <div className='ups'>
-                            <img src={saclay} />
-                            <div className='description'>
-                                <div className='title'>Tune Crafter</div>
-                                <div className='text'>Make music with hands gestures</div>
-                            </div>
+                        <div className='box'>
+                            <div className='title'>Tune Crafter</div>
+                            <div className='text'>Make music with hands gestures</div>
                             <div className='button' onClick={() => window.open('https://scavalleroo.github.io/Tune-Crafter/', '_blank')} >PLAY <span className="arrow">→</span></div>
                         </div>
                         <div className='upm'>
@@ -81,7 +79,7 @@ const Education = ({ refObj }) => {
                             </div>
                             <div className='button' onClick={() => window.open('https://drive.google.com/file/d/14_3_hvNoJlfGaYkFP5xTt4yyiSEgtxzy/view?usp=sharing', '_blank')}>READ REPORT <span className="arrow">→</span></div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='spacer'></div>
                 <div className='master'>
@@ -114,7 +112,7 @@ const Education = ({ refObj }) => {
                             <div className='text'>Meeting and sharing experiences with people from all over the world</div>
                         </div> */}
                     </div>
-                    <div className='projects'>
+                    {/* <div className='projects'>
                         <div className='wut'>
                             <img src={wut} />
                             <div className='description'>
@@ -131,7 +129,7 @@ const Education = ({ refObj }) => {
                             </div>
                             <div className='button' onClick={() => window.open('https://github.com/scavalleroo/direct-dfa', '_blank')}>GITHUB PROJECT <span className="arrow">→</span></div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='callToAction'>
                     <div className='title'>

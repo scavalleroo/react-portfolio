@@ -76,7 +76,7 @@
 }
 
 .modal-content {
-    background-color: #f5f6fa;
+    background-color: #1E1E1E;
     padding: 8px 16px;
     position: relative;
     width: 100%;
@@ -123,6 +123,8 @@
 
 .header {
     padding: 24px 16px;
+    height: 90vh;
+    justify-content: end !important;
 }
 
 .blueFilter {
@@ -176,9 +178,9 @@
     flex-shrink: 0;
     flex-basis: auto;
     padding: 4px 16px 8px 16px;
-    border-radius: 16px 0px 16px 16px;
+    /* border-radius: 16px 0px 16px 16px; */
     color: black;
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -189,13 +191,16 @@
 }
 
 .center .details .title {
-    background-image: linear-gradient(90deg, #F76162, #E67203);
+    color: #E9EBF2;
     font-weight: 600;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 1.4rem;
     line-break: strict !important;
+}
+
+.center .details .title::after {
+    content: '';
+    display: block;
+    height: 8px;
 }
 
 .center .details .text {
@@ -226,9 +231,19 @@
     line-break: normal !important;
 }
 
+.center .titleDetails::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #E67203;
+    margin-top: 4px;
+}
+
 .center .callToAction {
     padding: 24px;
-    background-color: #e0e5ef;
+    font-weight: bold;
+    color: #E9EBF2;
     width: 100%;
 }
 
