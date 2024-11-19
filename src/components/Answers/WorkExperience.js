@@ -25,6 +25,12 @@ const WorkExperience = ({ refObj }) => {
         setExpandedSection(expandedSection === section ? null : section);
     };
 
+    const activeContributionTitle = { borderRadius: "8px 8px 0px 0px", fontSize: "15px" };
+    const inactiveContributionTitle = { borderRadius: "8px" };
+    const activeContributionText = { maxHeight: "140px", padding: "8px 16px" };
+    const inactiveContributionText = { maxHeight: "0", padding: "0px" };
+
+
     return (
         <div className={`bubbleCustom ${isVisible ? 'visible' : ''}`} ref={refObj}>
             <AppFunctions ref={appFunctionsRef} />
@@ -62,26 +68,26 @@ const WorkExperience = ({ refObj }) => {
                             <h2 className='white-text m-0'>Contributions</h2>
                             <div className='projects'>
                                 <div className='box'>
-                                    <div className="title" onClick={() => handleToggle('userResearch')} style={expandedSection === 'userResearch' ? { borderRadius: "8px 8px 0px 0px" } : { borderRadius: "8px" }}>
-                                        User Research {expandedSection === 'userResearch' ? '\u2212' : '\u002B'}
+                                    <div className="title" onClick={() => handleToggle('1')} style={expandedSection === '1' ? activeContributionTitle : inactiveContributionTitle}>
+                                        User Research {expandedSection === '1' ? '\u2212' : '\u002B'}
                                     </div>
-                                    <div className="text" style={expandedSection === 'userResearch' ? { maxHeight: "140px", padding: "8px 16px" } : { maxHeight: "0", padding: "0px" }}>
+                                    <div className="text" style={expandedSection === '1' ? activeContributionText : inactiveContributionText}>
                                         I conducted a User Research to <span>validate the use of the Generative AI application</span> to address the problem knowledge management in the company.
                                     </div>
                                 </div>
                                 <div className='box'>
-                                    <div className="title" onClick={() => handleToggle('genAIChatbot')} style={expandedSection === 'genAIChatbot' ? { borderRadius: "8px 8px 0px 0px" } : { borderRadius: "8px" }}>
-                                        Gen AI Chatbot {expandedSection === 'genAIChatbot' ? '\u2212' : '\u002B'}
+                                    <div className="title" onClick={() => handleToggle('2')} style={expandedSection === '2' ? activeContributionTitle : inactiveContributionTitle}>
+                                        Gen AI Chatbot {expandedSection === '2' ? '\u2212' : '\u002B'}
                                     </div>
-                                    <div className="text" style={expandedSection === 'genAIChatbot' ? { maxHeight: "140px", padding: "8px 16px" } : { maxHeight: "0", padding: "0px" }}>
+                                    <div className="text" style={expandedSection === '2' ? activeContributionText : inactiveContributionText}>
                                         Generative AI chatbot <span>build and released in only 2 months</span> thanks to my contributions in the design of the Hi-Fi Prototype and Coding of the front-end of the application.
                                     </div>
                                 </div>
                                 <div className='box'>
-                                    <div className="title" onClick={() => handleToggle('productDesignTeam')} style={expandedSection === 'productDesignTeam' ? { borderRadius: "8px 8px 0px 0px" } : { borderRadius: "8px" }}>
-                                        Product Design Team {expandedSection === 'productDesignTeam' ? '\u2212' : '\u002B'}
+                                    <div className="title" onClick={() => handleToggle('3')} style={expandedSection === '3' ? activeContributionTitle : inactiveContributionTitle}>
+                                        Product Design Team {expandedSection === '3' ? '\u2212' : '\u002B'}
                                     </div>
-                                    <div className="text" style={expandedSection === 'productDesignTeam' ? { maxHeight: "140px", padding: "8px 16px" } : { maxHeight: "0", padding: "0px" }}>
+                                    <div className="text" style={expandedSection === '3' ? activeContributionText : inactiveContributionText}>
                                         I was able to <span>contribute to the knowledge of the Product Design Team</span> thanks to the study I did Designing Generative AI applications.
                                     </div>
                                 </div>
@@ -96,39 +102,49 @@ const WorkExperience = ({ refObj }) => {
                 <div className='master'>
                     <div className='details niipy'>
                         <div className='blueFilter'></div>
-                        <div className='title'>
-                            Niipy.com
+                        <div className='left'>
+                            <div className='title'>
+                                Niipy.com
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Role</div>
+                                <div className='text'>Full Stack Developer</div>
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Duration</div>
+                                <div className='text'>2 years</div>
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Tools</div>
+                                <div className='text'>Django, PostgreSQL</div>
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Team</div>
+                                <div className='text'>Dev Team - Junto Innovation Hub, Modena, Italy</div>
+                            </div>
                         </div>
-                        <div className='group'>
-                            <div className='title'>Role</div>
-                            <div className='text'>Full Stack Developer</div>
-                        </div>
-                        <div className='group'>
-                            <div className='title'>Duration</div>
-                            <div className='text'>2 years</div>
-                        </div>
-                        <div className='group'>
-                            <div className='title'>Tools</div>
-                            <div className='text'>Django, PostgreSQL</div>
-                        </div>
-                        <div className='group'>
-                            <div className='title'>Team</div>
-                            <div className='text'>Dev Team - Junto Innovation Hub, Modena, Italy</div>
-                        </div>
-                    </div>
-                    <h2 className='orange m-0'>Contributions</h2>
-                    <div className='projects'>
-                        <div className='box'>
-                            <div className='title'>Google API integration</div>
-                            <div className='text'>Implementation of the <span>Authentication with Google</span> and integration of <span>Google APIs</span> for Niipy.com</div>
-                        </div>
-                        <div className='box'>
-                            <div className='title'>Font-End Development</div>
-                            <div className='text'>I build the <span>UI for Desktop and Mobile</span> of Niipy.com using responsive CSS frameworks and Jinja templating.</div>
-                        </div>
-                        <div className='box'>
-                            <div className='title'>Design to Dev handover</div>
-                            <div className='text'>I was responsible for the feasibility study and <span>translation of the design from Adobe XD to the code</span></div>
+                        <div className='right'>
+                            <h2 className='white-text m-0'>Contributions</h2>
+                            <div className='projects'>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('4')} style={expandedSection === '4' ? activeContributionTitle : inactiveContributionTitle}>
+                                        Google API integration {expandedSection === '4' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '4' ? activeContributionText : inactiveContributionText}>Implementation of the <span>Authentication with Google</span> and integration of <span>Google APIs</span> for Niipy.com</div>
+                                </div>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('5')} style={expandedSection === '5' ? activeContributionTitle : inactiveContributionTitle}>
+                                        Font-End Development {expandedSection === '5' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '5' ? activeContributionText : inactiveContributionText}>I build the <span>UI for Desktop and Mobile</span> of Niipy.com using responsive CSS frameworks and Jinja templating.</div>
+                                </div>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('6')} style={expandedSection === '6' ? activeContributionTitle : inactiveContributionTitle}>
+                                        Design to Dev handover {expandedSection === '6' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '6' ? activeContributionText : inactiveContributionText}>I was responsible for the feasibility study and <span>translation of the design from Adobe XD to the code</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,35 +155,45 @@ const WorkExperience = ({ refObj }) => {
                 <div className='master'>
                     <div className='details rosterbook'>
                         <div className='blueFilter'></div>
-                        <div className='title'>
-                            Rosterbook
+                        <div className='left'>
+                            <div className='title'>
+                                Rosterbook
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Role</div>
+                                <div className='text'>CoFounder</div>
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Duration</div>
+                                <div className='text'>1 year</div>
+                            </div>
+                            <div className='group'>
+                                <div className='title'>Tools</div>
+                                <div className='text'>Flutter, Firebase, GCP, App Store Developer, Google Play Developer</div>
+                            </div>
                         </div>
-                        <div className='group'>
-                            <div className='title'>Role</div>
-                            <div className='text'>CoFounder</div>
-                        </div>
-                        <div className='group'>
-                            <div className='title'>Duration</div>
-                            <div className='text'>1 year</div>
-                        </div>
-                        <div className='group'>
-                            <div className='title'>Tools</div>
-                            <div className='text'>Flutter, Firebase, GCP, App Store Developer, Google Play Developer</div>
-                        </div>
-                    </div>
-                    <h2 className='orange m-0'>Contributions</h2>
-                    <div className='projects'>
-                        <div className='box'>
-                            <div className='title'>App Design and Ads</div>
-                            <div className='text'>I designed all the <span>UI</span> for the applications in many iterations and created all the <span>content for the marketing campaign</span>.</div>
-                        </div>
-                        <div className='box'>
-                            <div className='title'>App development</div>
-                            <div className='text'>I build the front end of the App with <span>Flutter</span> and the back-end using <span>Firebase, Javascript, PHP and SQL</span>.</div>
-                        </div>
-                        <div className='box'>
-                            <div className='title'>App Store and Play Store</div>
-                            <div className='text'>I managed the release and promotion on the Apple App Store and Google Play Store. <span>Achieved 5K downloads in 3 months</span>.</div>
+                        <div className='right'>
+                            <h2 className='white-text m-0'>Contributions</h2>
+                            <div className='projects'>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('7')} style={expandedSection === '7' ? activeContributionTitle : inactiveContributionTitle}>
+                                        App Design and Ads {expandedSection === '7' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '7' ? activeContributionText : inactiveContributionText}>I designed all the <span>UI</span> for the applications in many iterations and created all the <span>content for the marketing campaign</span>.</div>
+                                </div>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('8')} style={expandedSection === '8' ? activeContributionTitle : inactiveContributionTitle}>
+                                        App development {expandedSection === '8' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '8' ? activeContributionText : inactiveContributionText}>I build the front end of the App with <span>Flutter</span> and the back-end using <span>Firebase, Javascript, PHP and SQL</span>.</div>
+                                </div>
+                                <div className='box'>
+                                    <div className='title' onClick={() => handleToggle('9')} style={expandedSection === '9' ? activeContributionTitle : inactiveContributionTitle}>
+                                        App Store and Play Store {expandedSection === '9' ? '\u2212' : '\u002B'}
+                                    </div>
+                                    <div className='text' style={expandedSection === '9' ? activeContributionText : inactiveContributionText}>I managed the release and promotion on the Apple App Store and Google Play Store. <span>Achieved 5K downloads in 3 months</span>.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

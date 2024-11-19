@@ -89,6 +89,17 @@
     border-radius: 16px;
 }
 
+.bubbleCustom .content .master .detailsMaster {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    height: 90vh;
+}
+
 .bubbleCustom .content .master .details .left {
     display: flex;
     flex-direction: column;
@@ -129,7 +140,7 @@
 
 
 
-.bubbleCustom .content .master .details .franceFlag {
+.bubbleCustom .content .master .detailsMaster .franceFlag {
     position: absolute;
     height: 50%;
     background-color: #ffffff64;
@@ -141,7 +152,7 @@
     border-bottom-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .franceFlag::before {
+.bubbleCustom .content .master .detailsMaster .franceFlag::before {
     content: ' ';
     position: absolute;
     background-color: #00265420;
@@ -151,7 +162,7 @@
     border-bottom-left-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .franceFlag::after {
+.bubbleCustom .content .master .detailsMaster .franceFlag::after {
     content: ' ';
     position: absolute;
     background-color: #AA151B20;
@@ -162,7 +173,7 @@
     border-bottom-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .italyFlag {
+.bubbleCustom .content .master .detailsMaster .italyFlag {
     position: absolute;
     height: 50%;
     background-color: #F1F2F164;
@@ -174,7 +185,7 @@
     border-top-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .italyFlag::before {
+.bubbleCustom .content .master .detailsMaster .italyFlag::before {
     content: ' ';
     position: absolute;
     background-color: #02793b64;
@@ -184,7 +195,7 @@
     border-top-left-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .italyFlag::after {
+.bubbleCustom .content .master .detailsMaster .italyFlag::after {
     content: ' ';
     position: absolute;
     background-color: #AA151B20;
@@ -195,7 +206,7 @@
     border-top-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .polandFlag {
+.bubbleCustom .content .master .detailsMaster .polandFlag {
     position: absolute;
     top: 50%;
     background-color: #F1F2F164;
@@ -207,7 +218,7 @@
     border-bottom-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .polandFlag:after {
+.bubbleCustom .content .master .detailsMaster .polandFlag:after {
     content: ' ';
     position: absolute;
     background-color: #AA151B20;
@@ -220,7 +231,7 @@
 }
 
 
-.bubbleCustom .content .master .details .spainFlag {
+.bubbleCustom .content .master .detailsMaster .spainFlag {
     position: absolute;
     height: 50%;
     width: 100%;
@@ -233,22 +244,22 @@
     border-top-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .spainFlag .stripe {
+.bubbleCustom .content .master .detailsMaster .spainFlag .stripe {
     display: block;
     width: 100%;
 }
 
-.bubbleCustom .content .master .details .spainFlag .top {
+.bubbleCustom .content .master .detailsMaster .spainFlag .top {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
 
-.bubbleCustom .content .master .details .spainFlag .red {
+.bubbleCustom .content .master .detailsMaster .spainFlag .red {
     background-color: #AA151B20 !important;
     height: 25% !important;
 }
 
-.bubbleCustom .content .master .details .spainFlag .yellow {
+.bubbleCustom .content .master .detailsMaster .spainFlag .yellow {
     background-color: #f1c10020 !important;
     height: 50% !important;
 }
@@ -291,6 +302,32 @@
 }
 
 .bubbleCustom .content .master .details .group .text {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+.bubbleCustom .content .master .detailsMaster .title {
+    z-index: 2;
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.bubbleCustom .content .master .detailsMaster .group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+}
+
+.bubbleCustom .content .master .detailsMaster .group .title {
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+.bubbleCustom .content .master .detailsMaster .group .text {
     font-size: 18px;
     color: white;
     font-weight: 500;
@@ -488,6 +525,16 @@
 .bubbleCustom .content .master .box .title {
     font-weight: 600;
     cursor: pointer;
+}
+
+.activeContributionTitle {
+    border-radius: "8px 8px 0px 0px";
+    font-size: "15px";
+}
+
+.activeContributionText {
+    max-height: "140px";
+    padding: "8px 16px";
 }
 
 .bubbleCustom .content .master .box .text {
