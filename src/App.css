@@ -614,6 +614,111 @@ a {
   margin: 20px 16px 0px 16px;
 }
 
+.contactApp {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.contactApp .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 0px 16px 8px 8px;
+}
+
+.contactApp .sidebar .menuElement {
+  font-size: 16px;
+  color: grey;
+  font-weight: bold;
+  padding: 8px 36px 8px 8px;
+  border-radius: 0px 16px 16px 0px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.profileDetails .name {
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.profileDetails .role {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.profileDetails .role:hover {
+  text-decoration: underline;
+}
+
+.contactApp .sidebar .menuElement:hover {
+  background-color: #F8F9FA;
+  color: black;
+}
+
+.contactApp .sidebar .active {
+  background-color: #0000FF;
+  color: #F8F9FA;
+  transition: all 0.4s ease-in-out;
+}
+
+.messageArea {
+  font-family: 'Avant Garde', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 80px 8px 8px;
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+  line-height: 30px;
+  position: relative;
+  width: calc(100% - 80px);
+}
+
+.textarea-container {
+  position: relative;
+  display: inline-block;
+  width: min(493px, 100%);
+}
+
+.copyButton {
+  position: absolute;
+  top: 88px;
+  right: 0px;
+  background-color: #F76162;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 80px 8px 8px;
+  background: white;
+  width: calc(100% - 80px);
+  border-bottom: 2px solid #91939e;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.profileInfo .profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /* Reponsive */
 @media screen and (max-width: 768px) {
   .bigMe {

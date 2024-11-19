@@ -1,9 +1,10 @@
 import externalLink from '../assets/icons/external-link.png';
+import profilePic from '../assets/img/Face2.png';
 import Menu from '../components/Menu/Menu';
 import '../App.css';
 import AppFunctions from '../utils/AppFunctions';
 import Footer from '../components/Footer/Footer';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function ContactMe() {
     const appFunctionsRef = useRef(null);
@@ -13,19 +14,21 @@ function ContactMe() {
     const appRef = useRef(null);
     const textRefs = useRef([]);
     const mainRef = useRef(null);
+    const messageAreaRef = useRef(null);
+    const contactsRef = useRef(null);
+    const [activeMenu, setActiveMenu] = useState("email");
 
     const handleEmailClick = () => {
         appFunctionsRef.current.handleEmailClick();
     };
 
     useEffect(() => {
-
-
         const ball = ballRef.current;
         const lizard = lizardRef.current;
         const menu = menuRef.current;
         const app = appRef.current;
         const main = mainRef.current
+        const messageArea = messageAreaRef.current;
 
         let mouseX = 0;
         let mouseY = 0;
@@ -89,6 +92,8 @@ function ContactMe() {
                 ball.style.height = '256px';
                 ball.style.background = '#000000';
                 app.style.background = '#000000';
+                messageArea.style.color = '#FFFFFF';
+                messageArea.style.background = '#1E1E1E';
             } else {
                 if (
                     mouseX < menuRect.right &&
@@ -104,6 +109,8 @@ function ContactMe() {
                     ball.style.border = 'none';
                     ball.style.background = '#91939e12';
                     app.style.background = '#F8F9FA';
+                    messageArea.style.color = 'black';
+                    messageArea.style.background = '#FFFFFF';
                 }
             }
 
@@ -139,6 +146,13 @@ function ContactMe() {
         };
     }, []);
 
+    const handleCopyClick = () => {
+        if (messageAreaRef.current) {
+            messageAreaRef.current.select();
+            document.execCommand('copy');
+        }
+    };
+
     return (
         <div className="AskToMe" ref={appRef}>
             <div className="ball" ref={ballRef}></div>
@@ -152,40 +166,38 @@ function ContactMe() {
                         <span ref={el => textRefs.current[2] = el}>in </span>
                         <span ref={el => textRefs.current[3] = el} className='orange'>touch </span>
                     </div>
-                    <div className='contentContact mh-16'>
-                        <div className='filterContacts'></div>
-                        <div className='contacts'>
-                            <div className='work'>
-                                <h1 className='white-text'>Contacts</h1>
-                                <div className='box'>
-                                    <div className='title'>Email</div>
-                                    <div className='playButton playContact' onClick={handleEmailClick}>cavallotti.alessandro00@gmail.com <img src={externalLink} /></div>
-                                </div>
-                                <div className='box'>
-                                    <div className='title'>Linkedin</div>
-                                    <div className='playButton playContact' onClick={() => window.open('https://www.linkedin.com/in/alecava/', '_blank')}>Visit the profile <img src={externalLink} /></div>
-                                </div>
-                                <div className='box'>
-                                    <div className='title'>Github</div>
-                                    <div className='playButton playContact' onClick={() => window.open('https://github.com/scavalleroo', '_blank')}>Visit the profile <img src={externalLink} /></div>
-                                </div>
+                    <div className='mh-16'>
+                        {/* <h1 className='grey-text'>Write me to brake the ice</h1> */}
+                        <div className='contactApp'>
+                            <div className='sidebar'>
+                                <h1 className='grey-text' ref={contactsRef}>Contacts</h1>
+                                <div className={`menuElement ${activeMenu == 'email' ? 'active' : ''}`} onClick={() => setActiveMenu('email')}>Email</div>
+                                <div className={`menuElement ${activeMenu == 'linkedin' ? 'active' : ''}`} onClick={() => setActiveMenu('linkedin')}>LinkedIn</div>
                             </div>
-                        </div>
-                        <div className='callToAction'>
-                            <div className='title white'>
-                                Don't hesitate to drop me a message and share my profile
-                            </div>
-                            <div className='buttons'>
-                                <div className='rightButton' onClick={handleEmailClick}>
-                                    Send a message
+                            <div className='textarea-container'>
+                                <div className='profileInfo'>
+                                    <img src={profilePic} className='profilePicChat' />
+                                    <div className='profileDetails'>
+                                        <div className='name' onClick={
+                                            activeMenu == 'email' ? handleEmailClick :
+                                                () => window.open('https://www.linkedin.com/in/alecava/', '_blank')
+                                        }>Alessandro Cavallotti</div>
+                                        <div className='grey-text role'
+                                            onClick={
+                                                activeMenu == 'email' ? handleEmailClick :
+                                                    () => window.open('https://www.linkedin.com/in/alecava/', '_blank')
+                                            }>{activeMenu == 'email' ? 'cavallotti.alessandro00@gmail.com' : 'LinkedIn profile'}</div>
+                                    </div>
                                 </div>
+                                <button className='copyButton' onClick={handleCopyClick}>Copy</button>
+                                <textarea className='messageArea' placeholder='e.g: Hello, can we schedule a meeting?' rows={10} ref={messageAreaRef}></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <Footer />
-        </div>
+        </div >
     );
 }
 

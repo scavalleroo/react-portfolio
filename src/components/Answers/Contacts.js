@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import externalLink from '../../assets/icons/external-link.png';
 import AppFunctions from '../../utils/AppFunctions';
 import React, { useEffect, useState, useRef } from 'react';
@@ -43,9 +44,9 @@ const Contacts = ({ refObj }) => {
                         Don't hesitate to drop me a message and share my profile
                     </div>
                     <div className='buttons'>
-                        <div className='rightButton' onClick={handleEmailClick}>
+                        <Link to="/contactme" className='rightButton'>
                             Send a message
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
