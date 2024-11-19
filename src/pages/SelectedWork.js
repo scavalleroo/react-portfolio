@@ -151,7 +151,7 @@ function SelectedWork() {
                         <span ref={el => textRefs.current[0] = el}>Projects </span>
                         <span ref={el => textRefs.current[1] = el}>designed </span>
                         <span ref={el => textRefs.current[2] = el}>around </span>
-                        <span ref={el => textRefs.current[3] = el} className='orange'>Poeple </span>
+                        <span ref={el => textRefs.current[3] = el} className='orange'>People </span>
                     </div>
                     <div className='gallery'>
                         {projects.map((project, index) => (

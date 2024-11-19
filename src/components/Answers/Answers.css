@@ -40,38 +40,24 @@
     transition: all 0.4s ease-in-out;
 }
 
-.line:hover {
-    color: white;
-}
-
 .line .verticalLine {
-    width: 2px;
+    width: 5px;
     height: 94%;
-    background-color: #A7A7A7;
+    background-color: #F76162;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
-}
-
-.line .verticalLine:hover {
-    background-color: #F76162;
-    width: 5px;
-}
-
-.line .verticalLine:hover::before {
-    background-color: #F76162;
-    left: -5px;
 }
 
 .line .verticalLine::before {
     content: ' ';
     width: 16px;
     height: 16px;
-    background-color: #A7A7A7;
+    background-color: #F76162;
     border-radius: 50%;
     position: absolute;
-    left: -7px;
-    top: -7px;
+    left: -5px;
+    top: -5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
 }
@@ -95,13 +81,36 @@
 
 .bubbleCustom .content .master .details {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: calc(100vh - 80px);
+    height: auto;
+    overflow: auto;
+    border-radius: 16px;
+}
+
+.bubbleCustom .content .master .details .left {
+    display: flex;
     flex-direction: column;
     justify-content: end;
     position: relative;
     gap: 24px;
     padding: 24px 16px;
-    border-radius: 16px;
-    height: 90vh;
+    flex: 1;
+    order: 1;
+}
+
+.bubbleCustom .content .master .details .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    gap: 24px;
+    padding: 24px 16px;
+    flex: 1;
+    order: 2;
+    align-items: end;
+    text-align: right;
 }
 
 .bubbleCustom .content .master .eit {
@@ -253,6 +262,21 @@
     color: white;
 }
 
+.bubbleCustom .content .master .details .box .title {
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: white;
+    color: #1e1e1e;
+}
+
+.bubbleCustom .content .master .details .box .title:hover {
+    background-color: #e8e8e8;
+    font-size: 15px;
+}
+
 .bubbleCustom .content .master .details .group {
     display: flex;
     flex-direction: column;
@@ -275,7 +299,15 @@
 .bubbleCustom .content .master .projects {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 8px;
+    width: fit-content;
+}
+
+.bubbleCustom .content .master .projects .box {
+    padding: 0px !important;
+    align-items: end;
+    width: fit-content;
+    gap: 0px;
 }
 
 .bubbleCustom .content .master .projects>div {
@@ -453,30 +485,35 @@
     border-radius: 16px;
 }
 
-.bubbleCustom .content .master .box {
-    width: 50%;
-}
-
 .bubbleCustom .content .master .box .title {
     font-weight: 600;
-}
-
-.box .title::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background-color: #E9EBF2;
-    margin-top: 4px;
+    cursor: pointer;
 }
 
 .bubbleCustom .content .master .box .text {
     font-size: 18px;
     font-weight: 500;
+    color: #9496a1;
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    background-color: #181818;
+    border-radius: 8px 0px 8px 8px;
+    padding: 0px;
+    font-size: 16px;
+    text-align: right;
+    cursor: default;
 }
 
 .bubbleCustom .content .master .box .text span {
-    font-weight: 500;
+    /* background-image: linear-gradient(90deg, #F76162, #E67203);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative; */
+    color: white;
+    font-weight: bold;
 }
 
 .gap-8 {
@@ -510,26 +547,6 @@
     border-radius: 16px;
 }
 
-.bubbleCustom .content .master .niipy-box {
-    background-image: linear-gradient(90deg, #08B17B, #33904B);
-    gap: 4px !important;
-}
-
-.bubbleCustom .content .master .niipy-box .title {
-    color: white;
-    font-weight: 600;
-}
-
-.bubbleCustom .content .master .niipy-box .text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.bubbleCustom .content .master .niipy-box .text span {
-    font-weight: 500;
-}
-
 /* Rosterbook */
 .bubbleCustom .content .master .rosterbook {
     background-image: url('../../assets/img/Rosterbook.png');
@@ -547,26 +564,6 @@
     right: 0px;
     top: 0px;
     border-radius: 16px;
-}
-
-.bubbleCustom .content .master .rosterbook-box {
-    background-image: linear-gradient(90deg, #F76162, #E67203);
-    gap: 4px !important;
-}
-
-.bubbleCustom .content .master .rosterbook-box .title {
-    color: white;
-    font-weight: 600;
-}
-
-.bubbleCustom .content .master .rosterbook-box .text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.bubbleCustom .content .master .rosterbook-box .text span {
-    font-weight: 500;
 }
 
 /* Selected Work */
