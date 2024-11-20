@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.a36d0da3.css",
-    "main.js": "/static/js/main.8da2dad4.js",
+    "main.js": "/static/js/main.6601d579.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
+    "static/media/MomentusDemo.mp4": "/static/media/MomentusDemo.ad1010f9927788a6bbf2.mp4",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
-    "static/media/MomentusDemo.mp4": "/static/media/MomentusDemo.2300593457a93d6168ce.mp4",
     "static/media/ILoveMusic.mp4": "/static/media/ILoveMusic.f8c50cf9536d0f743cdf.mp4",
     "static/media/RosterbookVideo.mp4": "/static/media/RosterbookVideo.f4049e08626d8837db66.mp4",
+    "static/media/EnviroShareApp.mov": "/static/media/EnviroShareApp.e57a83bad852976ca6a9.mov",
     "static/media/TuneCrafterDemo.mp4": "/static/media/TuneCrafterDemo.f5e58bc1f63d9e66c8b3.mp4",
     "static/media/DigitalNomadsProtoVideo.mp4": "/static/media/DigitalNomadsProtoVideo.64a7aabb7138aa041281.mp4",
     "static/media/BachelorGraduation.png": "/static/media/BachelorGraduation.eea417b9d020cac4dde6.png",
@@ -118,11 +119,11 @@
     "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
     "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
     "main.a36d0da3.css.map": "/static/css/main.a36d0da3.css.map",
-    "main.8da2dad4.js.map": "/static/js/main.8da2dad4.js.map",
+    "main.6601d579.js.map": "/static/js/main.6601d579.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a36d0da3.css",
-    "static/js/main.8da2dad4.js"
+    "static/js/main.6601d579.js"
   ]
 }
