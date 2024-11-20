@@ -158,13 +158,16 @@ function AskToMe() {
                     bubbleChat.style.color = '#91939e';
                     bubbleChat.style.fontSize = '24px';
                     answers.forEach((answer) => {
+                        if (!answer) return;
                         answer.style.background = '#1E1E1E';
                         answer.style.color = '#EAEAEA';
                     });
                     nameSenders.forEach((nameSender) => {
+                        if (!nameSender) return;
                         nameSender.style.color = '#EAEAEA';
                     });
                     helloMessageFound.forEach((message) => {
+                        if (!message) return;
                         message.classList.add('white-text');
                     });
                 } else {
@@ -372,15 +375,15 @@ function AskToMe() {
 
                     <div className='conversation'>
                         {messages.map((message, index) => (
-                            <div>
+                            <div key={index}>
                                 {message.sender === 'User' ? (
-                                    <div className='userMessage' ref={el => divRefs.current[index] = el} key={index}>
+                                    <div className='userMessage' ref={el => divRefs.current[index] = el}>
                                         <div className='title'>You</div>
                                         <div className='bubbleUser'>{message.text}</div>
                                     </div>
                                 ) : (
                                     !(isLoading && index === messages.length - 1) ? (
-                                        <div className='myMessageChat' key={index}>
+                                        <div className='myMessageChat'>
                                             <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[index] = el} />
                                             <div className='messageSide'>
                                                 <div className='nameSender' ref={el => nameSendersRef.current[index] = el}>Alessandro</div>

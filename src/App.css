@@ -794,6 +794,32 @@ a {
   .callToAction .title {
     font-size: 1.4rem !important;
   }
+
+  .contactApp .sidebar h1 {
+    font-size: 16px;
+  }
+
+  .contactApp .sidebar .menuElement {
+    padding: 8px 0px 8px 4px;
+    font-size: 14px;
+  }
+
+  .mh-16 {
+    margin: 0px;
+  }
+
+  .messageArea,
+  .profileInfo {
+    width: calc(100% - 150px);
+  }
+
+  .copyButton {
+    right: 70px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
 }
 
 /* Styles for screens that are at least 1024px wide (desktops and larger) */

@@ -74,16 +74,17 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    z-index: 1000;
+    z-index: -1;
     overflow-y: auto;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     pointer-events: none;
 }
 
 .modal-overlay.show {
     opacity: 1;
     pointer-events: auto;
+    z-index: 1000;
 }
 
 .modal-content {

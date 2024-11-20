@@ -44,7 +44,7 @@ const SelectedWork = ({ refObj }) => {
                 <div className='title-gallery'>Most recent projects</div>
                 <div className='gallery'>
                     {recentProjects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                        <ProjectCard key={project.id * 100} project={project} />
                     ))}
                 </div>
                 <div className='callToAction'>
