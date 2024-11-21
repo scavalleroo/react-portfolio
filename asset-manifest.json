@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.290757f8.css",
-    "main.js": "/static/js/main.54a96d4b.js",
+    "main.js": "/static/js/main.074133e2.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
-    "static/media/MomentusDemo.mp4": "/static/media/MomentusDemo.ad1010f9927788a6bbf2.mp4",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
     "static/media/ILoveMusic.mp4": "/static/media/ILoveMusic.f8c50cf9536d0f743cdf.mp4",
     "static/media/RosterbookVideo.mp4": "/static/media/RosterbookVideo.f4049e08626d8837db66.mp4",
+    "static/media/MomentusDemo.mov": "/static/media/MomentusDemo.9f752808b07b839c6d03.mov",
     "static/media/EnviroShareApp.mov": "/static/media/EnviroShareApp.e57a83bad852976ca6a9.mov",
     "static/media/TuneCrafterDemo.mp4": "/static/media/TuneCrafterDemo.f5e58bc1f63d9e66c8b3.mp4",
     "static/media/DigitalNomadsProtoVideo.mp4": "/static/media/DigitalNomadsProtoVideo.64a7aabb7138aa041281.mp4",
@@ -119,11 +119,11 @@
     "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
     "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
     "main.290757f8.css.map": "/static/css/main.290757f8.css.map",
-    "main.54a96d4b.js.map": "/static/js/main.54a96d4b.js.map",
+    "main.074133e2.js.map": "/static/js/main.074133e2.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.290757f8.css",
-    "static/js/main.54a96d4b.js"
+    "static/js/main.074133e2.js"
   ]
 }
