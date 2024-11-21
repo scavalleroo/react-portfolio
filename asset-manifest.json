@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.290757f8.css",
-    "main.js": "/static/js/main.074133e2.js",
+    "main.js": "/static/js/main.589519fc.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
@@ -12,20 +12,20 @@
     "static/media/TuneCrafterDemo.mp4": "/static/media/TuneCrafterDemo.f5e58bc1f63d9e66c8b3.mp4",
     "static/media/DigitalNomadsProtoVideo.mp4": "/static/media/DigitalNomadsProtoVideo.64a7aabb7138aa041281.mp4",
     "static/media/BachelorGraduation.png": "/static/media/BachelorGraduation.eea417b9d020cac4dde6.png",
+    "static/media/RunIt.png": "/static/media/RunIt.dc43f82dcc9839c41030.png",
     "static/media/ILoveMusic.png": "/static/media/ILoveMusic.eaf996726798246752f3.png",
     "static/media/Rosterbook.png": "/static/media/Rosterbook.0e363a8db71c225cef94.png",
     "static/media/TuneCrafterAR.png": "/static/media/TuneCrafterAR.bcf282f505a8b3953cd1.png",
     "static/media/MasterGraduation.png": "/static/media/MasterGraduation.289740e7c995655a02d3.png",
     "static/media/Professional.png": "/static/media/Professional.82c8185e6b8d5555b97d.png",
     "static/media/TuneCrafter.png": "/static/media/TuneCrafter.947d090a32edc8924435.png",
-    "static/media/RunIt.png": "/static/media/RunIt.656d5b164a0edfef13f5.png",
     "static/media/Niipy.jpg": "/static/media/Niipy.72e508281f80cdd4c90f.jpg",
     "static/media/Personal.webp": "/static/media/Personal.b6ef82b305b22aefbbc0.webp",
     "static/media/Face.png": "/static/media/Face.8b1b432a9d3e87a6ce18.png",
     "static/media/office.jpg": "/static/media/office.df08d23b593ab9a37efc.jpg",
     "static/media/AirLiquideBg.jpg": "/static/media/AirLiquideBg.5e8ed16d0d142cc88de1.jpg",
     "static/media/Momentus.webp": "/static/media/Momentus.99bfde2a4bf1271f62c9.webp",
-    "static/media/RunIt.webp": "/static/media/RunIt.7e0b85e6ae53900ea37b.webp",
+    "static/media/RunIt.webp": "/static/media/RunIt.84c2976e9b71a5792178.webp",
     "static/media/Swear-Text-Light.otf": "/static/media/Swear-Text-Light.4355bc23f14c46732af0.otf",
     "static/media/Swear-Display-Medium.otf": "/static/media/Swear-Display-Medium.a8ca5f2b4b6a892d05a1.otf",
     "static/media/Swear-Display.otf": "/static/media/Swear-Display.6759aae6e3336f160e28.otf",
@@ -119,11 +119,11 @@
     "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
     "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
     "main.290757f8.css.map": "/static/css/main.290757f8.css.map",
-    "main.074133e2.js.map": "/static/js/main.074133e2.js.map",
+    "main.589519fc.js.map": "/static/js/main.589519fc.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.290757f8.css",
-    "static/js/main.074133e2.js"
+    "static/js/main.589519fc.js"
   ]
 }
