@@ -108,7 +108,7 @@
         "timeframe": "September 2022 - December 2022",
         "designConcept": "Momentus is a mobile application that allows international students to find places and opportunities to meet like-minded people and meet new people with similar interests to build new relationships and avoid loneliness.",
         "tags": "#UserResearch #DesignMethods #Sketching #Interviews #Prototyping #Scenario",
-        "coverImage": "assets/img/covers/1920x800/Momentus.webp",
+        "coverImage": "assets/img/covers/1920x800/Momentus.png",
         "titleDetails": "Design based on qualitative data",
         "centralVideo": "assets/img/covers/MomentusDemo.mov",
         "centralImage": "",
@@ -140,10 +140,10 @@
         "timeframe": "September 2022 - March 2023",
         "designConcept": "I spent two years as a full stack developer working on Niipy, a platform that allows businesses to advertise across multiple social media channels while managing them from a single platform.",
         "tags": "#Django #Python #Tornado #AWS #Docker #GoogleAPI #SQL #Postgresql #Agile #Scrum #CodeReview #Testing",
-        "coverImage": "assets/img/covers/1920x800/Niipy.webp",
+        "coverImage": "assets/img/covers/1920x800/Niipy.png",
         "titleDetails": "Coding for a startup",
         "centralVideo": "",
-        "centralImage": "assets/img/covers/JuntoImage.webp",
+        "centralImage": "assets/img/covers/Niipy.jpg",
         "centralYoutube": "",
         "leftBubbleDescriptions": [
             {
