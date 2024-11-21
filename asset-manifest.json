@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.290757f8.css",
-    "main.js": "/static/js/main.5ac99008.js",
+    "main.css": "/static/css/main.33fe9f73.css",
+    "main.js": "/static/js/main.3f76b657.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
     "static/media/RunItVideo.mp4": "/static/media/RunItVideo.f90ed70d28292e959f48.mp4",
     "static/media/TuneCrafterAR.mp4": "/static/media/TuneCrafterAR.e5ab1894ea6215672f12.mp4",
@@ -19,12 +19,13 @@
     "static/media/Rosterbook.png": "/static/media/Rosterbook.0e363a8db71c225cef94.png",
     "static/media/Niipy.jpg": "/static/media/Niipy.72e508281f80cdd4c90f.jpg",
     "static/media/MasterGraduation.png": "/static/media/MasterGraduation.289740e7c995655a02d3.png",
+    "static/media/office.jpg": "/static/media/office.c1ab3e996355f010f155.jpg",
     "static/media/TuneCrafterAR.png": "/static/media/TuneCrafterAR.001e6ee94548167c0a28.png",
+    "static/media/TuneCrafter.png": "/static/media/TuneCrafter.573026a0b04defd01e49.png",
     "static/media/Professional.png": "/static/media/Professional.82c8185e6b8d5555b97d.png",
-    "static/media/TuneCrafter.png": "/static/media/TuneCrafter.947d090a32edc8924435.png",
+    "static/media/TuneCrafterTemp.png": "/static/media/TuneCrafterTemp.947d090a32edc8924435.png",
     "static/media/Personal.webp": "/static/media/Personal.b6ef82b305b22aefbbc0.webp",
     "static/media/Face.png": "/static/media/Face.8b1b432a9d3e87a6ce18.png",
-    "static/media/office.jpg": "/static/media/office.df08d23b593ab9a37efc.jpg",
     "static/media/AirLiquideBg.jpg": "/static/media/AirLiquideBg.5e8ed16d0d142cc88de1.jpg",
     "static/media/Momentus.webp": "/static/media/Momentus.2babfa14a60dd801f3e3.webp",
     "static/media/RunIt.webp": "/static/media/RunIt.84c2976e9b71a5792178.webp",
@@ -119,12 +120,12 @@
     "static/media/chameleon_grey.svg": "/static/media/chameleon_grey.aea51125630f70e4f5be.svg",
     "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
     "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
-    "main.290757f8.css.map": "/static/css/main.290757f8.css.map",
-    "main.5ac99008.js.map": "/static/js/main.5ac99008.js.map",
+    "main.33fe9f73.css.map": "/static/css/main.33fe9f73.css.map",
+    "main.3f76b657.js.map": "/static/js/main.3f76b657.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.290757f8.css",
-    "static/js/main.5ac99008.js"
+    "static/css/main.33fe9f73.css",
+    "static/js/main.3f76b657.js"
   ]
 }
