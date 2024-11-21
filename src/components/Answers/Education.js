@@ -1,6 +1,3 @@
-import saclay from '../../assets/icons/saclay.png';
-import upm from '../../assets/icons/upm.png'
-import wut from '../../assets/icons/WUT.jpg'
 import AppFunctions from '../../utils/AppFunctions';
 import React, { useEffect, useState, useRef } from 'react';
 import './Answers.css';
@@ -17,10 +14,6 @@ const Education = ({ refObj }) => {
 
     const handleDownloadCV = () => {
         appFunctionsRef.current.downloadCV();
-    };
-
-    const handleEmailClick = () => {
-        appFunctionsRef.current.handleEmailClick();
     };
 
     return (

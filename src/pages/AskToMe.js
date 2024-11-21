@@ -330,6 +330,9 @@ function AskToMe() {
             case questions[3]:
                 response = "Contacts";
                 break;
+            default:
+                response = "None";
+                break;
         }
         addMessage('Alessandro', response);
     };
@@ -354,7 +357,7 @@ function AskToMe() {
                 <Menu title="Ask Me" menuRef={menuRef} lizardRef={lizardRef} />
                 <div className='chatSpace'>
                     <div className='myMessageChat'>
-                        <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[0] = el} />
+                        <img alt='Alessandro Face' src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[0] = el} />
                         <div className='messageSide'>
                             <div className='nameSender' ref={nameSenderRef}>Alessandro</div>
                             <div className='bubbleChat' ref={bubbleChatRef}>
@@ -384,7 +387,7 @@ function AskToMe() {
                                 ) : (
                                     !(isLoading && index === messages.length - 1) ? (
                                         <div className='myMessageChat'>
-                                            <img src={profilePic} className='profilePicChat' ref={el => imagesRefs.current[index] = el} />
+                                            <img src={profilePic} alt='Alessandro Face' className='profilePicChat' ref={el => imagesRefs.current[index] = el} />
                                             <div className='messageSide'>
                                                 <div className='nameSender' ref={el => nameSendersRef.current[index] = el}>Alessandro</div>
                                                 {message.text === 'WorkExperience' ? <WorkExperience refObj={el => answersRef.current[index] = el} /> :

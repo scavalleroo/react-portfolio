@@ -42,7 +42,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                             <div className='title'>Tags</div>
                             <div className='text'>{project.tags}</div>
                         </div> */}
-                        {project.title.href ? (<div className='playButton' onClick={() => window.open(project.title.href, '_blank')}>{project.title.name} <img src={externalLink} /></div>) : ''}
+                        {project.title.href ? (<div className='playButton' onClick={() => window.open(project.title.href, '_blank')}>{project.title.name} <img alt='Project Link' src={externalLink} /></div>) : ''}
                     </div>
                     <div className='information'>
                         <div className='details'>
@@ -64,7 +64,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                             project.centralVideo && project.centralVideo !== "" ?
                                 <video id="centralVideo" src={require(`../../${project.centralVideo}`)} alt="" className="centralVideo" controls autoPlay muted></video>
                                 : project.centralImage && project.centralImage !== "" ?
-                                    <img id="centralImage" src={require(`../../${project.centralImage}`)} alt="" className="centralImage" /> : ""
+                                    <img alt='Project Demo' id="centralImage" src={require(`../../${project.centralImage}`)} className="centralImage" /> : ""
                         )}
                     </div>
                     <div className='callToAction'>

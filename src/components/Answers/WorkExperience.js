@@ -15,10 +15,6 @@ const WorkExperience = ({ refObj }) => {
         appFunctionsRef.current.downloadCV();
     };
 
-    const handleEmailClick = () => {
-        appFunctionsRef.current.handleEmailClick();
-    };
-
     const [expandedSection, setExpandedSection] = useState(null);
 
     const handleToggle = (section) => {
@@ -206,9 +202,6 @@ const WorkExperience = ({ refObj }) => {
                         <div className='rightButton' onClick={handleDownloadCV}>
                             Download my Resume
                         </div>
-                        {/* <div className='rightButton' onClick={handleEmailClick}>
-                            Contact me
-                        </div> */}
                     </div>
                 </div>
             </div>

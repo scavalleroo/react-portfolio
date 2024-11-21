@@ -11,10 +11,6 @@ const SelectedWork = ({ refObj }) => {
 
     const appFunctionsRef = useRef(null);
 
-    const handleEmailClick = (ref) => {
-        appFunctionsRef.current.handleEmailClick();
-    };
-
     // Fetch the JSON data when the component mounts
     useEffect(() => {
         fetch('data/mostPopular.json')
@@ -55,9 +51,6 @@ const SelectedWork = ({ refObj }) => {
                         <Link to="/selectedwork" className='rightButton'>
                             See all the projects
                         </Link>
-                        {/* <div className='rightButton' onClick={handleEmailClick}>
-                            Contact me
-                        </div> */}
                     </div>
                 </div>
             </div>

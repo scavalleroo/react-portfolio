@@ -1,4 +1,3 @@
-import externalLink from '../assets/icons/external-link.png';
 import profilePic from '../assets/img/Face2.png';
 import Menu from '../components/Menu/Menu';
 import '../App.css';
@@ -171,22 +170,22 @@ function ContactMe() {
                         <div className='contactApp'>
                             <div className='sidebar'>
                                 <h1 className='grey-text' ref={contactsRef}>Contacts</h1>
-                                <div className={`menuElement ${activeMenu == 'email' ? 'active' : ''}`} onClick={() => setActiveMenu('email')}>Email</div>
-                                <div className={`menuElement ${activeMenu == 'linkedin' ? 'active' : ''}`} onClick={() => setActiveMenu('linkedin')}>LinkedIn</div>
+                                <div className={`menuElement ${activeMenu === 'email' ? 'active' : ''}`} onClick={() => setActiveMenu('email')}>Email</div>
+                                <div className={`menuElement ${activeMenu === 'linkedin' ? 'active' : ''}`} onClick={() => setActiveMenu('linkedin')}>LinkedIn</div>
                             </div>
                             <div className='textarea-container'>
                                 <div className='profileInfo'>
-                                    <img src={profilePic} className='profilePicChat' />
+                                    <img alt='Alessandro Face' src={profilePic} className='profilePicChat' />
                                     <div className='profileDetails'>
                                         <div className='name' onClick={
-                                            activeMenu == 'email' ? handleEmailClick :
+                                            activeMenu === 'email' ? handleEmailClick :
                                                 () => window.open('https://www.linkedin.com/in/alecava/', '_blank')
                                         }>Alessandro Cavallotti</div>
                                         <div className='grey-text role'
                                             onClick={
-                                                activeMenu == 'email' ? handleEmailClick :
+                                                activeMenu === 'email' ? handleEmailClick :
                                                     () => window.open('https://www.linkedin.com/in/alecava/', '_blank')
-                                            }>{activeMenu == 'email' ? 'cavallotti.alessandro00@gmail.com' : 'LinkedIn profile'}</div>
+                                            }>{activeMenu === 'email' ? 'cavallotti.alessandro00@gmail.com' : 'LinkedIn profile'}</div>
                                     </div>
                                 </div>
                                 <button className='copyButton' onClick={handleCopyClick}>Copy</button>
