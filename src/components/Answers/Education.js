@@ -27,12 +27,12 @@ const Education = ({ refObj }) => {
                 <div className='master'>
                     <div className='detailsMaster eit'>
                         <div className='blueFilter'></div>
-                        <div className='spainFlag'>
+                        {/* <div className='spainFlag'>
                             <span className="red stripe top"></span>
                             <span className="yellow stripe"></span>
                             <span className="red stripe"></span>
                         </div>
-                        <div className='franceFlag'></div>
+                        <div className='franceFlag'></div> */}
                         <div className='title'>
                             EIT Digital Master in Human Computer Interaction and Design
                         </div>
@@ -58,9 +58,9 @@ const Education = ({ refObj }) => {
                 <div className='master'>
                     <div className='detailsMaster non-eit'>
                         <div className='blueFilter'></div>
-                        <div className='italyFlag'>
+                        {/* <div className='italyFlag'>
                         </div>
-                        <div className='polandFlag'></div>
+                        <div className='polandFlag'></div> */}
                         <div className='title'>
                             Bachelor degree in Computer Science
                         </div>

@@ -97,7 +97,8 @@
     gap: 24px;
     padding: 24px 16px;
     border-radius: 16px;
-    height: 90vh;
+    height: auto;
+    min-height: 90vh;
 }
 
 .bubbleCustom .content .master .details .left {
@@ -125,8 +126,7 @@
 }
 
 .bubbleCustom .content .master .eit {
-    background-image: url('../../assets/img/MasterGraduation.png');
-    background-position: center;
+    background-image: url('../../assets/img/MasterGraduation.JPG');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -713,7 +713,8 @@
     gap: 24px;
     padding: 24px 16px;
     border-radius: 16px;
-    height: 90vh;
+    height: auto;
+    min-height: 90vh;
 }
 
 /* Responsive */
