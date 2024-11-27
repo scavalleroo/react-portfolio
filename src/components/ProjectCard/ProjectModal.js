@@ -25,6 +25,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                 <div className='center'>
                     <div className='header' style={divStyle}>
                         <div className='blueFilter'></div>
+                        <h1 className='case-study-warning'>This case study will be released soon!</h1>
                         <div className='projTitle'>{project.title.name}</div>
                         <div className='group'>
                             <div className='title'>When</div>

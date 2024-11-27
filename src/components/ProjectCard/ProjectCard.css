@@ -298,6 +298,16 @@
     width: 16px;
 }
 
+.case-study-warning {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .information {
