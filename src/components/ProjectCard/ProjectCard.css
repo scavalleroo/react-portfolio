@@ -89,7 +89,7 @@
 
 .modal-content {
     background-color: #1E1E1E;
-    padding: 8px 16px;
+    padding: 0px 16px 8px 16px;
     position: relative;
     width: 100%;
     margin: 2rem 1rem 1rem 1rem;
@@ -142,8 +142,11 @@
 
 .header {
     padding: 24px 16px;
-    height: 90vh;
+    height: 80vh;
     justify-content: end !important;
+    width: 100%;
+    align-self: center;
+    max-width: 1920px;
 }
 
 .blueFilter {
@@ -180,10 +183,83 @@
 
 .information {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: column;
+    gap: 36px;
     justify-content: center;
     width: 100%;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.project-description img {
+    object-fit: contain;
+    border-radius: 16px;
+    max-width: 1080px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+}
+
+.project-description video {
+    object-fit: contain;
+    border-radius: 16px;
+    max-width: 1080px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+}
+
+.div-description {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 768px;
+}
+
+.div-description .title {
+    font-size: 24px;
+    /* Larger font size for the title */
+    font-weight: bold;
+    width: 256px;
+    flex-shrink: 0;
+    color: #E9EBF2;
+}
+
+/* .div-description .title::after {
+    content: '';
+    width: 48px;
+    height: 4px;
+    background-color: #E9EBF2;
+    display: block;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: block;
+} */
+
+.div-description .description-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #90939e;
+    gap: 8px;
+}
+
+.div-description .points-list {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.div-description .point {
+    margin-bottom: 0.5rem;
+    /* Space between list items */
 }
 
 .center .details {
@@ -298,6 +374,19 @@
     width: 16px;
 }
 
+.scroll {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 10;
+    font-weight: 100;
+    align-self: center;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
 .case-study-warning {
     z-index: 2;
     position: absolute;
@@ -319,5 +408,12 @@
     .centralImage,
     .centralVideo {
         width: 100% !important;
+    }
+
+    @media (max-width: 768px) {
+        .div-description {
+            flex-direction: column;
+            /* Stack title and description on smaller screens */
+        }
     }
 }

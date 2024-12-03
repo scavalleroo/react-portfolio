@@ -13,6 +13,8 @@ const ProjectCard = ({ project }) => {
         setShowModal(false);
     };
 
+    console.log(project);
+
     return (
         <div>
             <div className="project-card" onClick={handleOpenModal}>
