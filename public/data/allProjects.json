@@ -92,7 +92,7 @@
                     ]
                 },
                 "image": null,
-                "video": null
+                "video": "assets/img/TuneCrafter/TuneCrafterFinal.mov"
             },
             {
                 "title": "Results",
@@ -108,7 +108,7 @@
                     ]
                 },
                 "image": null,
-                "video": "assets/img/TuneCrafter/TuneCrafterFinal.mov"
+                "video": null
             }
         ]
     },

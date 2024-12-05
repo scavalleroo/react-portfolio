@@ -3,6 +3,7 @@ import externalLink from '../../assets/icons/external-link.png';
 import AppFunctions from '../../utils/AppFunctions';
 import React, { useEffect, useState, useRef } from 'react';
 import './Answers.css';
+import { sendEventContactMe, sendEventSocialMedia } from '../../utils/analytics';
 
 const Contacts = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +16,12 @@ const Contacts = ({ refObj }) => {
 
     const handleEmailClick = () => {
         appFunctionsRef.current.handleEmailClick();
+        sendEventContactMe('contacts_question');
+    };
+
+    const goToSocial = (url) => {
+        window.open(url, '_blank');
+        sendEventSocialMedia(url);
     };
 
     return (
@@ -31,11 +38,11 @@ const Contacts = ({ refObj }) => {
                         </div>
                         <div className='box'>
                             <div className='title'>Linkedin</div>
-                            <div className='playButton playContact' onClick={() => window.open('https://www.linkedin.com/in/alecava/', '_blank')}>Visit the profile <img alt='Link LinkedIn' src={externalLink} /></div>
+                            <div className='playButton playContact' onClick={() => goToSocial('https://www.linkedin.com/in/alecava/')}>Visit the profile <img alt='Link LinkedIn' src={externalLink} /></div>
                         </div>
                         <div className='box'>
                             <div className='title'>Github</div>
-                            <div className='playButton playContact' onClick={() => window.open('https://github.com/scavalleroo', '_blank')}>Visit the profile <img alt='Link Github' src={externalLink} /></div>
+                            <div className='playButton playContact' onClick={() => goToSocial('https://github.com/scavalleroo')}>Visit the profile <img alt='Link Github' src={externalLink} /></div>
                         </div>
                     </div>
                 </div>

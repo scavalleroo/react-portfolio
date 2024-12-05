@@ -8,6 +8,7 @@ import WorkExperience from '../components/Answers/WorkExperience';
 import SelectedWork from '../components/Answers/SelectedWork';
 import Contacts from '../components/Answers/Contacts';
 import React, { useRef, useEffect } from 'react';
+import ReactGA from "react-ga4";
 
 function AskToMe() {
     const divRefs = useRef([]);  // This stores refs for each message div
@@ -320,21 +321,34 @@ function AskToMe() {
         switch (question) {
             case questions[0]:
                 response = "WorkExperience";
+                sendEventQuestion(response, 0);
                 break;
             case questions[1]:
                 response = "Education";
+                sendEventQuestion(response, 1);
                 break;
             // case questions[2]:
             //     response = "SelectedWork";
             //     break;
             case questions[2]:
                 response = "Contacts";
+                sendEventQuestion(response, 2);
                 break;
             default:
                 response = "None";
+                sendEventQuestion(response, 99);
                 break;
         }
         addMessage('Alessandro', response);
+    };
+
+    const sendEventQuestion = (question, index) => {
+        ReactGA.event({
+            category: "user_interaction",
+            action: "question",
+            label: question,
+            value: index,
+        });
     };
 
     useEffect(() => {

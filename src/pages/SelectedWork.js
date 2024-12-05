@@ -20,8 +20,6 @@ function SelectedWork() {
             .then((data) => setProjects(data))
             .catch((error) => console.error('Error fetching data:', error));
 
-
-
         const ball = ballRef.current;
         const lizard = lizardRef.current;
         const menu = menuRef.current;

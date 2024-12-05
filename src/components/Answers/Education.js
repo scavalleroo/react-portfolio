@@ -1,6 +1,7 @@
 import AppFunctions from '../../utils/AppFunctions';
 import React, { useEffect, useState, useRef } from 'react';
 import './Answers.css';
+import { sendEventDownloadCV } from '../../utils/analytics';
 
 const Education = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -14,6 +15,7 @@ const Education = ({ refObj }) => {
 
     const handleDownloadCV = () => {
         appFunctionsRef.current.downloadCV();
+        sendEventDownloadCV('education');
     };
 
     return (

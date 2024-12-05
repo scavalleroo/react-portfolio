@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import AppFunctions from '../../utils/AppFunctions';
 import './Answers.css';
+import { sendEventExpand, sendEventDownloadCV } from '../../utils/analytics';
 
 const WorkExperience = ({ refObj }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,12 +14,15 @@ const WorkExperience = ({ refObj }) => {
 
     const handleDownloadCV = () => {
         appFunctionsRef.current.downloadCV();
+        sendEventDownloadCV('work_experience');
     };
 
     const [expandedSection, setExpandedSection] = useState(null);
 
     const handleToggle = (section) => {
         setExpandedSection(expandedSection === section ? null : section);
+        if (expandedSection !== section)
+            sendEventExpand(section);
     };
 
     const activeContributionTitle = { borderRadius: "8px 8px 0px 0px", fontSize: "15px" };

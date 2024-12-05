@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import './ProjectCard.css';
 import ProjectModal from './ProjectModal';
+import { sendEventProjectCard, sendEventCloseProjectCard } from '../../utils/analytics';
 
 const ProjectCard = ({ project }) => {
     const [showModal, setShowModal] = useState(false); // Modal visibility state
 
     const handleOpenModal = () => {
         setShowModal(true);
+        sendEventProjectCard(project.title.name);
     };
 
     const handleCloseModal = () => {
         setShowModal(false);
+        sendEventCloseProjectCard(project.title.name);
     };
-
-    console.log(project);
 
     return (
         <div>

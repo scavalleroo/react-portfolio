@@ -4,6 +4,7 @@ import '../App.css';
 import AppFunctions from '../utils/AppFunctions';
 import Footer from '../components/Footer/Footer';
 import { useEffect, useRef, useState } from 'react';
+import { sendEventContactMe, sendEventCopyToClipboard } from '../utils/analytics';
 
 function ContactMe() {
     const appFunctionsRef = useRef(null);
@@ -19,6 +20,7 @@ function ContactMe() {
 
     const handleEmailClick = () => {
         appFunctionsRef.current.handleEmailClick();
+        sendEventContactMe('contact_me_page');
     };
 
     useEffect(() => {
@@ -148,8 +150,10 @@ function ContactMe() {
     const handleCopyClick = () => {
         if (messageAreaRef.current) {
             messageAreaRef.current.select();
+            sendEventCopyToClipboard(messageAreaRef.current.value);
             document.execCommand('copy');
         }
+
     };
 
     return (

@@ -5,6 +5,7 @@ import externalLink from '../../assets/icons/external-link.png';
 import Lottie from "lottie-react";
 import scrollAnimation from "../../assets/icons/scroll.json";
 import './ProjectCard.css';
+import { sendEventContactMe, sendEventGoToWebsite } from '../../utils/analytics';
 
 const ProjectModal = ({ show, onClose, project }) => {
     const appFunctionsRef = useRef(null);
@@ -17,9 +18,13 @@ const ProjectModal = ({ show, onClose, project }) => {
 
     const handleEmailClick = () => {
         appFunctionsRef.current.handleEmailClick();
+        sendEventContactMe('project_modal');
     };
 
-    console.log(project.descriptions);
+    const goToWebsite = () => {
+        window.open(project.title.href, '_blank');
+        sendEventGoToWebsite(project.title.name);
+    };
 
     return ReactDOM.createPortal(
         <div className={`modal-overlay ${show ? 'show' : ''}`}>
@@ -44,7 +49,7 @@ const ProjectModal = ({ show, onClose, project }) => {
                                 <div className='title'>Where</div>
                                 <div className='text'>{project.location}</div>
                             </div>
-                            {project.title.href ? (<div className='playButton' onClick={() => window.open(project.title.href, '_blank')}>{project.title.name} <img alt='Project Link' src={externalLink} /></div>) : ''}
+                            {project.title.href ? (<div className='playButton' onClick={goToWebsite}>{project.title.name} <img alt='Project Link' src={externalLink} /></div>) : ''}
                         </div>
                         <div className='scroll'>
                             <div className='scroll-icon'>
