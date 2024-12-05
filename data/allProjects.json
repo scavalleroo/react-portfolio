@@ -8,185 +8,210 @@
         "location": "Université Paris-Saclay, Paris",
         "timeframe": "September 2023 - October 2023",
         "designConcept": "Tune Crafter is a web application that allows people to create new music beats and control the music flow with simple hand gestures.",
-        "tags": "#GestureRecognition #SpeechRecognition #Music #ReactJS #Mediapipe #Webkit #Design #Analytics",
         "coverImage": "assets/img/covers/1920x800/TuneCrafter.png",
-        "titleDetails": "Create music with innovative interactions",
-        "centralVideo": "assets/img/covers/TuneCrafterDemo.mp4",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
+        "descriptions": [
             {
-                "title": "Tech stack",
-                "description": "We used Vite.js and React.js with Typescript and Node.js. Gesture recognition used the Mediapipe library and speech recognition used the Webkit library."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Performace Tracking",
-                "description": "Google Analytics is integrated into the website to evaluate performance and analyse user behaviour and demographic information, enabling informed decisions to be made to improve the user experience."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/EnviroShare.webp",
-        "title": {
-            "name": "EnviroShare",
-            "href": "https://www.figma.com/proto/c62zO0rfsyh0yZhiCHbGGv/Enviroshare?page-id=0%3A1&type=design&node-id=1112-77&viewport=312%2C191%2C0.09&t=UWqp3FzJHcBAdLBp-1&scaling=scale-down&starting-point-node-id=1101%3A7287&mode=design"
-        },
-        "location": "Universidad Politecnica de Madrid",
-        "timeframe": "September 2022 - December 2022",
-        "designConcept": "EnviroShare addresses the problem of avoiding costly one-off purchases by allowing users to borrow items they do not currently own but may need for a short period of time. This inventive solution promotes a more sustainable and economical use of resources.",
-        "tags": "#Figma #UX/UI #Prototypes #Personas #Sprint #Design #Testing #Evaluation",
-        "coverImage": "assets/img/covers/1920x800/EnviroShare.webp",
-        "titleDetails": "User First Design",
-        "centralVideo": "assets/img/covers/EnviroShareApp.mov",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Users study",
-                "description": "First, we defined a problem using personas and a current scenario. We used UI concepts to create a mood board and experimented with Jake Knapp's sprint method to quickly iterate on the prototype."
+                "title": "The Challenge",
+                "description": "The challenge assigned by the course Advance Programming of Interactive System was to use cutting-edge technologies to create innovative user interactions within an application in a 4 week timeframe.",
+                "list": null,
+                "image": null,
+                "video": null
             },
             {
-                "title": "Prototyping and Testing",
-                "description": "We created Hi-Fi Figma prototypes and added interactions. We then tested the prototypes to identify problematic interactions, and then did a second iteration with the improvements."
-            }
-        ],
-        "rightBubbleDescriptions": [
+                "title": "The Solution",
+                "description": "We successfully created a web application that runs on Chromium based browsers and on devices that are equipped with a webcam and a microphone that allows people to play with the music flow and create beats using simple hand gestures and voice commands. We also developed a smartwatch app that communicates the heartbeat and receives tactile feedback of the music tempo directly on the watch.",
+                "list": null,
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "My Role & Contributions",
+                "description": "UI Designer & Developer",
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Drawing sketches of the applications and defining the features of the application.",
+                        "Defining the architecture of the application after conducting a technology research benchmarked of different tech stack and libraries.",
+                        "Coding key features of the application such as user interaction through gesture recognition and the music flow control and the UI of the application.",
+                        "Creating reports of the app performance with Google Analytics that will drive changes based on the user behaviours."
+                    ]
+                },
+                "image": null,
+                "video": "assets/img/TuneCrafter/TuneCrafterFinal.mov"
+            },
+            {
+                "title": "Design Flow",
+                "description": null,
+                "list": {
+                    "type": "numbers",
+                    "points": [
+                        "Defining the topic: Thanks to brainstorming sessions, we decided to focus on creating music beats and controlling the music flow.",
+                        "Cutting edge technologies: To define the architecture of the app we based our decision mainly on the performance, the adaptability with other libraries, the community and the documentation of the technology. We took the path of a computer vision and speech recognition app that can be used from Desktop and Smartphones and that also connects with Android smartwatches.",
+                        "Unexplored and innovative application: Combine the hand gestures recognition with the music control and beats creation and receiving live tactile feedback on the watch."
+                    ]
+                },
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "Application Design",
+                "description": "The initial design phase focused on creating a UI and interaction system for a music application using hand gestures and speech recognition. We explored two primary design approaches:",
+                "list": {
+                    "types": "numbers",
+                    "points": [
+                        "DJ Console Interface: We considered a familiar layout resembling a DJ console, which would leverage users' existing mental models of music creation tools.",
+                        "Innovative Interaction Design: Our goal was to enable users to create beats through simple, intuitive gestures like a two-finger touch. After three low-fidelity prototype iterations, we finalised the UI design."
+                    ]
+                },
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "Gesture Mapping and Implementation",
+                "description": "We utilised the Mediapipe API to analyse hand tracking capabilities and selected specific gestures for action mapping. The primary challenge was designing a system that could initiate actions from any user position. Our solution was implementing a finite state machine that dynamically interprets gesture sequences to trigger specific actions.",
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Standard Mode: 4 drumpad sounds",
+                        "Christmas Mode: 4 seasonal-specific sounds",
+                        "Piano Mode: 4 piano chords for foundational musical composition"
+                    ]
+                },
+                "image": "assets/img/TuneCrafter/Gestures.png",
+                "video": null
+            },
+            {
+                "title": "Learnings",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Experience with OpenCV, Mediapipe and Webkit libraries for hand gesture and speech recognition.",
+                        "Design the architecture of the communication of the Web app with the Smartwatch using network sockets under the same internet connection and exploiting smartwatch features.",
+                        "Valuable learning about the usability of and the discoverability of the feature of the application were collected thanks to user feedbacks."
+                    ]
+                },
+                "image": null,
+                "video": null
+            },
             {
                 "title": "Results",
-                "description": "We used the 5-second test and the UEQ test, which gave us an overview of the design's performance."
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Web application designed, implemented and lunched in 4 weeks timeframe.",
+                        "The “wow effect” of the application created a word of mouth effect that bring 60 new users per month that try the platform.",
+                        "Development of personal skills: User Interactions design, Web and Smartwatch development, Application tracking and User testing.",
+                        "Live demo at Université Paris-Saclay.",
+                        "Live demo and interview at Good Soup Media channel"
+                    ]
+                },
+                "image": "assets/img/TuneCrafter/MobileDesk.png",
+                "video": null
             }
         ]
     },
     {
         "image": "assets/img/700x1000/DigitalNomads.webp",
         "title": {
-            "name": "Digital Nomads App",
+            "name": "Digital Nomads Space",
             "href": "https://drive.google.com/file/d/14_3_hvNoJlfGaYkFP5xTt4yyiSEgtxzy/view?usp=sharing"
         },
         "location": "Universidad Politecnica de Madrid",
         "timeframe": "March 2023 - June 2023",
-        "designConcept": "Digital Nomads is  mobile  app  that  connects  like-minded  professionals  and  helps  them  find  ideal workspaces.",
-        "tags": "#Interviews #LowFiPrototypes #Android #UsabilityTesting #Evaluation #Design",
-        "coverImage": "assets/img/covers/1920x800/DigitalNomads.webp",
-        "titleDetails": "Rely on user feedback to improve",
-        "centralVideo": "assets/img/covers/DigitalNomadsProtoVideo.mp4",
-        "centralImage": "",
-        "leftBubbleDescriptions": [
+        "designConcept": "Digital Nomads Space is mobile app that connects like-minded professionals and helps them find ideal workspaces.",
+        "coverImage": "assets/img/DigitalNomads/Cover.png",
+        "descriptions": [
             {
-                "title": "Users Interviews",
-                "description": "Our initial task was to conduct 15 users interviews and observations in work cafes around Madrid to better comprehend the behaviors and needs of our users."
+                "title": "The Problem",
+                "description": "In 2019, approximately 5.5% of employed people aged 20–64 years in the EU usually worked from home. The impact of the COVID-19 crisis more than doubled the share in 2020 to 12.3%. In 2021 there was a further increase in the share of people working from home that reached 13.5%. The problem is that digital nomads struggle to find free public places to work from and meet each others.",
+                "list": null,
+                "image": null,
+                "video": null
             },
             {
-                "title": "User Profiles: Student, Coorporate worker and Freelancer",
-                "description": "Our research showed that the primary focus for freelancers and corporate workers is to interact or collaborate with others on specific projects related to their field of work. Meanwhile, for students, the primary focus is obtaining information on where others work or study and having the ability to organize study groups."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Usability Testing",
-                "description": "Two different low-fidelity prototypes were developed to identify the most efficient design. We tested the usability of both low-fidelity prototypes with 15 participants and created two tasks for them to complete without guidance, encouraging them to find their own solutions."
+                "title": "The Solution",
+                "description": "The solution is a mobile application that allows digital nomads to find the perfect workspace based on their preferences and to organise in person meetings with other digital nomads.",
+                "list": null,
+                "image": null,
+                "video": null
             },
             {
-                "title": "HiFi Evaluation",
-                "description": "We created an HiFi version for Android of the best performing prototype and tested it with 16 participants and collected data on their effectiveness and efficiency."
+                "title": "My Role & Contributions",
+                "description": "User Researcher & UX Engineer",
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Preparation of semi structured user interviews and observations sheets.",
+                        "Finding participant, conducting user interviews and coding of the data collected.",
+                        "Designing the user interactions, application interface and paper prototyping.",
+                        "Developing the Hi-Fi prototype as an Android application.",
+                        "Analysis of quantitative and qualitative data collected from the user testing."
+                    ]
+                },
+                "image": "assets/img/DigitalNomads/Role.webp",
+                "video": null
+            },
+            {
+                "title": "Context of use process",
+                "description": null,
+                "list": {
+                    "type": "numbers",
+                    "points": [
+                        "Preparation of a 24-question semi-structured interview with 9 participants recruited in a Starbucks café in Madrid.",
+                        "After the interviews, we asked the participant to perform 2 tasks: how they find the workplace for the day; how they contact and meet with other digital nomads. We let the participant perform the task while the team observed and took notes on the methods used by the participants.",
+                        "Three user profiles have been identified: Student, Freelancer, and Corporate Employee. For each profile, the motivations and frustrations were identified based on the user interviews.",
+                        "Using the material collected from the observation, a task analysis with the different steps was created to draw the user flow for the two tasks: Finding a place to work/study and Connecting with people.",
+                        "For each profile, the task was divided into 4 steps that defined the current scenario.",
+                        "User journey maps of the future scenario when the app will be available were created for the 3 profiles by addressing the frustrations and motivations of the users."
+                    ]
+                },
+                "image": "assets/img/DigitalNomads/JourneyMap.png",
+                "video": null
+            },
+            {
+                "title": "Low Fi prototype evaluation",
+                "description": "Two different paper prototypes were created: one using menus and form interaction and the other using the direct manipulation style. The goal was to evaluate how the two designs fit into the participants' mental models. The evaluation was done using the 'thinking aloud' method. Evaluated attributes: efficiency, effectiveness and user satisfaction. For this test, we had 15 participants test both prototypes, alternating which prototype had been tested first to avoid bias in the responses. For each task the user performed, we measured the time it took to complete the task, the number of clicks required to complete the task, and the number of errors the user made along the way. At the end of the usability test, we asked the participant to anonymously complete a SUS questionnaire to evaluate the user satisfaction between the two prototypes, and finally we analyzed all the quantitative and observational data collected to identify the best candidate for the Hi-Fi prototype.",
+                "list": null,
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "Hi Fi prototype evaluation",
+                "description": "The Hi-Fi prototype was made using Android as this decision was imposed by the teacher of the class. The evaluation was conducted with a set of 16 participants that were recruited in Starbucks cafe in Madrid and we asked the participant to perform two task. While the participant were performing the test we took notes of the user comments, measured the time spent to complete the task, the number of clicks made and the number of errors made. We also asked the participant to complete the System Usability Scale (SUS) questionary and the the User Experience Questionnaire (UEQ).",
+                "list": null,
+                "image": "assets/img/DigitalNomads/UEQ.png",
+                "video": null
+            },
+            {
+                "title": "Learnings",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Complete user-centered design process that led us to create a system based on user needs.",
+                        "Evaluate a system using quantitative data to compare results and provide evidence over people's opinions.",
+                        "Rapid prototyping and iteration to test as many ideas as possible and quickly validate solutions."
+                    ]
+                },
+                "image": null,
+                "video": "assets/img/DigitalNomads/Final.mov"
             },
             {
                 "title": "Results",
-                "description": "The project concluded with a presentation of our work and potential design improvements for the future."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/Momentus.webp",
-        "title": {
-            "name": "Momentus",
-            "href": ""
-        },
-        "location": "Universidad Politecnica de Madrid",
-        "timeframe": "September 2022 - December 2022",
-        "designConcept": "Momentus is a mobile application that allows international students to find places and opportunities to meet like-minded people and meet new people with similar interests to build new relationships and avoid loneliness.",
-        "tags": "#UserResearch #DesignMethods #Sketching #Interviews #Prototyping #Scenario",
-        "coverImage": "assets/img/covers/1920x800/Momentus.png",
-        "titleDetails": "Design based on qualitative data",
-        "centralVideo": "assets/img/covers/MomentusDemo.mov",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Interviews coding",
-                "description": "To understand the needs of international students, we first conducted user interviews and observations. We analysed the data by coding the relevant parts of the text and assessed the reliability and validity of all the data collected."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Design Methods",
-                "description": "We based our application on a navigation map with two tasks, from which we created a low-fidelity prototype using Balsamiq and designed the experiment. "
-            },
-            {
-                "title": "Video Prototype",
-                "description": "The project ended with a video showing how a person could use our application to attend an event through our system."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/Niipy.webp",
-        "title": {
-            "name": "Niipy",
-            "href": "https://www.niipy.com/"
-        },
-        "location": "Junto Innovation Hub, Modena, Italy",
-        "timeframe": "September 2022 - March 2023",
-        "designConcept": "I spent two years as a full stack developer working on Niipy, a platform that allows businesses to advertise across multiple social media channels while managing them from a single platform.",
-        "tags": "#Django #Python #Tornado #AWS #Docker #GoogleAPI #SQL #Postgresql #Agile #Scrum #CodeReview #Testing",
-        "coverImage": "assets/img/covers/1920x800/Niipy.png",
-        "titleDetails": "Coding for a startup",
-        "centralVideo": "",
-        "centralImage": "assets/img/covers/Niipy.jpg",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Working in team",
-                "description": "I was part of a team using the agile methodology. My role was to transfer prototypes to the browser side using various front-end frameworks and ensure their connection to the back-end."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "My Contributions",
-                "description": "I needed to integrate several API services, including Google Authentication, Google Places and Google My Business. The AWS architecture supporting the development hosted several Docker machines, which in turn hosted the services. I performed code reviews and tested the code before deploying it to production."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/Rosterbook.webp",
-        "title": {
-            "name": "Rosterbook",
-            "href": "https://www.instagram.com/rosterlook.it/"
-        },
-        "location": "Carpi, Italy",
-        "timeframe": "March 2020 - September 2020",
-        "designConcept": "Rosterbook is the first social network for basketball players and sport agents to share, connect and collaborate basedon a mobile app.",
-        "tags": "#Flutter #Dart #Firebase #Design #Business #Marketing #Startup #SocialMedia #GoogleAnalytics",
-        "coverImage": "assets/img/covers/1920x800/Rosterbook.webp",
-        "titleDetails": "Startup Experience",
-        "centralVideo": "assets/img/covers/RosterbookVideo.mp4",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Big Data Collection",
-                "description": "I spent 3 months gathering information, designing, learning and coding the frontend and backend of the application all by myself. My brother helped me with the data collection and we managed to have the most complete data set of all the minor basketball teams in Italy."
-            },
-            {
-                "title": "Connecting Players and Managers",
-                "description": "The app allows players to create a CV of their sporting career. The profiles are then indexed and displayed through filtered searches, making it easier for sports managers and coaches to find and contact players."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Launch to the market",
-                "description": "The app had 5,000 downloads from basketball players in 2 months with more than 3,000 registered profiles. The requests were increasing and I could not do all the work myself and we did not have enough resources to keep the project going. It was a great learning experience, both technically and business wise. The application is no longer available, but who knows if it will come back in the future 😃"
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "User research validated the initial problem statement and confirmed the need for the proposed design solution.",
+                        "The qualitative and quantitative data collected directly informed our user-centered design approach, ensuring alignment with user needs and expectations.",
+                        "Two low-fidelity prototypes were systematically evaluated, allowing for iterative refinement and early user feedback.",
+                        "A high-fidelity prototype was developed and extensively evaluated, demonstrating the design's effectiveness and readiness for potential implementation."
+                    ]
+                },
+                "image": null,
+                "video": null
             }
         ]
     },
@@ -194,103 +219,90 @@
         "image": "assets/img/700x1000/RunIt.webp",
         "title": {
             "name": "Run It",
-            "href": ""
+            "href": "https://ex-situ.lri.fr/teaching/dois-2023-design-of-interactive-systems/student-s-workspace/group-1"
         },
         "location": "Université Paris-Saclay, Paris",
         "timeframe": "November 2023 - Dicember 2023",
-        "designConcept": "Run-it is a voice-activated wearable projector for runners, offering path selection and personalization with landmarks and points of interest, real-time running data, route issue reporting, map sharing, and access to favorite routes and run statistics.",
-        "tags": "#design #humancomputerinteraction #prototype #interviews #userprofile",
-        "coverImage": "assets/img/covers/1920x800/RunIt.png",
-        "titleDetails": "Design a new navigation system for runners",
-        "centralVideo": "assets/img/covers/RunItVideo.mp4",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
+        "designConcept": "Run-it is a new voice-activated wearable projector for runners to improve navigation for runners.",
+        "coverImage": "assets/img/RunIt/Cover.png",
+        "descriptions": [
             {
-                "title": "User Interviews",
-                "description": "To gather information about navigation, we interviewed 10 runners in Paris and asked them to describe their navigation experiences and the problems they encountered."
+                "title": "The Challenge",
+                "description": "The challenge was to redesign the navigation system for runners. In particular, the main challenges runners face when using navigation are: the time it takes to plan the route before the run; the inability to easily change the route in the middle of the run; the lack of real-time updates on road conditions; and the need for running performance metrics.",
+                "list": null,
+                "image": null,
+                "video": null
             },
             {
-                "title": "Current and Future Scenarios",
-                "description": "We created a current scenario based on the interviews and a future scenario based on the current scenario and the latest technology available in December 2023."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Storyboard",
-                "description": "Given the future scenario, we created a storyboard to show how the product would be used in the future. The storyboard included 8 breakpoints and 3 personas that needed to interact with each other."
+                "title": "The Solution",
+                "description": "Run-it, a voice-activated wearable projector for runners that provides route selection and personalisation with landmarks and points of interest, real-time running data, route problem reporting, map sharing and access to favourite routes and run statistics.",
+                "list": null,
+                "image": "assets/img/RunIt/Solution.jpeg",
+                "video": null
             },
             {
-                "title": "Prototyping and Filming",
-                "description": "We iterated 3 times on our first prototype, which was made with transparent paper and markers. We made a video based on our future scenario and had our video reviewed by other groups who helped us improve our design."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/TuneCrafterAR.webp",
-        "title": {
-            "name": "Tune Crafter AR",
-            "href": ""
-        },
-        "location": "Université Paris-Saclay, Paris",
-        "timeframe": "November 2023 - Dicember 2023",
-        "designConcept": "From the original Tune Crafter project, we decided to create an AR version of the application to allow users to play music with tangibles and AR.",
-        "tags": "#augmented #reality #music #tangibles #design #interaction #Unity #Vuforia #AR",
-        "coverImage": "assets/img/covers/1920x800/TuneCrafterAR.png",
-        "titleDetails": "Playing music with tangibles and AR",
-        "centralVideo": "assets/img/covers/TuneCrafterAR.mp4",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Unity and Vuforia",
-                "description": "The application was built using Unity and Vuforia. We used the Vuforia library to recognize the objects and the Unity library to create the interactions."
+                "title": "My Role & Contributions",
+                "description": "User Researcher & UX Designer",
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Prepared semi-structured user interviews, recruited participants, conducted user interviews and coded data.",
+                        "User interaction design, application interface design and paper prototyping.",
+                        "Scripting the storyboard, directing and shooting the prototype video.",
+                        "Present the product design decision made based on user feedback."
+                    ]
+                },
+                "image": null,
+                "video": null
             },
             {
-                "title": "Tangibles",
-                "description": "To create the design of the tablet, we observed how DJs actually play the console and tried to make it easier for them to play with our tangibles."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Further Development",
-                "description": "The result of the project was the creation of an Android application that allows the user to view and interact with physical objects through the camera. Further development could include bringing this application to AR glasses and headsets to improve the user experience."
-            }
-        ]
-    },
-    {
-        "image": "assets/img/700x1000/I_love_music.png",
-        "title": {
-            "name": "I Love Music",
-            "href": "https://alessandro-cavallotti.gitbook.io/digital-fabrication/week-1"
-        },
-        "location": "Université Paris-Saclay, Paris",
-        "timeframe": "January 2024 - March 2024",
-        "designConcept": "I Love Music is a composition of simple notes in the shape of a heart, representing my love for music in all it's forms. Everything including the design iterations, drawing, printing and assembling was done by me.",
-        "tags": "#3dprinting #prusa #digialfabrication #fablab #music #love #autocad #fusion360 #flatsurface #modular #parametric #pressfit #foldable",
-        "coverImage": "assets/img/covers/1920x800/ILoveMusic.png",
-        "titleDetails": "Iterative design (3D printing)",
-        "centralVideo": "assets/img/covers/ILoveMusic.mp4",
-        "centralImage": "",
-        "centralYoutube": "",
-        "leftBubbleDescriptions": [
-            {
-                "title": "Drawing and Printing",
-                "description": "Autocad Fusion 360 was used to design the 3D shapes. Printing was done on Prusa 3D printers using PHA filaments, which are produced and consumed by bacteria and are therefore more sustainable than PLA."
+                "title": "Design Process",
+                "description": null,
+                "list": {
+                    "type": "numbers",
+                    "points": [
+                        "We defined the target users and their key characteristics: 'Regular runner who enjoys exploring new places'.",
+                        "Conducting 12 user interviews with runners to learn about their experiences with navigation during training.",
+                        "We identify 12 situations where the user, in this case the runner, does not complete the task of exploring new places. The situations could have been of 3 types: failure, circumvention or surprise.",
+                        "We defined 2 personas and an extreme character. The extreme character is a persona that tests the limits of our design. In our case this was Joe. He likes to plan everything, including the details of weather, road conditions, crowd size, points of interest and expected time, before he goes for a run. He gets upset if he gets lost, so he always takes his mobile phone with him. He doesn't like to waste time and is not very patient. Loves nature.",
+                        "We wrote a current scenario in which all 3 personas interact during the story. The story also included a list of 7 brakedowns.",
+                        "We had iterative ideation sessions where we came up with 20 ideas related to our topic, from which we voted on 8 ideas and made a quick paper prototype.",
+                        "We grouped the key ideas that underpinned the design of the new navigation system to have a first definition of the design concept. We defined the target audience and what the system should do.",
+                        "We wrote the future scenario script as if the system was being used by our three personas.",
+                        "We drew a storyboard to make a video prototype of our navigation system. We then asked for feedback from other groups and iterated to improve based on their comments.",
+                        "We changed the future scenario based on the peer feedback and applied the changes to both the paper prototype and the storyboard. At the end of the work, we shoot the final version of the video prototype."
+                    ]
+                },
+                "image": "assets/img/RunIt/Storyboard.png",
+                "video": null
             },
             {
-                "title": "Prototyping and Testing",
-                "description": "The difficulty of the project lay in the constraints of the project. 6 iterations of design and testing were required to improve the final product."
-            }
-        ],
-        "rightBubbleDescriptions": [
-            {
-                "title": "Mass production",
-                "description": "Once the design had been finalized, a total of 50 pieces were printed using optimization methods to maximize efficiency and minimize production time."
+                "title": "Learnings",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Rapid iteration of ideation and prototyping allowed us to explore many designs.",
+                        "Creating personas and extreme characters to test the limits of the system.",
+                        "Focus on designing a system based on user breakdowns to ensure that will solve real people problems."
+                    ]
+                },
+                "image": null,
+                "video": null
             },
             {
-                "title": "Final product",
-                "description": "Each piece could be connected to the others in seven ways. The final project was 50 pieces connected together to form a hearth shape, representing my love for music."
+                "title": "Results",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Creation of an innovative navigation system based on users needs.",
+                        "Fast iteration of many ideation process allowed us to explore many design.",
+                        "The work was presented to for the course DOIS 2024 Design of Interactive Systems directed by professor Wendy E. Mackay at Inria & Université Paris-Saclay."
+                    ]
+                },
+                "image": "assets/img/RunIt/Poster.png",
+                "video": "assets/img/RunIt/Video.mp4"
             }
         ]
     }
