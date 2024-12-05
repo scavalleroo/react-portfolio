@@ -16,7 +16,7 @@ function AskToMe() {
     const questions = [
         "What is your Work Experience?",
         "What is your Education?",
-        "Can you show me some of your work?",
+        // "Can you show me some of your work?",
         "How can I contact you?"
     ]
     const lizardRef = useRef(null);
@@ -324,10 +324,10 @@ function AskToMe() {
             case questions[1]:
                 response = "Education";
                 break;
+            // case questions[2]:
+            //     response = "SelectedWork";
+            //     break;
             case questions[2]:
-                response = "SelectedWork";
-                break;
-            case questions[3]:
                 response = "Contacts";
                 break;
             default:
@@ -414,8 +414,8 @@ function AskToMe() {
                             <div className='question' onClick={() => { handleQuestionClick(questions[1]) }}>{questions[1]}</div>
                         </div>
                         <div className='questions'>
+                            {/* <div className='question' onClick={() => { handleQuestionClick(questions[2]) }}>{questions[2]}</div> */}
                             <div className='question' onClick={() => { handleQuestionClick(questions[2]) }}>{questions[2]}</div>
-                            <div className='question' onClick={() => { handleQuestionClick(questions[3]) }}>{questions[3]}</div>
                         </div>
                     </div>
                 </div>

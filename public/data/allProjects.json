@@ -172,7 +172,7 @@
             },
             {
                 "title": "Low Fi prototype evaluation",
-                "description": "Two different paper prototypes were created: one using menus and form interaction and the other using the direct manipulation style. The goal was to evaluate how the two designs fit the mental models of the participants. The evaluation has been made using the “thinking aloud” method. Evaluated attributes: efficiency, effectiveness, and user satisfaction. For this test we had 15 participants testing both prototype alternating which prototype was tested before to avoid biases in the answers. For each task that the user was performing we measured the time spent to complete the task, the number of clicks necessary to complete the task and the number of errors that the user made along the way. To conclude the usability test we asked the participant to fill anonymously a SUS questionary to evaluate the user satisfaction between the 2 prototypes and finally analysed all the quantitive and observations collected to identify the best candidate for the hi-fi prototype.",
+                "description": "Two different paper prototypes were created: one using menus and form interaction and the other using the direct manipulation style. The goal was to evaluate how the two designs fit into the participants' mental models. The evaluation was done using the 'thinking aloud' method. Evaluated attributes: efficiency, effectiveness and user satisfaction. For this test, we had 15 participants test both prototypes, alternating which prototype had been tested first to avoid bias in the responses. For each task the user performed, we measured the time it took to complete the task, the number of clicks required to complete the task, and the number of errors the user made along the way. At the end of the usability test, we asked the participant to anonymously complete a SUS questionnaire to evaluate the user satisfaction between the two prototypes, and finally we analyzed all the quantitative and observational data collected to identify the best candidate for the Hi-Fi prototype.",
                 "list": null,
                 "image": null,
                 "video": null
@@ -212,6 +212,97 @@
                 },
                 "image": null,
                 "video": null
+            }
+        ]
+    },
+    {
+        "image": "assets/img/700x1000/RunIt.webp",
+        "title": {
+            "name": "Run It",
+            "href": "https://ex-situ.lri.fr/teaching/dois-2023-design-of-interactive-systems/student-s-workspace/group-1"
+        },
+        "location": "Université Paris-Saclay, Paris",
+        "timeframe": "November 2023 - Dicember 2023",
+        "designConcept": "Run-it is a new voice-activated wearable projector for runners to improve navigation for runners.",
+        "coverImage": "assets/img/RunIt/Cover.png",
+        "descriptions": [
+            {
+                "title": "The Challenge",
+                "description": "The challenge was to redesign the navigation system for runners. In particular, the main challenges runners face when using navigation are: the time it takes to plan the route before the run; the inability to easily change the route in the middle of the run; the lack of real-time updates on road conditions; and the need for running performance metrics.",
+                "list": null,
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "The Solution",
+                "description": "Run-it, a voice-activated wearable projector for runners that provides route selection and personalisation with landmarks and points of interest, real-time running data, route problem reporting, map sharing and access to favourite routes and run statistics.",
+                "list": null,
+                "image": "assets/img/RunIt/Solution.jpeg",
+                "video": null
+            },
+            {
+                "title": "My Role & Contributions",
+                "description": "User Researcher & UX Designer",
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Prepared semi-structured user interviews, recruited participants, conducted user interviews and coded data.",
+                        "User interaction design, application interface design and paper prototyping.",
+                        "Scripting the storyboard, directing and shooting the prototype video.",
+                        "Present the product design decision made based on user feedback."
+                    ]
+                },
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "Design Process",
+                "description": null,
+                "list": {
+                    "type": "numbers",
+                    "points": [
+                        "We defined the target users and their key characteristics: 'Regular runner who enjoys exploring new places'.",
+                        "Conducting 12 user interviews with runners to learn about their experiences with navigation during training.",
+                        "We identify 12 situations where the user, in this case the runner, does not complete the task of exploring new places. The situations could have been of 3 types: failure, circumvention or surprise.",
+                        "We defined 2 personas and an extreme character. The extreme character is a persona that tests the limits of our design. In our case this was Joe. He likes to plan everything, including the details of weather, road conditions, crowd size, points of interest and expected time, before he goes for a run. He gets upset if he gets lost, so he always takes his mobile phone with him. He doesn't like to waste time and is not very patient. Loves nature.",
+                        "We wrote a current scenario in which all 3 personas interact during the story. The story also included a list of 7 brakedowns.",
+                        "We had iterative ideation sessions where we came up with 20 ideas related to our topic, from which we voted on 8 ideas and made a quick paper prototype.",
+                        "We grouped the key ideas that underpinned the design of the new navigation system to have a first definition of the design concept. We defined the target audience and what the system should do.",
+                        "We wrote the future scenario script as if the system was being used by our three personas.",
+                        "We drew a storyboard to make a video prototype of our navigation system. We then asked for feedback from other groups and iterated to improve based on their comments.",
+                        "We changed the future scenario based on the peer feedback and applied the changes to both the paper prototype and the storyboard. At the end of the work, we shoot the final version of the video prototype."
+                    ]
+                },
+                "image": "assets/img/RunIt/Storyboard.png",
+                "video": null
+            },
+            {
+                "title": "Learnings",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Rapid iteration of ideation and prototyping allowed us to explore many designs.",
+                        "Creating personas and extreme characters to test the limits of the system.",
+                        "Focus on designing a system based on user breakdowns to ensure that will solve real people problems."
+                    ]
+                },
+                "image": null,
+                "video": null
+            },
+            {
+                "title": "Results",
+                "description": null,
+                "list": {
+                    "type": "bullet",
+                    "points": [
+                        "Creation of an innovative navigation system based on users needs.",
+                        "Fast iteration of many ideation process allowed us to explore many design.",
+                        "The work was presented to for the course DOIS 2024 Design of Interactive Systems directed by professor Wendy E. Mackay at Inria & Université Paris-Saclay."
+                    ]
+                },
+                "image": "assets/img/RunIt/Poster.png",
+                "video": "assets/img/RunIt/Video.mp4"
             }
         ]
     }
