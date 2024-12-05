@@ -21,7 +21,7 @@
                 "title": "The Solution",
                 "description": "We successfully created a web application that runs on Chromium based browsers and on devices that are equipped with a webcam and a microphone that allows people to play with the music flow and create beats using simple hand gestures and voice commands. We also developed a smartwatch app that communicates the heartbeat and receives tactile feedback of the music tempo directly on the watch.",
                 "list": null,
-                "image": null,
+                "image": "assets/img/TuneCrafter/MobileDesk.png",
                 "video": null
             },
             {
@@ -36,8 +36,8 @@
                         "Creating reports of the app performance with Google Analytics that will drive changes based on the user behaviours."
                     ]
                 },
-                "image": null,
-                "video": "assets/img/TuneCrafter/TuneCrafterFinal.mov"
+                "image": "assets/img/TuneCrafter/Working.jpeg",
+                "video": null
             },
             {
                 "title": "Design Flow",
@@ -107,8 +107,8 @@
                         "Live demo and interview at Good Soup Media channel"
                     ]
                 },
-                "image": "assets/img/TuneCrafter/MobileDesk.png",
-                "video": null
+                "image": null,
+                "video": "assets/img/TuneCrafter/TuneCrafterFinal.mov"
             }
         ]
     },
@@ -263,7 +263,7 @@
                     "points": [
                         "We defined the target users and their key characteristics: 'Regular runner who enjoys exploring new places'.",
                         "Conducting 12 user interviews with runners to learn about their experiences with navigation during training.",
-                        "We identify 12 situations where the user, in this case the runner, does not complete the task of exploring new places. The situations could have been of 3 types: failure, circumvention or surprise.",
+                        "We identify 12 situations where the user, in this case the runner, does not complete the task of exploring new places. The situations could have been of 3 types: brakedown, workaround or surprise.",
                         "We defined 2 personas and an extreme character. The extreme character is a persona that tests the limits of our design. In our case this was Joe. He likes to plan everything, including the details of weather, road conditions, crowd size, points of interest and expected time, before he goes for a run. He gets upset if he gets lost, so he always takes his mobile phone with him. He doesn't like to waste time and is not very patient. Loves nature.",
                         "We wrote a current scenario in which all 3 personas interact during the story. The story also included a list of 7 brakedowns.",
                         "We had iterative ideation sessions where we came up with 20 ideas related to our topic, from which we voted on 8 ideas and made a quick paper prototype.",
