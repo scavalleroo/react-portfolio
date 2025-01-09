@@ -719,6 +719,12 @@ a {
   font-weight: bold;
 }
 
+.smooth-width {
+  display: inline-block;
+  transition: width 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
 /* Reponsive */
 @media screen and (max-width: 768px) {
   .bigMe {

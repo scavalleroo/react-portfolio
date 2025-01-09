@@ -6,7 +6,7 @@ import '../App.css';
 import { downloadCV } from '../utils/AppFunctions';
 
 function Home() {
-    const [myName, setMyName] = useState("Alessandro,");
+    const [myName, setMyName] = useState("UX/UI Designer");
     const [fadeClass, setFadeClass] = useState('fade-in');
     const ballRef = useRef(null);
     const headerRef = useRef(null);
@@ -16,7 +16,7 @@ function Home() {
     const appRef = useRef(null);
 
     useEffect(() => {
-        const texts = ["Alessandro,", "@scavalleroo,"];
+        const texts = ["UX/UI Designer", "Software Developer", "Marathoner", "Musician", "Team Player"];
         let index = 0;
         const interval = setInterval(() => {
             setFadeClass('fade-out'); // Start fade-out before changing the text
@@ -27,7 +27,7 @@ function Home() {
                 setFadeClass('fade-in'); // Start fade-in with the new text
             }, 500); // Delay to match fade-out duration
 
-        }, 3000); // Changes every 3 seconds
+        }, 5000); // Changes every 3 seconds
 
         // Clean up the interval on component unmount
         return () => clearInterval(interval);
@@ -176,9 +176,18 @@ function Home() {
             <div className='centerHome'>
                 <div className='headerHome' ref={headerRef}>
                     <div className='myName'>
-                        <div className='bigMe'><span ref={el => textRefs.current[0] = el}>Hello,</span> <span ref={el => textRefs.current[8] = el}>I'm</span></div> <div className={`bigMe orange ${fadeClass}`}>{myName}</div>
+                        <div className='bigMe'><span ref={el => textRefs.current[0] = el}>Hello,</span> <span ref={el => textRefs.current[8] = el}>I'm</span></div> <div className={`bigMe orange`}>Alessandro,</div>
                     </div>
-                    <div className='bigMe'><span ref={el => textRefs.current[1] = el}>Early</span> <span className='orange'>UX/UI Designer</span> <span ref={el => textRefs.current[2] = el}>with</span> <span ref={el => textRefs.current[3] = el}>the</span> <span ref={el => textRefs.current[4] = el}>goal</span> <span ref={el => textRefs.current[5] = el}>of</span> <span ref={el => textRefs.current[6] = el}>creating</span> <span ref={el => textRefs.current[7] = el}>products</span> <span className='orange'>driven by innovation.</span></div>
+                    <div className='bigMe' style={{ transition: 'all 1s' }}>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[1] = el} className={`orange ${fadeClass} smooth-width`}>{myName}</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[2] = el}> with</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[3] = el}> the</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[4] = el}> goal</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[5] = el}> of</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[6] = el}> creating</span>
+                        <span style={{ transition: 'all 1s' }} ref={el => textRefs.current[7] = el}> products</span>
+                        <span style={{ transition: 'all 1s' }} className='orange'> driven by innovation.</span>
+                    </div>
                 </div>
             </div>
             <Footer />
