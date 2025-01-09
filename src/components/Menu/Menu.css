@@ -104,8 +104,26 @@
         align-items: center;
     }
 
+    .lizard {
+        width: 24px;
+        height: 24px;
+    }
+
     .callToActions {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0px 8px;
+    }
+
+    .buttonAction {
+        justify-content: space-evenly;
+    }
+
+    .buttonAction .button {
+        font-size: 14px;
+        padding: 0px;
     }
 }

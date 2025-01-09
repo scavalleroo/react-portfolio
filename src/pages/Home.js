@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 import React, { useState, useEffect, useRef } from 'react';
 import '../App.css';
+import { downloadCV } from '../utils/AppFunctions';
 
 function Home() {
     const [myName, setMyName] = useState("Alessandro,");
@@ -158,6 +159,9 @@ function Home() {
             <div className='topBar'>
                 <Link to="/"><img src={lizard} alt="lizard" width="40" height="40" className='lizard' ref={lizardRef} /></Link>
                 <div className='callToActions' ref={menuRef}>
+                    <div className='buttonAction'>
+                        <Link to="" className='button' onClick={downloadCV}>Resume</Link>
+                    </div>
                     <div className='buttonAction'>
                         <Link to="/asktome" className='button'>Ask Me</Link>
                     </div>

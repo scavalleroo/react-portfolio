@@ -27,4 +27,15 @@ class AppFunctions extends Component {
     }
 }
 
+export const downloadCV = () => {
+    const fileUrl = `/Curriculum.pdf`;
+    const fileName = 'AlessandroCavallottiResume.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', fileName); // Set the file name for the download
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+};
+
 export default AppFunctions;

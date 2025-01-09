@@ -126,7 +126,7 @@
 }
 
 .bubbleCustom .content .master .eit {
-    background-image: url('../../assets/img/MasterGraduation.JPG');
+    background-image: url('../../assets/img/MasterGraduation.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -702,7 +702,7 @@
 }
 
 .contentContact {
-    background-image: url('/src/assets/img/office.jpg');
+    background-image: linear-gradient(to right, #fd6827, #a50034);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
