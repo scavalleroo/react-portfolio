@@ -16,7 +16,7 @@ function Home() {
     const appRef = useRef(null);
 
     useEffect(() => {
-        const texts = ["UX/UI Designer", "Software Developer", "Marathoner", "Musician", "Team Player"];
+        const texts = ["UX/UI Designer", "Software Developer", "Marathoner", "Musician", "Team Player", "From 2000"];
         let index = 0;
         const interval = setInterval(() => {
             setFadeClass('fade-out'); // Start fade-out before changing the text
