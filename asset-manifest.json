@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f1f80aa.css",
-    "main.js": "/static/js/main.7e88fd09.js",
+    "main.css": "/static/css/main.6f455fa4.css",
+    "main.js": "/static/js/main.60ee764a.js",
     "static/js/453.9020e0e3.chunk.js": "/static/js/453.9020e0e3.chunk.js",
     "static/media/Final.mov": "/static/media/Final.f3c54979089369a4c3af.mov",
     "static/media/TuneCrafterFinal.mov": "/static/media/TuneCrafterFinal.65bc58826acfadd1677e.mov",
@@ -131,12 +131,12 @@
     "static/media/chameleon_orange.svg": "/static/media/chameleon_orange.f421e75f44e3fcb6840c.svg",
     "static/media/chameleon_white.svg": "/static/media/chameleon_white.622517301481f789148256812649b7d2.svg",
     "static/media/scroll.lottie": "/static/media/scroll.e4be105cf09684e6bd22.lottie",
-    "main.4f1f80aa.css.map": "/static/css/main.4f1f80aa.css.map",
-    "main.7e88fd09.js.map": "/static/js/main.7e88fd09.js.map",
+    "main.6f455fa4.css.map": "/static/css/main.6f455fa4.css.map",
+    "main.60ee764a.js.map": "/static/js/main.60ee764a.js.map",
     "453.9020e0e3.chunk.js.map": "/static/js/453.9020e0e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f1f80aa.css",
-    "static/js/main.7e88fd09.js"
+    "static/css/main.6f455fa4.css",
+    "static/js/main.60ee764a.js"
   ]
 }
